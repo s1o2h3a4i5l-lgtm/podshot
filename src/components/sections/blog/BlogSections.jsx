@@ -8,6 +8,7 @@ import FlipText from '@/components/ui/FlipText';
 import { UnderlineButton } from '@/components/ui/Marquee';
 import { ArrowIcon } from '@/components/ui/Buttons';
 import { postHref } from '@/data/blog';
+import { BASE_PATH } from '@/lib/basePath';
 
 function PostCard({ p, big = false, light = false, className = '', direction }) {
   const Title = big ? 'h2' : 'h3';
@@ -77,7 +78,7 @@ export function BlogGrid({ title, posts, filters }) {
   );
 }
 
-export function Timeline({ subtitle, title, text, items, image = '/images/timeline/timeline-img.png' }) {
+export function Timeline({ subtitle, title, text, items, image = `${BASE_PATH}/images/timeline/timeline-img.png` }) {
   const swiper = useRef(null);
   return (
     <section className="tj-timeline-section container-space tj-theme-dark fix">

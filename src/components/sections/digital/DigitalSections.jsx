@@ -9,8 +9,9 @@ import { site } from '@/data/site';
 import { serviceHref } from '@/data/services-meta';
 import { projectHref } from '@/data/projects';
 import { postHref } from '@/data/blog';
+import { BASE_PATH } from '@/lib/basePath';
 
-const PLUS = '/images/shapes/plus-shape.svg';
+const PLUS = `${BASE_PATH}/images/shapes/plus-shape.svg`;
 
 export function DigitalHero({ word, text, button, location }) {
   return (
@@ -38,7 +39,7 @@ export function DigitalHero({ word, text, button, location }) {
                 </div>
               </div>
               <div className="tj_gallery d-lg-none tj-fade" data-direction="bottom" data-delay=".9">
-                {[1, 2, 3, 4].map((n) => <img key={n} alt="" loading="lazy" width="219" height="251" className="gallery_img" style={{ height: 'auto' }} src={`/images/gallery/offcanvas-gallery-img-${n}.png`} />)}
+                {[1, 2, 3, 4].map((n) => <img key={n} alt="" loading="lazy" width="219" height="251" className="gallery_img" style={{ height: 'auto' }} src={`${BASE_PATH}/images/gallery/offcanvas-gallery-img-${n}.png`} />)}
               </div>
               <h1 className="hero_title tj-char-reveal-left fade-in">{word}</h1>
             </div>
@@ -53,7 +54,7 @@ export function DigitalHero({ word, text, button, location }) {
   );
 }
 
-export function AboutCounters({ subtitle, title, highlight, titleEnd, person, counter, counterText, text, button, image = '/images/about/h2-about-img.webp', video = '/videos/h1-hero-2.mp4' }) {
+export function AboutCounters({ subtitle, title, highlight, titleEnd, person, counter, counterText, text, button, image = `${BASE_PATH}/images/about/h2-about-img.webp`, video = `${BASE_PATH}/videos/h1-hero-2.mp4` }) {
   return (
     <section className="h2-about-section container-space fix">
       <div className="container-fluid">
@@ -67,7 +68,7 @@ export function AboutCounters({ subtitle, title, highlight, titleEnd, person, co
             </div>
             <div className="h2-about-content-wrap">
               <div className="tj-author-profile tj-fade">
-                <div className="author-img"><img alt="" loading="lazy" width="160" height="160" src="/images/users/user-img-5.png" /></div>
+                <div className="author-img"><img alt="" loading="lazy" width="160" height="160" src={`${BASE_PATH}/images/users/user-img-5.png`} /></div>
                 <div className="author-info">
                   <h3 className="name tj-fz-h5">{person.name}</h3>
                   <span className="designation">{person.role}</span>
@@ -167,7 +168,7 @@ export function ServiceCards({ subtitle, title, text, button, items }) {
   );
 }
 
-export function ListRows({ subtitle, title, button, items, image = '/images/award/award-trophy.gif', titleImage = null }) {
+export function ListRows({ subtitle, title, button, items, image = `${BASE_PATH}/images/award/award-trophy.gif`, titleImage = null }) {
   return (
     <section className="h2-award-section container-space fix">
       <div className="blocks-shape tj-fade" data-direction="left" />

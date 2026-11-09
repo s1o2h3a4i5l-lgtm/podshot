@@ -7,6 +7,7 @@ import HeroRing from '@/components/ui/HeroRing';
 import { groups, servicesIn, serviceHref } from '@/data/services-meta';
 import { projectHref } from '@/data/projects';
 import { postHref } from '@/data/blog';
+import { BASE_PATH } from '@/lib/basePath';
 
 const CURSOR_EXPLORE = "Explore <br/> more<i class='tji-arrow-up-right'></i>";
 
@@ -47,7 +48,7 @@ export function Hero({ title, location, text, primary, secondary }) {
   );
 }
 
-export function Showreel({ video = '/videos/podshot-showreel.mp4' }) {
+export function Showreel({ video = `${BASE_PATH}/videos/podshot-showreel.mp4` }) {
   return (
     <div className="h1-video-section container-space h1HeroAnimation">
       <div className="container-fluid">
@@ -65,8 +66,8 @@ export function Showreel({ video = '/videos/podshot-showreel.mp4' }) {
   );
 }
 
-export function About({ subtitle, title, text, button, trustedCount, trustedText, image = '/images/about/h1-about-img.jpg' }) {
-  const users = ['/images/users/user-list-img-1.png', '/images/users/user-list-img-2.png', '/images/users/user-list-img-3.png', '/images/users/user-list-img-4.png'];
+export function About({ subtitle, title, text, button, trustedCount, trustedText, image = `${BASE_PATH}/images/about/h1-about-img.jpg` }) {
+  const users = [`${BASE_PATH}/images/users/user-list-img-1.png`, `${BASE_PATH}/images/users/user-list-img-2.png`, `${BASE_PATH}/images/users/user-list-img-3.png`, `${BASE_PATH}/images/users/user-list-img-4.png`];
   return (
     <section className="h1-about-section container-space fix" id="h1-about">
       <div className="container-fluid">
@@ -109,7 +110,7 @@ export function About({ subtitle, title, text, button, trustedCount, trustedText
   );
 }
 
-export function Features({ items, image = '/images/feature/h1-feature-img.webp' }) {
+export function Features({ items, image = `${BASE_PATH}/images/feature/h1-feature-img.webp` }) {
   return (
     <section className="h1-features-section container-space fix">
       <div className="container-fluid">
@@ -141,7 +142,7 @@ export function Features({ items, image = '/images/feature/h1-feature-img.webp' 
   );
 }
 
-const PROCESS_IMAGES = ['/images/process/h1-process-img-1.webp', '/images/process/h1-process-img-2.webp', '/images/process/h1-process-img-3.webp'];
+const PROCESS_IMAGES = [`${BASE_PATH}/images/process/h1-process-img-1.webp`, `${BASE_PATH}/images/process/h1-process-img-2.webp`, `${BASE_PATH}/images/process/h1-process-img-3.webp`];
 
 // Agina's pinned process: three steps scroll past while their images slide in.
 export function Process({ subtitle, title, steps, images = PROCESS_IMAGES }) {
@@ -360,8 +361,8 @@ export function ClientStrip({ subtitle }) {
                     {row.map((n, i) => (
                       <div key={i} className="tj_client_item">
                         <span>
-                          <img alt="Client logo" loading="lazy" width="205" height="72" className="front" style={{ height: 'auto' }} src={`/images/clients/client-black-img-${n}.png`} />
-                          <img alt="" loading="lazy" width="205" height="72" className="back" style={{ height: 'auto' }} src={`/images/clients/client-white-img-${n}.png`} />
+                          <img alt="Client logo" loading="lazy" width="205" height="72" className="front" style={{ height: 'auto' }} src={`${BASE_PATH}/images/clients/client-black-img-${n}.png`} />
+                          <img alt="" loading="lazy" width="205" height="72" className="back" style={{ height: 'auto' }} src={`${BASE_PATH}/images/clients/client-white-img-${n}.png`} />
                         </span>
                       </div>
                     ))}
@@ -376,7 +377,7 @@ export function ClientStrip({ subtitle }) {
   );
 }
 
-const BLOG_AUTHOR_IMAGES = ['/images/users/h1-blog-user-1.png', '/images/users/h1-blog-user-2.png', '/images/users/h1-blog-user-3.png'];
+const BLOG_AUTHOR_IMAGES = [`${BASE_PATH}/images/users/h1-blog-user-1.png`, `${BASE_PATH}/images/users/h1-blog-user-2.png`, `${BASE_PATH}/images/users/h1-blog-user-3.png`];
 
 export function BlogTeaser({ subtitle, title, text, button, posts }) {
   return (

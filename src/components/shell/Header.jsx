@@ -5,6 +5,7 @@ import Link from 'next/link';
 import FlipText from '@/components/ui/FlipText';
 import { nav } from '@/data/services-meta';
 import { site } from '@/data/site';
+import { BASE_PATH } from '@/lib/basePath';
 
 function Logo() {
   return (
@@ -98,7 +99,7 @@ function Offcanvas({ open, onClose }) {
           </div>
           <div className="offcanvas_action d-none d-lg-block">
             <h5 className="greetings">
-              Glad you&apos;re here! <img alt="" loading="lazy" width="28" height="28" src="/images/icons/start.svg" />
+              Glad you&apos;re here! <img alt="" loading="lazy" width="28" height="28" src={`${BASE_PATH}/images/icons/start.svg`} />
             </h5>
             <Link className="tj_text_btn" href="/about" onClick={onClose}>
               Get to know us <i className="tji-arrow-right" />
@@ -106,7 +107,7 @@ function Offcanvas({ open, onClose }) {
           </div>
           <div className="offcanvas_gallery tj_gallery d-none d-lg-block">
             {[1, 2, 3, 4].map((n) => (
-              <img key={n} alt="" loading="lazy" width="219" height="251" className="gallery_img" style={{ height: 'auto' }} src={`/images/gallery/offcanvas-gallery-img-${n}.png`} />
+              <img key={n} alt="" loading="lazy" width="219" height="251" className="gallery_img" style={{ height: 'auto' }} src={`${BASE_PATH}/images/gallery/offcanvas-gallery-img-${n}.png`} />
             ))}
           </div>
           <div className="offcanvas_menu mobile_menu mean-container d-lg-none">

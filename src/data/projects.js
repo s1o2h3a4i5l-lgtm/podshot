@@ -1,3 +1,4 @@
+import { BASE_PATH } from '@/lib/basePath';
 // SAMPLE CONTENT: these case studies are written as realistic examples so the layout can be reviewed.
 // Replace every project with real client work (and real numbers) before the site goes live.
 export const projects = [
@@ -8,7 +9,7 @@ export const projects = [
     category: 'Campaigns',
     services: ['Google Ads', 'Landing page'],
     year: '2025',
-    image: '/images/projects/h1-project-img-1.webp',
+    image: `${BASE_PATH}/images/projects/h1-project-img-1.webp`,
     summary: 'Search ads and a simple landing page that turned clicks into booked consultations.',
     brief: 'The clinic was spending on ads but most clicks came from people outside Pune or looking for free advice. Calls were few and hard to track.',
     steps: [
@@ -32,7 +33,7 @@ export const projects = [
     category: 'Social media',
     services: ['Social Media Marketing', 'Reels'],
     year: '2025',
-    image: '/images/projects/h1-project-img-2.webp',
+    image: `${BASE_PATH}/images/projects/h1-project-img-2.webp`,
     summary: 'A month of planned reels and stories that gave people a reason to visit.',
     brief: 'The cafe had good food and a nice space, but the Instagram page was quiet and posts went out at random.',
     steps: [
@@ -56,7 +57,7 @@ export const projects = [
     category: 'Websites',
     services: ['Website Development', 'SEO'],
     year: '2026',
-    image: '/images/projects/h1-project-img-5.webp',
+    image: `${BASE_PATH}/images/projects/h1-project-img-5.webp`,
     summary: 'A fast, mobile-first site with course pages and an enquiry form.',
     brief: 'The old site was slow, hard to use on phones and did not show up on Google for course searches.',
     steps: [
@@ -80,7 +81,7 @@ export const projects = [
     category: 'Local SEO',
     services: ['Local SEO and Google Business Profile'],
     year: '2025',
-    image: '/images/projects/h3-project-1.webp',
+    image: `${BASE_PATH}/images/projects/h3-project-1.webp`,
     summary: 'A cleaned-up Google profile, regular posts and a review plan.',
     brief: 'The salon was hard to find on Google Maps, even for people standing a few streets away.',
     steps: [

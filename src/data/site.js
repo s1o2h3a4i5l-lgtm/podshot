@@ -1,9 +1,10 @@
+import { BASE_PATH } from '@/lib/basePath';
 // Company details used across the whole site.
 export const site = {
   name: 'PodShot',
   legalName: 'Podshot Studio & Creative Agency',
   tagline: 'Digital marketing in Pune',
-  logo: '/brand/podshot-logo.png',
+  logo: `${BASE_PATH}/brand/podshot-logo.png`,
   city: 'Wakad, Pune',
   address: ['2nd floor, above HDFC Bank, Dange Chowk,', 'Hinjewadi Road, Wakad, Pune 411033'],
   hours: 'Mon to Sat, 10:00 AM to 6:30 PM',

@@ -31,3 +31,33 @@ function flatten(root, parent, prefix) {
 
 walk(OUT);
 console.log(`postbuild: wrote ${copied} flat prefetch files`);
+
+// GitHub Pages build only (GH_PAGES=1): safety net for any asset path we didn't prefix in source
+// (vendor CSS we don't hand-edit, anything missed). Rewrites unprefixed /images|videos|brand|gif
+// |icons|favicon references across every output file to carry the /podshot basePath, so nothing
+// 404s once served from https://<user>.github.io/podshot/. No-op for the normal (local/prod) build.
+if (process.env.GH_PAGES === '1') {
+  const BASE = '/podshot';
+  const assetRe = /(["'(])\/(images|videos|brand|gif|icons|favicon|fonts)([^"')]*)/g;
+  let patched = 0;
+  let filesTouched = 0;
+
+  function walkPatch(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) { walkPatch(full); continue; }
+      if (!/\.(html|css|js|txt|json)$/.test(entry.name)) continue;
+      const text = fs.readFileSync(full, 'utf8');
+      let changed = false;
+      const next = text.replace(assetRe, (m, lead, group, rest, offset) => {
+        if (text.slice(Math.max(0, offset - BASE.length - 1), offset + 1 + group.length) === `${BASE}/${group}`) return m;
+        changed = true;
+        patched += 1;
+        return `${lead}${BASE}/${group}${rest}`;
+      });
+      if (changed) { fs.writeFileSync(full, next); filesTouched += 1; }
+    }
+  }
+  walkPatch(OUT);
+  console.log(`postbuild: GH_PAGES safety net patched ${patched} asset paths across ${filesTouched} files`);
+}

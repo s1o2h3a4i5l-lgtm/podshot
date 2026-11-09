@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FlipText from '@/components/ui/FlipText';
 import { whatsappLink } from '@/data/site';
+import { BASE_PATH } from '@/lib/basePath';
 
 export default function Cta({ title = 'Let’s talk!', primary = 'Chat on WhatsApp', secondary = 'Send us a brief', message = 'Hi PodShot, I would like to talk about my brand.' }) {
   return (
@@ -14,7 +15,7 @@ export default function Cta({ title = 'Let’s talk!', primary = 'Chat on WhatsA
               <div className="cta_buttons d-inline-flex flex-wrap tj-fade" data-direction="right">
                 <a className="tj_user_profile flip-text-wrap" href={whatsappLink(message)} target="_blank" rel="noreferrer">
                   <div className="avatar">
-                    <img alt="" loading="lazy" width="96" height="96" src="/images/users/h1-hero-user-img.png" />
+                    <img alt="" loading="lazy" width="96" height="96" src={`${BASE_PATH}/images/users/h1-hero-user-img.png`} />
                   </div>
                   <div className="name flip-text"><FlipText>{primary}</FlipText></div>
                 </a>

@@ -1,3 +1,4 @@
+import { BASE_PATH } from '@/lib/basePath';
 // Blog posts moved from podshot.in and rewritten in plain language.
 // Body blocks: ['p', text] paragraph, ['h2', text] heading, ['ul', [items]] list, ['quote', text] pull quote.
 export const posts = [
@@ -7,7 +8,7 @@ export const posts = [
     category: 'Marketing',
     date: '20 Jan 2026',
     author: 'PodShot Team',
-    image: '/images/blog/h1-blog-img-2.webp',
+    image: `${BASE_PATH}/images/blog/h1-blog-img-2.webp`,
     excerpt: 'Wakad is busy and competitive online. Here is what a good marketing partner should do for a local business, and what to watch out for.',
     body: [
       ['p', 'Wakad has grown fast. Startups, IT firms, clinics, cafes and service businesses all compete for the same local customers, and most of that competition happens on Google and Instagram.'],

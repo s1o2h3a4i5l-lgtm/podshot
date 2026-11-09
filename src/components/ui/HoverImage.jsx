@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+import { BASE_PATH } from '@/lib/basePath';
 
 const vertex = `
 attribute vec2 uv;
@@ -31,7 +32,7 @@ void main() {
 }
 `;
 
-export default function HoverImage({ src, href, alt = '', displacement = '/images/webgl/23.png', intensity = 0.6, speedIn = 1, speedOut = 1, width, height }) {
+export default function HoverImage({ src, href, alt = '', displacement = `${BASE_PATH}/images/webgl/23.png`, intensity = 0.6, speedIn = 1, speedOut = 1, width, height }) {
   const ref = useRef(null);
 
   useEffect(() => {

@@ -2,9 +2,10 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { BASE_PATH } from '@/lib/basePath';
 
 const lerp = (a, b, n) => (1 - n) * a + n * b;
-const IMAGES = Array.from({ length: 10 }, (_, i) => `/images/hero/img-${i + 1}.webp`);
+const IMAGES = Array.from({ length: 10 }, (_, i) => `${BASE_PATH}/images/hero/img-${i + 1}.webp`);
 
 // Images that follow the mouse across the Home 02 hero, ported from Agina.
 export default function ImageTrail({ images = IMAGES }) {

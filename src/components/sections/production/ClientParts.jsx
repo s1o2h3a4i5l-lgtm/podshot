@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { RoundIconButton, BoxButton } from '@/components/ui/Buttons2';
 import { sendToWhatsApp } from '@/lib/whatsappForm';
+import { BASE_PATH } from '@/lib/basePath';
 
 // Home 03 big-text service list: hovering a row activates it and swaps the sticky icon.
 export function StickyServiceList({ subtitle, text, button, items }) {
@@ -59,7 +60,7 @@ export function StickyServiceList({ subtitle, text, button, items }) {
 // Home 03 red form band, used as a short enquiry form that opens WhatsApp.
 export function FormBand({ subtitle, title, link, fields, submit, intro }) {
   return (
-    <section className="tj-contact-section container-space tj-image-distortion tj-bg-image fix section-parallax-target" data-bg-image="/images/contact/contact-bg.png" style={{ backgroundImage: 'url(/images/contact/contact-bg.png)' }}>
+    <section className="tj-contact-section container-space tj-image-distortion tj-bg-image fix section-parallax-target" data-bg-image={`${BASE_PATH}/images/contact/contact-bg.png`} style={{ backgroundImage: 'url(/images/contact/contact-bg.png)' }}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-6 col-lg-5">

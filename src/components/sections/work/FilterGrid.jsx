@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import FlipText from '@/components/ui/FlipText';
+import { BASE_PATH } from '@/lib/basePath';
 import { IconButton, ArrowIcon } from '@/components/ui/Buttons';
 
 const WIDTHS = ['tj-w-100', 'tj-w-66', 'tj-w-34', 'tj-w-50', 'tj-w-50', 'tj-w-25', 'tj-w-25', 'tj-w-50'];
@@ -32,7 +33,7 @@ export default function FilterGrid({ items, filters, button = { label: 'Start a 
               {shown.map((p, i) => (
                 <div key={p.href} className={`tj_project_item tj_filter_item ${active === 'All' ? WIDTHS[i % WIDTHS.length] : 'tj-w-50'}`}>
                   <div className="project_image">
-                    <Link href={p.href}><img alt={p.title} width="1190" height="720" src={p.image || `/images/projects/${IMAGES[i % IMAGES.length]}.webp`} /></Link>
+                    <Link href={p.href}><img alt={p.title} width="1190" height="720" src={p.image || `${BASE_PATH}/images/projects/${IMAGES[i % IMAGES.length]}.webp`} /></Link>
                   </div>
                   <div className="project_content">
                     <div className="project_title_wrap">

@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { BASE_PATH } from '@/lib/basePath';
 
-const IMAGES = Array.from({ length: 10 }, (_, i) => `/images/hero/img-${i + 1}.webp`);
+const IMAGES = Array.from({ length: 10 }, (_, i) => `${BASE_PATH}/images/hero/img-${i + 1}.webp`);
 const AUTO_SPEED = 14; // degrees per second
 const DRAG = 0.35; // degrees per pixel dragged
 const SPRING = 30;

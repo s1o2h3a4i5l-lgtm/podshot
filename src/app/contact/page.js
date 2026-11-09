@@ -1,6 +1,7 @@
 import { ContactForm, OfficeMap } from '@/components/sections/contact/ContactClient';
 import { site } from '@/data/site';
 import { services } from '@/data/services-meta';
+import { BASE_PATH } from '@/lib/basePath';
 
 export const metadata = {
   title: 'Contact Us',
@@ -38,7 +39,7 @@ export default function ContactPage() {
               <div className="col">
                 <div className="contact-location-wrap ps-two-locations">
                   <div className="contact-location-item tj-fade" data-delay="0.3">
-                    <div className="country-flag"><img alt="" loading="lazy" width="90" height="90" style={{ height: 'auto' }} src="/brand/podshot-logo.png" /></div>
+                    <div className="country-flag"><img alt="" loading="lazy" width="90" height="90" style={{ height: 'auto' }} src={`${BASE_PATH}/brand/podshot-logo.png`} /></div>
                     <div className="tj_contact">
                       <div className="contact_info">{site.address[0]}<br />{site.address[1]}</div>
                       <div className="contact_info">{site.hours}</div>
@@ -47,7 +48,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="contact-location-item tj-fade" data-delay="0.5">
-                    <div className="country-flag"><img alt="" loading="lazy" width="90" height="90" style={{ height: 'auto' }} src="/brand/podshot-logo.png" /></div>
+                    <div className="country-flag"><img alt="" loading="lazy" width="90" height="90" style={{ height: 'auto' }} src={`${BASE_PATH}/brand/podshot-logo.png`} /></div>
                     <div className="tj_contact">
                       <div className="contact_info">Need a podcast studio?<br />Visit our sister brand.</div>
                       <div className="contact_info">PodShot Studio, Wakad and Hinjewadi</div>
@@ -80,7 +81,7 @@ export default function ContactPage() {
                     {site.socials.map((s) => <li key={s.label}><a href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}><i className={s.icon} /></a></li>)}
                   </ul>
                 </div>
-                <div className="purpose-video"><video autoPlay loop muted playsInline><source src="/videos/h1-hero-2.mp4" type="video/mp4" /></video></div>
+                <div className="purpose-video"><video autoPlay loop muted playsInline><source src={`${BASE_PATH}/videos/h1-hero-2.mp4`} type="video/mp4" /></video></div>
               </div>
             </div>
             <div className="col-lg-6">

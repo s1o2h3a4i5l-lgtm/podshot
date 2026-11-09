@@ -1,5 +1,6 @@
 import { SolidButton } from '@/components/ui/Buttons';
 import GuideToc from '@/components/ui/GuideToc';
+import { BASE_PATH } from '@/lib/basePath';
 
 // Renders article blocks with Agina's blog body styles.
 // ['p', text] ['h2', text] ['h3', text] ['ul', [items]] ['ol', [items]] ['quote', text] ['table', { head: [], rows: [[]] }] ['img', src]
@@ -22,7 +23,7 @@ export function ArticleBody({ blocks, quoteAuthor = { name: 'PodShot Team', role
         <blockquote key={i} className="tj-fade">
           <p>“{value}”</p>
           <div className="tj_blog_author">
-            <div className="author_images"><img alt="" loading="lazy" width="160" height="160" style={{ height: 'auto' }} src="/images/blog/blog-author.png" /></div>
+            <div className="author_images"><img alt="" loading="lazy" width="160" height="160" style={{ height: 'auto' }} src={`${BASE_PATH}/images/blog/blog-author.png`} /></div>
             <div className="author_text">
               <div className="author_name fs-20"><span>By </span>{quoteAuthor.name}</div>
               <span className="author_degination">{quoteAuthor.role}</span>

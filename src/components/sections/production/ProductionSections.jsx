@@ -3,9 +3,10 @@ import FlipText from '@/components/ui/FlipText';
 import { BoxButton, RoundIconButton } from '@/components/ui/Buttons2';
 import { IconButton } from '@/components/ui/Buttons';
 import VideoPopup from '@/components/ui/VideoPopup';
+import { BASE_PATH } from '@/lib/basePath';
 
-const USERS = ['/images/users/user-list-img-1.png', '/images/users/user-list-img-2.png', '/images/users/user-list-img-3.png', '/images/users/user-list-img-4.png'];
-const PURPOSE = ['/images/purpose/purpose-2.webp', '/images/purpose/purpose-3.webp', '/images/purpose/purpose-4.webp'];
+const USERS = [`${BASE_PATH}/images/users/user-list-img-1.png`, `${BASE_PATH}/images/users/user-list-img-2.png`, `${BASE_PATH}/images/users/user-list-img-3.png`, `${BASE_PATH}/images/users/user-list-img-4.png`];
+const PURPOSE = [`${BASE_PATH}/images/purpose/purpose-2.webp`, `${BASE_PATH}/images/purpose/purpose-3.webp`, `${BASE_PATH}/images/purpose/purpose-4.webp`];
 
 function Tags({ tags }) {
   return (
@@ -28,12 +29,12 @@ export function UsersTrust({ count, text, className = 'trusted_text tj-fz-h5 fw-
 }
 
 // Home 03's two-screen hero: a portrait intro that opens into three reasons with a video.
-export function WindowHero({ title, tags, text, button, trust, reasons, video = '/videos/h1-hero-2.mp4' }) {
+export function WindowHero({ title, tags, text, button, trust, reasons, video = `${BASE_PATH}/videos/h1-hero-2.mp4` }) {
   return (
     <section className="window-shape-section">
       <div className="window-shape-wrapper">
         <div className="h3-hero-section window-shape-screen window-shape-screen-1">
-          <div className="tj-bg-image tj-bg-image-absolute" style={{ backgroundImage: 'url(/images/hero/h3-hero-bg.webp)' }} />
+          <div className="tj-bg-image tj-bg-image-absolute" style={{ backgroundImage: `url(${BASE_PATH}/images/hero/h3-hero-bg.webp)` }} />
           <div className="container-fluid">
             <div className="row">
               <div className="col">
@@ -58,7 +59,7 @@ export function WindowHero({ title, tags, text, button, trust, reasons, video = 
           </div>
         </div>
         <div className="window-shape-img">
-          <img alt="" loading="lazy" width="60" height="57" style={{ height: 'auto' }} src="/images/shapes/window-shape.svg" />
+          <img alt="" loading="lazy" width="60" height="57" style={{ height: 'auto' }} src={`${BASE_PATH}/images/shapes/window-shape.svg`} />
         </div>
         <div className="purpose section-gap tj-progress-wrapper container-space window-shape-screen window-shape-screen-2 fix">
           <div className="purpose-wrapper">
@@ -144,7 +145,7 @@ export function ProjectGallery({ subtitle, button, items }) {
   );
 }
 
-export function DarkCallout({ subtitle, title, text, button, video, trust, image = '/images/service/service-img-2.webp' }) {
+export function DarkCallout({ subtitle, title, text, button, video, trust, image = `${BASE_PATH}/images/service/service-img-2.webp` }) {
   return (
     <section className="service-work-section container-space tj-theme-dark fix">
       <div className="container-fluid">

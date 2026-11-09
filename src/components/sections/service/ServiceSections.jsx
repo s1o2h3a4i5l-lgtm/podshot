@@ -3,10 +3,11 @@ import Link from 'next/link';
 import { IconButton, UserButton } from '@/components/ui/Buttons';
 import FlipText from '@/components/ui/FlipText';
 import { site } from '@/data/site';
+import { BASE_PATH } from '@/lib/basePath';
 
 const Sub = ({ children, direction = 'right' }) => <span className="sec_subtitle tj-fade" data-direction={direction}>[ <span>{children}</span> ]</span>;
 
-export function ServiceBanner({ title, tags, text, image = '/images/service/service-details.webp', listTitle = 'What you get', list, back = { label: 'All services', href: '/digital-marketing' }, primary = { label: 'Get a free quote', href: '/contact' }, secondary = { label: 'See our work', href: '/work' } }) {
+export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/service/service-details.webp`, listTitle = 'What you get', list, back = { label: 'All services', href: '/digital-marketing' }, primary = { label: 'Get a free quote', href: '/contact' }, secondary = { label: 'See our work', href: '/work' } }) {
   return (
     <section className="service-details-banner fix">
       <div className="container-space">
@@ -51,7 +52,7 @@ export function ServiceBanner({ title, tags, text, image = '/images/service/serv
   );
 }
 
-export function WhyChoose({ subtitle, title, text, items, image = '/images/service/choose-img.webp' }) {
+export function WhyChoose({ subtitle, title, text, items, image = `${BASE_PATH}/images/service/choose-img.webp` }) {
   return (
     <section className="why-choose-section container-space sidebar-sticky-container">
       <div className="container-fluid">
@@ -145,7 +146,7 @@ export function ProcessCards({ subtitle, title, steps, button = { label: 'Start 
   );
 }
 
-export function IconCards({ subtitle, title, items, image = '/images/feature/career-feature.webp' }) {
+export function IconCards({ subtitle, title, items, image = `${BASE_PATH}/images/feature/career-feature.webp` }) {
   return (
     <section className="career_features">
       <div className="container-space">
@@ -271,7 +272,7 @@ export function ResultsChecklist({ subtitle, title, text, points }) {
   );
 }
 
-export function ThreeBlocks({ subtitle, title, items, image = '/images/about/about-img-4.webp' }) {
+export function ThreeBlocks({ subtitle, title, items, image = `${BASE_PATH}/images/about/about-img-4.webp` }) {
   return (
     <section className="tj-future-goal-section container-space fix">
       <div className="container-fluid">
@@ -348,8 +349,8 @@ export function ServiceRows({ subtitle, title, items }) {
 }
 
 const STRIP = [
-  ['/images/careers/careers-gallery-1.webp', 386, 412], ['/images/careers/careers-gallery-2.webp', 612, 588],
-  ['/images/careers/careers-gallery-3.webp', 386, 412], ['/images/careers/careers-gallery-4.webp', 550, 588],
+  [`${BASE_PATH}/images/careers/careers-gallery-1.webp`, 386, 412], [`${BASE_PATH}/images/careers/careers-gallery-2.webp`, 612, 588],
+  [`${BASE_PATH}/images/careers/careers-gallery-3.webp`, 386, 412], [`${BASE_PATH}/images/careers/careers-gallery-4.webp`, 550, 588],
 ];
 
 export function ImageStrip() {
@@ -368,7 +369,7 @@ export function ImageStrip() {
   );
 }
 
-const GALLERY = Array.from({ length: 12 }, (_, i) => `/images/projects/gallery-project-${i + 1}.webp`);
+const GALLERY = Array.from({ length: 12 }, (_, i) => `${BASE_PATH}/images/projects/gallery-project-${i + 1}.webp`);
 
 export function GalleryShowcase({ titles, word = 'PodShot' }) {
   const items = [...GALLERY, ...GALLERY].map((src, i) => ({ src, title: titles[i % titles.length] }));
@@ -389,7 +390,7 @@ export function GalleryShowcase({ titles, word = 'PodShot' }) {
   );
 }
 
-const PERSPECTIVE = ['/images/projects/h1-project-img-1.webp', '/images/projects/h1-project-img-2.webp', '/images/projects/h1-project-img-3.webp', '/images/projects/h1-project-img-4.webp', '/images/projects/h1-project-img-5.webp', '/images/projects/skew-project-5.png', '/images/projects/skew-project-6.png', '/images/projects/skew-project-8.png'];
+const PERSPECTIVE = [`${BASE_PATH}/images/projects/h1-project-img-1.webp`, `${BASE_PATH}/images/projects/h1-project-img-2.webp`, `${BASE_PATH}/images/projects/h1-project-img-3.webp`, `${BASE_PATH}/images/projects/h1-project-img-4.webp`, `${BASE_PATH}/images/projects/h1-project-img-5.webp`, `${BASE_PATH}/images/projects/skew-project-5.png`, `${BASE_PATH}/images/projects/skew-project-6.png`, `${BASE_PATH}/images/projects/skew-project-8.png`];
 
 export function PerspectiveShowcase({ items }) {
   const list = items.map((it, i) => ({ ...it, image: it.image || PERSPECTIVE[i % PERSPECTIVE.length] }));

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { BoxButton } from '@/components/ui/Buttons2';
 import { site } from '@/data/site';
+import { BASE_PATH } from '@/lib/basePath';
 
 function Accordion({ items, id }) {
   const [open, setOpen] = useState(0);
@@ -39,7 +40,7 @@ export default function Faq({ subtitle = 'Common questions', title, items, card,
             <div className="section_heading d-block d-lg-none">{heading}</div>
             <div className="faq-card sidebar-sticky">
               <div className="tj-author-profile">
-                <div className="author-img"><img alt="" loading="lazy" width="160" height="160" style={{ height: 'auto' }} src="/images/users/user-img-5.png" /></div>
+                <div className="author-img"><img alt="" loading="lazy" width="160" height="160" style={{ height: 'auto' }} src={`${BASE_PATH}/images/users/user-img-5.png`} /></div>
                 <div className="author-info">
                   <h3 className="name tj-fz-h5">PodShot Team</h3>
                   <span className="designation">Here to help</span>

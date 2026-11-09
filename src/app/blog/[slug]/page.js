@@ -6,6 +6,7 @@ import { ArticleBody } from '@/components/sections/Article';
 import Cta from '@/components/sections/Cta';
 import { posts, postHref } from '@/data/blog';
 import { site } from '@/data/site';
+import { BASE_PATH } from '@/lib/basePath';
 
 export const dynamicParams = false;
 
@@ -53,7 +54,7 @@ export default async function PostPage({ params }) {
               <div className="tj_blog_sidebar">
                 <div className="tj_blog_author_info tj-fade">
                   <div className="tj_blog_author">
-                    <div className="author_images"><img alt="" loading="lazy" width="80" height="80" style={{ height: 'auto' }} src="/images/blog/blog-author.png" /></div>
+                    <div className="author_images"><img alt="" loading="lazy" width="80" height="80" style={{ height: 'auto' }} src={`${BASE_PATH}/images/blog/blog-author.png`} /></div>
                     <div className="author_text">
                       <div className="author_name fs-20"><span>By </span>{p.author}</div>
                       <span className="author_degination">Wakad, Pune</span>
@@ -93,7 +94,7 @@ export default async function PostPage({ params }) {
             </div>
             <div className="col-lg-8">
               <div className="tj_blog_details_body">
-                <div className="tj_blog_details_image tj-fade"><img alt={p.title} width="1788" height="1080" style={{ height: 'auto' }} src="/images/blog/blog-details.webp" /></div>
+                <div className="tj_blog_details_image tj-fade"><img alt={p.title} width="1788" height="1080" style={{ height: 'auto' }} src={`${BASE_PATH}/images/blog/blog-details.webp`} /></div>
                 <ArticleBody blocks={p.body} />
               </div>
             </div>

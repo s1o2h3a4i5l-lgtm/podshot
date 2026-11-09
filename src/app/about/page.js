@@ -4,13 +4,14 @@ import { TeamCards } from '@/components/sections/home/HomeSections';
 import CardsTestimonials from '@/components/sections/CardsTestimonials';
 import Cta from '@/components/sections/Cta';
 import { team, testimonials } from '@/data/people';
+import { BASE_PATH } from '@/lib/basePath';
 
 export const metadata = {
   title: 'About PodShot',
   description: 'PodShot is a creative and digital marketing agency in Wakad, Pune. One team for content, campaigns and growth.',
 };
 
-const GALLERY = [1, 2, 3, 4].map((n) => `/images/about/about-gallery-${n}.webp`);
+const GALLERY = [1, 2, 3, 4].map((n) => `${BASE_PATH}/images/about/about-gallery-${n}.webp`);
 
 export default function AboutPage() {
   return (

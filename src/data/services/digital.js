@@ -1,4 +1,5 @@
 import { projects, projectHref } from '../projects';
+import { BASE_PATH } from '@/lib/basePath';
 
 const related = (cats) => projects.filter((p) => cats.includes(p.category)).concat(projects).slice(0, 4)
   .map((p) => ({ title: p.title, category: p.category, year: p.year, image: p.image, href: projectHref(p) }));
@@ -13,7 +14,7 @@ export const digital = {
       tags: ['Strategy', 'Reels', 'Management'],
       text: 'Content that people stop for, plus the planning that keeps your pages growing. We plan, shoot, post and reply, so you can run your business.',
       list: ['Monthly content plan', 'Reels and short videos', 'Posts and carousels', 'Captions and hashtags', 'Comments and messages', 'Monthly report'],
-      image: '/images/service/service-details.webp',
+      image: `${BASE_PATH}/images/service/service-details.webp`,
     },
     sections: [
       { type: 'whyChoose', subtitle: 'Why PodShot', title: 'Posts that look good and actually bring business', text: 'Random posting does not grow a brand. We start with who your customers are, what they watch and what makes them trust you, then build every post around that.', items: [
@@ -30,10 +31,10 @@ export const digital = {
         { title: 'Paid social', tags: ['Meta ads'], points: ['Boosts that make sense', 'Lead form ads', 'Retargeting', 'Monthly optimisation'] },
       ] },
       { type: 'pinnedReels', subtitle: 'Reels we make', title: 'Short videos, real results', button: { label: 'See packages', href: '/packages' }, items: [
-        { title: 'Clinic myth buster', label: 'Educational reel', image: '/images/team/team-member-4.png' },
-        { title: 'New menu launch', label: 'Cafe reel', image: '/images/team/team-member-1.png' },
-        { title: 'Founder story', label: 'Personal brand', image: '/images/team/team-member-2.png' },
-        { title: 'Before and after', label: 'Salon reel', image: '/images/team/team-member-3.png' },
+        { title: 'Clinic myth buster', label: 'Educational reel', image: `${BASE_PATH}/images/team/team-member-4.png` },
+        { title: 'New menu launch', label: 'Cafe reel', image: `${BASE_PATH}/images/team/team-member-1.png` },
+        { title: 'Founder story', label: 'Personal brand', image: `${BASE_PATH}/images/team/team-member-2.png` },
+        { title: 'Before and after', label: 'Salon reel', image: `${BASE_PATH}/images/team/team-member-3.png` },
       ] },
       { type: 'stepRow', subtitle: 'How it works', title: 'One simple monthly rhythm.', text: 'Once a month we plan, shoot and schedule. During the month we post, reply and watch the numbers. Then we use what we learned to make next month better.', steps: [
         { title: 'Strategy call', text: 'We learn your goals, customers and offers.' },
@@ -76,7 +77,7 @@ export const digital = {
       tags: ['Rankings', 'Content', 'Technical'],
       text: 'Get found. Get clicked. Get customers. People search before they buy, and we make sure they find you, not your competitor.',
       list: ['Keyword research', 'On-page SEO', 'Technical fixes', 'Local SEO', 'SEO content', 'Monthly reports'],
-      image: '/images/service/service-img.webp',
+      image: `${BASE_PATH}/images/service/service-img.webp`,
     },
     sections: [
       { type: 'stats', subtitle: 'Results that matter', title: 'More visitors who are ready to buy, not just more traffic.', text: 'SEO should bring enquiries. We track the numbers that show it is working.', items: [
@@ -142,7 +143,7 @@ export const digital = {
       tags: ['Google Maps', 'Reviews', 'Calls'],
       text: 'Everyone searches "near me". We make sure your business shows up in the top 3 on Google Maps, with the reviews and photos that make people choose you.',
       list: ['Profile setup and fixes', 'Weekly posts', 'Review plan', 'Local citations', 'Maps ranking work', 'Monthly report'],
-      image: '/images/service/service-details.webp',
+      image: `${BASE_PATH}/images/service/service-details.webp`,
     },
     sections: [
       { type: 'iconCards', subtitle: 'Why PodShot', title: 'Ranking on Maps is a plan, not luck.', items: [
@@ -206,7 +207,7 @@ export const digital = {
       tags: ['Search', 'Leads', 'ROI'],
       text: 'Get quality leads, real customers and clear numbers. Google Ads is not about spending more, it is about spending smart.',
       list: ['Account setup', 'Search ads', 'Display ads', 'YouTube ads', 'Performance Max', 'Retargeting'],
-      image: '/images/service/service-img.webp',
+      image: `${BASE_PATH}/images/service/service-img.webp`,
     },
     sections: [
       { type: 'stats', subtitle: 'Performance snapshot', title: 'What well-run Google Ads do for local businesses.', text: 'These are patterns we see often. Your results depend on your market and budget.', items: [
@@ -264,7 +265,7 @@ export const digital = {
       tags: ['Video ads', 'Reach', 'Retargeting'],
       text: 'Reach more people, build trust and sell with video. We write the ad, shoot it and run it, so the story and the targeting work together.',
       list: ['Video strategy', 'Scripts and hooks', 'Ad shoot and edit', 'Campaign setup', 'Retargeting', 'A/B testing'],
-      image: '/images/service/service-details.webp',
+      image: `${BASE_PATH}/images/service/service-details.webp`,
     },
     sections: [
       { type: 'threeBlocks', subtitle: 'Why YouTube', title: 'Why YouTube ads work so well.', items: [
@@ -282,7 +283,7 @@ export const digital = {
         { title: 'Shoot and edit', text: 'Our crew shoots and edits the ad, in every length and size you need.', tags: ['Shoot', 'Edit', 'Cut downs'] },
         { title: 'Target, test and scale', text: 'We target the right people, test versions and put more budget behind the winner.', tags: ['Targeting', 'A/B tests', 'Scale'] },
       ] },
-      { type: 'mediaCallout', subtitle: 'See an example', title: 'A YouTube ad made and run by PodShot.', text: 'Watch a sample ad. The same team that filmed it also set up the campaign that ran it.', button: { label: 'Play sample ad' }, video: '/videos/h1-hero-2.mp4' },
+      { type: 'mediaCallout', subtitle: 'See an example', title: 'A YouTube ad made and run by PodShot.', text: 'Watch a sample ad. The same team that filmed it also set up the campaign that ran it.', button: { label: 'Play sample ad' }, video: `${BASE_PATH}/videos/h1-hero-2.mp4` },
       { type: 'listRows', subtitle: 'What is included', title: 'Our YouTube advertising services.', items: [
         { title: 'Video strategy and planning', label: 'Audience, message, budget' },
         { title: 'Creative video production', label: 'Shot by our own crew' },
@@ -316,7 +317,7 @@ export const digital = {
       tags: ['AI images', 'AI video', 'Editing'],
       text: 'AI-made images and videos for your ads, socials and website, finished by our human editors so they look real and on brand.',
       list: ['AI product images', 'AI lifestyle scenes', 'AI spokesperson videos', 'AI reels', 'Storyboards and concepts', 'Human finishing'],
-      image: '/images/service/service-img.webp',
+      image: `${BASE_PATH}/images/service/service-img.webp`,
     },
     sections: [
       { type: 'threeBlocks', subtitle: 'Why AI content', title: 'Why AI content matters for brands now.', items: [
@@ -364,7 +365,7 @@ export const digital = {
       tags: ['Design', 'Build', 'SEO ready'],
       text: 'Modern, fast websites built to grow your business. Your site should look good, load quickly and make it easy for people to contact you.',
       list: ['Custom design', 'Business websites', 'E-commerce stores', 'Landing pages', 'Redesigns', 'Maintenance'],
-      image: '/images/service/service-details.webp',
+      image: `${BASE_PATH}/images/service/service-details.webp`,
     },
     sections: [
       { type: 'perspectiveShowcase', items: [
