@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,40298,e=>{"use strict";e.S([56850,"Program,f",0,21663,"Renderer,f",0,80075,"Mesh,f",0,99925,"Texture,f",0,53604,"Triangle,f"])}]);
