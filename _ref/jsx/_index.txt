@@ -1,0 +1,124 @@
+home-01__00  h1-hero-section container-space h1HeroAnimation
+home-01__01  h1-video-section container-space h1HeroAnimation
+home-01__02  h1-about-section container-space fix
+home-01__03  h1-features-section container-space fix
+home-01__04  h1-process-section container-space fix section-divider
+home-01__05  h1-project-section container-space fix
+home-01__06  h1-services-section container-space tj-theme-dark fix
+home-01__07  h1-team-section container-space fix
+home-01__08  h1-testimonial-section container-space tj-theme-bg-2 fix
+home-01__09  h1-client-section tj-theme-bg-2 fix
+home-01__10  h1-blog-section container-space fix
+home-01__11  h1-cta-section container-space fix
+home-01__12  h1-footer-area footer-1 tj-theme-dark
+home-02__00  h2-hero-section container-space
+home-02__01  h2-about-section container-space fix
+home-02__02  h2-marquee-section fix
+home-02__03  h2-service-section fix
+home-02__04  h2-award-section container-space fix
+home-02__05  h2-project-section tj-theme-dark fix
+home-02__06  h2-pricing-section container-space fix
+home-02__07  h2-testimonial-section fix
+home-02__08  h2-blog-section container-space fix
+home-02__09  h2-client-section container-space tj-theme-bg section-parallax-target 
+home-02__10  h2-footer-area footer-2 tj-theme-dark section-parallax fix
+home-03__00  window-shape-section
+home-03__01  h3_about_section section-divider container-space fix title-img-anim-co
+home-03__02  h3-project-section container-space section-divider
+home-03__03  section-divider tj-fade
+home-03__04  h3-service-section container-space sidebar-sticky-container
+home-03__05  h3-testimonial-section-wrapper tj-theme-dark
+home-03__06  tj-faq-section container-space sidebar-sticky-container
+home-03__07  h3-team-section team_pin_area_container container-space
+home-03__08  h3_client_section container-space
+home-03__09  h3-blog-section container-space section-divider
+home-03__10  tj-contact-section container-space tj-image-distortion tj-bg-image fix
+home-03__11  h3-footer-area tj-theme-dark fix section-parallax
+about__00  inner_top_gap
+about__01  tj-about-section fix
+about__02  tj-future-goal-section container-space fix
+about__03  tj-timeline-section container-space tj-theme-dark fix
+about__04  h1-team-section about-team-section container-space fix
+about__05  more-team-section container-space fix
+about__06  about-testimonial-section container-space tj-theme-bg-2 fix
+about__07  h3_client_section container-space
+about__08  h1-cta-section container-space fix
+about__09  h1-footer-area footer-1 tj-theme-dark
+services__00  inner_top_gap
+services__01  service-banner fix
+services__02  tj-services-section container-space fix
+services__03  service-work-section container-space tj-theme-dark fix
+services__04  h2-pricing-section container-space fix
+services__05  tj-faq-section container-space sidebar-sticky-container tj-border-top
+services__06  h1-cta-section container-space fix
+services__07  h1-footer-area footer-1 tj-theme-dark
+service-details__00  inner_top_gap
+service-details__01  service-details-banner fix
+service-details__02  why-choose-section container-space sidebar-sticky-container
+service-details__03  related-project-section container-space tj-theme-dark
+service-details__04  tj-identity-section container-space
+service-details__05  working-process-section container-space tj-theme-dark
+service-details__06  tj-faq-section-2 container-space
+service-details__07  h1-cta-section container-space fix
+service-details__08  h1-footer-area footer-1 tj-theme-dark
+project__00  inner_top_gap
+project__01  service-banner fix
+project__02  project-filter-section container-space fix tj-fade
+project__03  h1-cta-section container-space fix
+project__04  h1-footer-area footer-1 tj-theme-dark
+project-details__00  inner_top_gap
+project-details__01  service-details-banner fix
+project-details__02  project-details-section container-space
+project-details__03  project-details-section container-space
+project-details__04  result-impact-section container-space tj-theme-bg
+project-details__05  project-testimonial-section tj-theme-bg-2 fix
+project-details__06  final-conclusion-section container-space tj-theme-bg
+project-details__07  h1-cta-section container-space fix
+project-details__08  h1-footer-area footer-1 tj-theme-dark
+pricing__00  inner_top_gap
+pricing__01  service-banner pricing-banner fix
+pricing__02  tj-faq-section container-space sidebar-sticky-container tj-border-top
+pricing__03  h1-cta-section container-space fix
+pricing__04  h1-footer-area footer-1 tj-theme-dark
+contact__00  tj-contact-banner container-space
+contact__01  contact-location-section fix
+contact__02  tj-contact-section-3 container-space fix
+contact__03  h1-cta-section container-space fix
+contact__04  h1-footer-area footer-1 tj-theme-dark
+blog__00  inner_top_gap
+blog__01  tj_blog_featured container-space
+blog__02  tj_blog_grid_area container-space tj_filter section-divider fix
+blog__03  h1-cta-section container-space fix
+blog__04  h1-footer-area footer-1 tj-theme-dark
+blog-details__00  tj_blog_details container-space
+blog-details__01  h1-cta-section container-space fix
+blog-details__02  h1-footer-area footer-1 tj-theme-dark
+gallery-showcase__00  gallery-showcase-section fix tj-theme-dark
+perspective-showcase__00  perspective-showcase-section container-space
+skew-showcase__00  skew-showcase-section container-space fix
+team__00  inner_top_gap
+team__01  service-banner fix
+team__02  team-section-4 about-team-section container-space tj-theme-bg fix posi
+team__03  join-team-section tj-theme-dark fix
+team__04  more-team-section more-team-2 container-space tj-theme-bg fix position
+team__05  h1-cta-section container-space fix
+team__06  h1-footer-area footer-1 tj-theme-dark
+team-details__00  tj-team-details container-space
+team-details__01  team-section-5 about-team-section container-space fix tj-theme-bg-2
+team-details__02  tj-contact-section-2 container-space fix
+team-details__03  h1-cta-section container-space fix
+team-details__04  h1-footer-area footer-1 tj-theme-dark
+careers__00  inner_top_gap
+careers__01  career_about
+careers__02  career_features
+careers__03  career-opening-section container-space tj-theme-dark fix
+careers__04  career-gallery-section tj-theme-bg fix position-relative z-1
+careers__05  h1-cta-section container-space fix
+careers__06  h1-footer-area footer-1 tj-theme-dark
+error__00  inner_top_gap
+error__01  tj-error-section
+error__02  h1-cta-section container-space fix
+error__03  h1-footer-area footer-1 tj-theme-dark
+policy__00  tj-policy-privacy container-space
+policy__01  h1-cta-section container-space fix
+policy__02  h1-footer-area footer-1 tj-theme-dark

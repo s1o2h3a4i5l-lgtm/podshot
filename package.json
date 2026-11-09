@@ -4,17 +4,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node tools/postbuild.js",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.1",
+    "leaflet": "^1.9.4",
     "next": "16.4.5",
+    "ogl": "^1.0.11",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "swiper": "^14.4.0"
   },
   "devDependencies": {
     "eslint": "^9",
-    "eslint-config-next": "16.4.5"
+    "eslint-config-next": "16.4.5",
+    "node-html-parser": "^9.0.6"
   }
 }
