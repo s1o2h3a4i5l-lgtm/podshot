@@ -23,7 +23,6 @@ export function ArticleBody({ blocks, quoteAuthor = { name: 'PodShot Team', role
         <blockquote key={i} className="tj-fade">
           <p>“{value}”</p>
           <div className="tj_blog_author">
-            <div className="author_images"><img alt="" loading="lazy" width="160" height="160" style={{ height: 'auto' }} src={`${BASE_PATH}/images/blog/blog-author.png`} /></div>
             <div className="author_text">
               <div className="author_name fs-20"><span>By </span>{quoteAuthor.name}</div>
               <span className="author_degination">{quoteAuthor.role}</span>
@@ -124,7 +123,7 @@ export function Guide({ subtitle = 'The full guide', title, blocks }) {
               {closing.length > 0 && (
                 <div className="ps-guide-cta tj-fade">
                   {closing.map(([, t], i) => <p key={i}>{t}</p>)}
-                  <SolidButton href="/contact">Book a free call</SolidButton>
+                  <SolidButton href="/contact#contact-form">Book a free call</SolidButton>
                 </div>
               )}
             </div>

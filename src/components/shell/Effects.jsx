@@ -10,7 +10,7 @@ import mobileEffects from '@/lib/mobileEffects';
 export default function Effects() {
   const pathname = usePathname();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!window.location.hash) window.scrollTo(0, 0);
     const stopEffects = tn();
     const stopHold = sectionHold();
     const stopMobile = mobileEffects();

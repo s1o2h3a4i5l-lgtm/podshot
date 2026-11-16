@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import FlipText from '@/components/ui/FlipText';
-import { IconButton, BorderedButton, UserButton, ArrowIcon } from '@/components/ui/Buttons';
+import { Anchor, IconButton, BorderedButton, UserButton, ArrowIcon } from '@/components/ui/Buttons';
 import HoverImage from '@/components/ui/HoverImage';
 import ShowreelVideo from '@/components/ui/ShowreelVideo';
 import HeroRing from '@/components/ui/HeroRing';
@@ -66,7 +66,7 @@ export function Showreel({ video = `${BASE_PATH}/videos/podshot-showreel.mp4` })
   );
 }
 
-export function About({ subtitle, title, text, button, trustedCount, trustedText, image = `${BASE_PATH}/images/about/h1-about-img.jpg` }) {
+export function About({ subtitle, title, text, button, trustedCount, trustedText, image = `${BASE_PATH}/images/about/about-us.png` }) {
   const users = [`${BASE_PATH}/images/users/user-list-img-1.png`, `${BASE_PATH}/images/users/user-list-img-2.png`, `${BASE_PATH}/images/users/user-list-img-3.png`, `${BASE_PATH}/images/users/user-list-img-4.png`];
   return (
     <section className="h1-about-section container-space fix" id="h1-about">
@@ -206,42 +206,62 @@ export function Process({ subtitle, title, steps, images = PROCESS_IMAGES }) {
   );
 }
 
-export function ProjectShowcase({ subtitle, titleLead, title, projects, button }) {
+export function ProjectShowcase({ subtitle, titleLead, title, text, projects, button }) {
   return (
     <section className="h1-project-section container-space fix">
       <div className="container-fluid">
         <div className="row">
           <div className="col">
             <div className="h1_projects_wrapper">
-              <div className="section_heading ">
+              <div className="section_heading">
                 <span className="sec_subtitle tj-fade">[ <span>{subtitle}</span> ]</span>
-                <h2 className="sec_title tj-reveal-line"><span className="space">{titleLead}</span> {title}</h2>
+                <h2 className="sec_title tj-reveal-line">
+                  {titleLead ? <><span className="space">{titleLead}</span> {title}</> : title}
+                </h2>
               </div>
+              {(button || text) && (
+                <div className="h1_projects_header_bottom d-flex flex-wrap align-items-center justify-content-between">
+                  {button && (
+                    <div className="tj-fade d-none d-lg-inline-flex" data-direction="left">
+                      <IconButton href={button.href} className="view-more-btn">{button.label}</IconButton>
+                    </div>
+                  )}
+                  {text && (
+                    <div className="project_desc fs-18 tj-fade" data-direction="right">{text}</div>
+                  )}
+                </div>
+              )}
             </div>
             <div className="h1_projects_wrap tj-fade">
               <div className="h1_projects_items">
-                {projects.map((p) => (
-                  <div key={p.slug} className="tj_project_item tj--hover-item">
-                    <div className="project_image">
-                      <HoverImage src={p.image} href={projectHref(p)} alt={p.title} width="1326" height="900" />
-                      <Link className="category flip-text-wrap" href={projectHref(p)}><span className="flip-text"><FlipText>{p.category}</FlipText></span></Link>
+                {projects.map((p) => {
+                  const href = p.url || projectHref(p);
+                  return (
+                    <div key={p.slug} className="tj_project_item tj--hover-item">
+                      <div className="project_image">
+                        <HoverImage src={p.image} href={href} alt={p.title} width="1326" height="900" />
+                      </div>
+                      <div className="project_content">
+                        <h3 className="project_title tj-fz-h5">
+                          <Anchor href={href}>
+                            <span className="icon_btn"><ArrowIcon /></span>
+                            <span className="text">{p.title}</span>
+                          </Anchor>
+                        </h3>
+                        <Anchor className="project_year project_cta flip-text-wrap" href={href}>
+                          [ <span className="flip-text"><FlipText>{p.cta || p.year}</FlipText></span> ]
+                        </Anchor>
+                      </div>
                     </div>
-                    <div className="project_content">
-                      <h3 className="project_title tj-fz-h5">
-                        <Link href={projectHref(p)}>
-                          <span className="icon_btn"><ArrowIcon /></span>
-                          <span className="text">{p.title}</span>
-                        </Link>
-                      </h3>
-                      <div className="project_year">[ <span>{p.year}</span> ]</div>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <div className="projects-progress"><span /></div>
-              <div className="projects_more_button text-center text-lg-end tj-fade">
-                <IconButton href={button.href} className="view-more-btn">{button.label}</IconButton>
-              </div>
+              {button && (
+                <div className="projects_more_button text-center mt-4 d-lg-none tj-fade">
+                  <IconButton href={button.href} className="view-more-btn">{button.label}</IconButton>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -343,9 +363,13 @@ export function TeamCards({ text, subtitle, title, button, members }) {
   );
 }
 
+const CLIENTS = [
+  { name: 'RPG Life Sciences', src: `${BASE_PATH}/images/clients/rpg-logo-clean.png`, width: 700, height: 334 },
+  { name: 'Sustainida', src: `${BASE_PATH}/images/clients/sustainida-black.png`, width: 120, height: 120 },
+];
+
 export function ClientStrip({ subtitle }) {
-  const logos = [1, 2, 3, 4, 5, 6, 7, 8];
-  const row = [...logos, ...logos, ...logos, ...logos];
+  const row = [...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS];
   return (
     <div className="h1-client-section tj-theme-bg-2 fix">
       <div className="container-fluid px-0">
@@ -357,16 +381,17 @@ export function ClientStrip({ subtitle }) {
               </div>
               <div className="h1_client_slider_wrap tj-fade">
                 <div className="scroll-slider" data-scroll-speed="40" style={{ '--duration': '40s', '--gap': '30px' }}>
-                  <div className="scroll-wrapper">
-                    {row.map((n, i) => (
-                      <div key={i} className="tj_client_item">
-                        <span>
-                          <img alt="Client logo" loading="lazy" width="205" height="72" className="front" style={{ height: 'auto' }} src={`${BASE_PATH}/images/clients/client-black-img-${n}.png`} />
-                          <img alt="" loading="lazy" width="205" height="72" className="back" style={{ height: 'auto' }} src={`${BASE_PATH}/images/clients/client-white-img-${n}.png`} />
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  {[0, 1].map((track) => (
+                    <div key={track} className="scroll-wrapper" aria-hidden={track === 1 || undefined}>
+                      {row.map((c, i) => (
+                        <div key={`${track}-${c.name}-${i}`} className="tj_client_item">
+                          <span>
+                            <img alt={c.name} width={c.width} height={c.height} src={c.src} />
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -377,7 +402,7 @@ export function ClientStrip({ subtitle }) {
   );
 }
 
-const BLOG_AUTHOR_IMAGES = [`${BASE_PATH}/images/users/h1-blog-user-1.png`, `${BASE_PATH}/images/users/h1-blog-user-2.png`, `${BASE_PATH}/images/users/h1-blog-user-3.png`];
+/* Author avatar images removed – kept text-only byline */
 
 export function BlogTeaser({ subtitle, title, text, button, posts }) {
   return (
@@ -403,7 +428,6 @@ export function BlogTeaser({ subtitle, title, text, button, posts }) {
                     <div className="blog_content">
                       <div className="blog_meta">
                         <div className="blog_meta_item author">
-                          <img alt="" loading="lazy" width="184" height="184" className="author_img" src={BLOG_AUTHOR_IMAGES[i % 3]} />
                           <span>By <Link href={postHref(p)}>{p.author}</Link></span>
                         </div>
                         <div className="blog_meta_item date"><span>{p.date}</span></div>

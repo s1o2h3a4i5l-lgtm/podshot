@@ -8,7 +8,6 @@ import FlipText from '@/components/ui/FlipText';
 import { UnderlineButton } from '@/components/ui/Marquee';
 import { ArrowIcon } from '@/components/ui/Buttons';
 import { postHref } from '@/data/blog';
-import { BASE_PATH } from '@/lib/basePath';
 
 function PostCard({ p, big = false, light = false, className = '', direction }) {
   const Title = big ? 'h2' : 'h3';
@@ -28,6 +27,33 @@ function PostCard({ p, big = false, light = false, className = '', direction }) 
   );
 }
 
+
+export function BlogHero() {
+  return (
+    <section className="ps-blog-hero text-center fix">
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          <div className="col-12 col-xl-9 text-center">
+            <div className="ps-blog-hero-centered">
+              <div className="ps-blog-single-line tj-fade">
+                <span className="ps-blog-badge">[ BLOG ]</span>
+                <span className="ps-blog-sep">•</span>
+                <span className="ps-blog-line-text">Articles, guides &amp; marketing tips for growing businesses</span>
+              </div>
+              <h1 className="ps-blog-hero-heading tj-reveal-line">
+                Marketing tips for local brands
+              </h1>
+              <p className="ps-blog-hero-subline tj-fade">
+                Simple, practical advice on SEO, ads, social media and video content — written for business owners, not marketers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function BlogFeatured({ subtitle, title, posts }) {
   const [first, ...rest] = posts;
   return (
@@ -37,7 +63,7 @@ export function BlogFeatured({ subtitle, title, posts }) {
           <div className="col">
             <div className="section_heading">
               <span className="sec_subtitle tj-fade">[ <span>{subtitle}</span> ]</span>
-              <h1 className="sec_title tj-reveal-line">{title}</h1>
+              <h2 className="sec_title tj-reveal-line">{title}</h2>
             </div>
             <div className="tj_blog_featured_wrapper">
               <PostCard p={first} big light className="tj-fade" direction="left" />
@@ -54,19 +80,21 @@ export function BlogGrid({ title, posts, filters }) {
   const [active, setActive] = useState('All');
   const shown = active === 'All' ? posts : posts.filter((p) => p.category === active);
   return (
-    <section className="tj_blog_grid_area container-space tj_filter section-divider fix">
+    <section className="tj_blog_grid_area container-space tj_filter fix">
       <div className="container-fluid">
         <div className="row">
           <div className="col">
-            <div className="tj_blog_grid_header d-flex flex-wrap align-items-center  justify-content-between gap-4">
-              <div className="section_heading"><h2 className="sec_title tj-reveal-line">{title}</h2></div>
-              <div className="tj_filter_btn_group category-wrap">
-                {['All', ...filters].map((f) => (
-                  <button key={f} type="button" className={`tj_filter_btn category flip-text-wrap${active === f ? ' active' : ''}`} onClick={() => setActive(f)}>
-                    <span className="flip-text"><FlipText>{f}</FlipText></span>
-                  </button>
-                ))}
+            {title && (
+              <div className="section_heading text-center mb-4">
+                <h2 className="sec_title tj-reveal-line">{title}</h2>
               </div>
+            )}
+            <div className="tj_filter_btn_group category-wrap justify-content-center">
+              {Array.from(new Set(['All', ...(filters || [])])).map((f) => (
+                <button key={f} type="button" className={`tj_filter_btn category flip-text-wrap${active === f ? ' active' : ''}`} onClick={() => setActive(f)}>
+                  <span className="flip-text"><FlipText>{f}</FlipText></span>
+                </button>
+              ))}
             </div>
             <div className="tj_blog_grid tj_filter_item_wrapper">
               {shown.map((p) => <PostCard key={p.slug} p={p} className="tj_filter_item" />)}
@@ -78,7 +106,7 @@ export function BlogGrid({ title, posts, filters }) {
   );
 }
 
-export function Timeline({ subtitle, title, text, items, image = `${BASE_PATH}/images/timeline/timeline-img.png` }) {
+export function Timeline({ subtitle, title, text, items, image = null }) {
   const swiper = useRef(null);
   return (
     <section className="tj-timeline-section container-space tj-theme-dark fix">
@@ -90,7 +118,7 @@ export function Timeline({ subtitle, title, text, items, image = `${BASE_PATH}/i
               <h2 className="sec_title fs-230 tj-reveal-line">{title}</h2>
             </div>
             <div className="timeline-content-area">
-              <div className="timeline-img tj-fade"><img alt="" loading="lazy" width="450" height="450" style={{ height: 'auto' }} src={image} /></div>
+              {image && <div className="timeline-img tj-fade"><img alt="" loading="lazy" width="450" height="450" style={{ height: 'auto' }} src={image} /></div>}
               <h2 className="timeline-content tj-fade" data-delay="0.7">{text}</h2>
             </div>
           </div>

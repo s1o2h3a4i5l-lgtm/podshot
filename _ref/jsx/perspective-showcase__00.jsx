@@ -90,7 +90,7 @@
               <div className="perspective-showcase-item works-item">
                 <div className="perspective-showcase-img">
                   <a href="/project/brandmark">
-                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/h1-project-img-1.webp" />
+                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/project-3.webp" />
                   </a>
                 </div>
                 <div className="perspective-showcase-content d-xl-none">
@@ -120,7 +120,7 @@
               <div className="perspective-showcase-item works-item">
                 <div className="perspective-showcase-img">
                   <a href="/project/brandmark">
-                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/h1-project-img-2.webp" />
+                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/project-2.png" />
                   </a>
                 </div>
                 <div className="perspective-showcase-content d-xl-none">
@@ -210,7 +210,7 @@
               <div className="perspective-showcase-item works-item">
                 <div className="perspective-showcase-img">
                   <a href="/project/brandmark">
-                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/h1-project-img-5.webp" />
+                    <img alt="" loading="lazy" width="1326" height="900" style={{ color: 'transparent' }} src="/images/projects/project.png" />
                   </a>
                 </div>
                 <div className="perspective-showcase-content d-xl-none">

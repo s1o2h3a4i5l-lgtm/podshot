@@ -60,7 +60,6 @@ export default function TestimonialSlider({ subtitle, items }) {
                   {items.map((t, i) => (
                     <SwiperSlide key={i}>
                       <div className="tj-author-profile author">
-                        <div className="author-img"><img alt="" loading="lazy" width="160" height="160" src={t.avatar} /></div>
                         <div className="author-info">
                           <h3 className="name"><span>{t.name}</span></h3>
                           <span className="designation"><span>{t.role}</span></span>

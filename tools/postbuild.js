@@ -32,13 +32,12 @@ function flatten(root, parent, prefix) {
 walk(OUT);
 console.log(`postbuild: wrote ${copied} flat prefetch files`);
 
-// GitHub Pages build only (GH_PAGES=1): safety net for any asset path we didn't prefix in source
-// (vendor CSS we don't hand-edit, anything missed). Rewrites unprefixed /images|videos|brand|gif
-// |icons|favicon references across every output file to carry the /podshot basePath, so nothing
-// 404s once served from https://<user>.github.io/podshot/. No-op for the normal (local/prod) build.
-if (process.env.GH_PAGES === '1') {
-  const BASE = '/podshot';
-  const assetRe = /(["'(])\/(images|videos|brand|gif|icons|favicon|fonts)([^"')]*)/g;
+// Prefix any leftover unprefixed root asset URLs when exporting for a subfolder (SITE_BASE_PATH or GH_PAGES=1).
+const rawBase = process.env.SITE_BASE_PATH || (process.env.GH_PAGES === '1' ? '/podshot' : '');
+const BASE = rawBase ? `/${rawBase.replace(/^\/+|\/+$/g, '')}` : '';
+
+if (BASE) {
+  const assetRe = /(["'(])\/(images|videos|brand|gif|icons|favicon|fonts|map-tiles)([^"')]*)/g;
   let patched = 0;
   let filesTouched = 0;
 
@@ -59,5 +58,16 @@ if (process.env.GH_PAGES === '1') {
     }
   }
   walkPatch(OUT);
-  console.log(`postbuild: GH_PAGES safety net patched ${patched} asset paths across ${filesTouched} files`);
+  console.log(`postbuild: basePath(${BASE}) patched ${patched} asset paths across ${filesTouched} files`);
 }
+
+// Write .htaccess so Apache/cPanel serves trailingSlash directory indexes cleanly without parent rewrite interference.
+const htaccess = [
+  'DirectoryIndex index.html',
+  'Options -Indexes',
+  'RewriteEngine On',
+  `ErrorDocument 404 ${BASE}/404.html`,
+  '',
+].join('\n');
+fs.writeFileSync(path.join(OUT, '.htaccess'), htaccess);
+console.log(`postbuild: wrote ${BASE ? `subfolder (${BASE})` : 'root'} .htaccess`);

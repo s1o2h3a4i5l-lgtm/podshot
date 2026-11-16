@@ -45,7 +45,7 @@ export function CaseBanner({ project }) {
               <div className="service_details_header_right tj-fade" data-delay="0.3">
                 <p className="desc fs-18">{project.brief}</p>
                 <div className="btn-wrap">
-                  <IconButton href="/contact">Get similar results</IconButton>
+                  <IconButton href="/contact#contact-form">Get similar results</IconButton>
                   <a className="tj_text_btn" href={site.whatsapp} target="_blank" rel="noreferrer">Chat on WhatsApp</a>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export function CaseBanner({ project }) {
           <div className="service_details_intro row">
             <div className="col-lg-8">
               <div className="service_details_img tj-fade" data-delay="0.3">
-                <img data-move="1.8" alt={project.title} width="1190" height="892" className="parallax-image" style={{ height: 'auto' }} src={`${BASE_PATH}/images/projects/project-details.webp`} />
+                <img data-move="1.8" alt={project.title} width="1190" height="892" className="parallax-image" style={{ height: 'auto' }} src={project.image || `${BASE_PATH}/images/projects/project-details.webp`} />
               </div>
             </div>
             <div className="col-lg-4">
@@ -88,7 +88,6 @@ export function ClientStory({ quote, rating = 5 }) {
             <div className="col">
               <div className="project-testimonial-wrap tj-fade" data-delay="0.3">
                 <div className="tj_testimonial_item project_testimonial_item">
-                  <div className="author-img"><img alt="" loading="lazy" width="333" height="333" style={{ height: 'auto' }} src={`${BASE_PATH}/images/users/project-owner.png`} /></div>
                   <div className="testimonial_content_wrapper">
                     <div className="testimonial_content">
                       <Rating value={rating} />

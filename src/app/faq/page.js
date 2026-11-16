@@ -5,7 +5,7 @@ import { faqGroups } from '@/data/faqs';
 
 export const metadata = {
   title: 'FAQs | Wakad, Pune',
-  description: 'Answers to common questions about working with PodShot: marketing, shoots, packages, timelines and payments.',
+  description: 'Answers to common questions about working with PodShot: marketing, shoots, timelines and payments.',
 };
 
 export default function FaqPage() {

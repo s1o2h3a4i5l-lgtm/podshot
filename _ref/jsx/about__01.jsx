@@ -34,7 +34,7 @@
             <img alt="Image" loading="lazy" width="612" height="588" style={{ color: 'transparent' }} src="/images/about/about-gallery-1.webp" />
           </div>
           <div className="about_gallery_item active">
-            <img alt="Image" loading="lazy" width="612" height="588" style={{ color: 'transparent' }} src="/images/about/about-gallery-2.webp" />
+            <img alt="Image" loading="lazy" width="612" height="588" style={{ color: 'transparent' }} src="/images/about/about-us.png" />
           </div>
           <div className="about_gallery_item">
             <img alt="Image" loading="lazy" width="612" height="588" style={{ color: 'transparent' }} src="/images/about/about-gallery-3.webp" />

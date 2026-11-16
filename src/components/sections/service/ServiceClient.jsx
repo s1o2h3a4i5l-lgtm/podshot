@@ -43,7 +43,9 @@ export function RelatedSlider({ subtitle, title, items }) {
                     <div className="tj_project_item tj--hover-item">
                       <div className="project_image">
                         <HoverImage src={p.image} href={p.href} alt={p.title} width="870" height="765" />
-                        <Link className="category flip-text-wrap" href={p.href}><span className="flip-text"><FlipText>{p.category}</FlipText></span></Link>
+                        {p.category && p.category !== 'Software' && (
+                          <Link className="category flip-text-wrap" href={p.href}><span className="flip-text"><FlipText>{p.category}</FlipText></span></Link>
+                        )}
                       </div>
                       <div className="project_content">
                         <h3 className="project_title tj-fz-h5">

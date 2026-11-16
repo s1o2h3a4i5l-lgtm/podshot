@@ -79,7 +79,7 @@
             </div>
           </div>
           <div className="about_img" data-speed="2">
-            <img alt="Image" loading="lazy" width="344" height="414" style={{ color: 'transparent', height: 'auto' }} src="/images/about/h1-about-img.jpg" />
+            <img alt="Image" loading="lazy" width="344" height="414" style={{ color: 'transparent', height: 'auto' }} src="/images/about/about-us.png" />
           </div>
         </div>
       </div>

@@ -44,7 +44,6 @@ export default function CardsTestimonials({ subtitle, title, items }) {
                     <div className={`tj_testimonial_item about_testimonial_item${i % 2 ? ' tj-theme-bg-dark' : ''}`}>
                       <div className="testimonial_top">
                         <div className="tj-author-profile">
-                          <div className="author-img"><img alt="" loading="lazy" width="160" height="160" src={t.avatar} /></div>
                           <div className="author-info">
                             <h3 className="name tj-fz-h5">{t.name}</h3>
                             <span className="designation">{t.role}</span>

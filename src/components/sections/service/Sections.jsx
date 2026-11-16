@@ -2,7 +2,7 @@
 // Each entry is { type, ...props }. Add new section types here when needed.
 import { WhyChoose, Stats, ProcessCards, IconCards, CardGrid, StepRow, ResultsChecklist, ThreeBlocks, ServiceRows, ImageStrip, GalleryShowcase, PerspectiveShowcase, SkewShowcase } from './ServiceSections';
 import { RelatedSlider, PercentCircles } from './ServiceClient';
-import { ServiceCards, ListRows, PortfolioList, PricingSection } from '@/components/sections/digital/DigitalSections';
+import { ServiceCards, ListRows, PortfolioList } from '@/components/sections/digital/DigitalSections';
 import { PinnedPortraits, DarkCallout, ProjectGallery } from '@/components/sections/production/ProductionSections';
 import { Process, TeamCards } from '@/components/sections/home/HomeSections';
 import { Guide } from '@/components/sections/Article';
@@ -26,7 +26,6 @@ const TYPES = {
   stackedCards: ServiceCards,
   listRows: ListRows,
   portfolioList: PortfolioList,
-  pricing: PricingSection,
   pinnedReels: PinnedPortraits,
   mediaCallout: DarkCallout,
   projectGallery: ProjectGallery,

@@ -1,19 +1,31 @@
 import { PageBanner } from '@/components/sections/work/WorkSections';
 import FilterGrid from '@/components/sections/work/FilterGrid';
+import { ClientStrip } from '@/components/sections/home/HomeSections';
 import Cta from '@/components/sections/Cta';
-import { projects, projectHref, workFilters } from '@/data/projects';
+import { projects, localSeoItems, projectHref, workFilters } from '@/data/projects';
 
 export const metadata = {
-  title: 'Our Work: Campaigns, Shoots and Results',
-  description: 'Case studies from PodShot: Google Ads, social media, websites, local SEO, product shoots and ad films for brands in Pune.',
+  title: 'Our Work: Software, Local SEO & Clients',
+  description: 'Software products, local SEO growth case studies and clients we work with at PodShot in Pune.',
 };
 
 export default function WorkPage() {
+  const workItems = [
+    ...projects.map((p) => ({
+      title: p.title,
+      category: p.category,
+      year: p.year,
+      image: p.image,
+      href: projectHref(p),
+    })),
+    ...localSeoItems,
+  ];
   return (
     <>
       <div className="inner_top_gap" />
-      <PageBanner subtitle="Our work" title="Campaigns, content and the results they brought for Pune brands." />
-      <FilterGrid filters={workFilters} items={projects.map((p) => ({ title: p.title, category: p.category, year: p.year, href: projectHref(p) }))} />
+      <PageBanner subtitle="Our work" title="Custom software, local SEO results and the clients we partner with." />
+      <FilterGrid filters={workFilters} items={workItems} />
+      <ClientStrip subtitle="Clients we work with" />
       <Cta title="Your project next?" message="Hi PodShot, I saw your work and would like to talk about my project." />
     </>
   );

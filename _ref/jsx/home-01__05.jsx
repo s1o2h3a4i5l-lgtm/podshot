@@ -24,7 +24,7 @@
             <div className="tj_project_item tj--hover-item">
               <div className="project_image">
                 <a className="tj--hover-img" data-displacement="/images/webgl/23.png" data-intensity="0.6" data-speedin="1" data-speedout="1" href="/project/brandmark">
-                  <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/h1-project-img-1.webp" />
+                  <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/project-3.webp" />
                 </a>
                 <a className="category flip-text-wrap" href="/project/brandmark">
                   <span className="flip-text">
@@ -63,7 +63,7 @@
             <div className="tj_project_item tj--hover-item">
               <div className="project_image">
                 <a className="tj--hover-img" data-displacement="/images/webgl/23.png" data-intensity="0.6" data-speedin="1" data-speedout="1" href="/project/stationery">
-                  <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/h1-project-img-2.webp" />
+                  <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/project-2.png" />
                 </a>
                 <a className="category flip-text-wrap" href="/project/stationery">
                   <span className="flip-text">

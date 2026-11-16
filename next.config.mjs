@@ -1,17 +1,19 @@
 /** @type {import('next').NextConfig} */
-// GitHub Pages serves this repo at https://<user>.github.io/podshot/, not the domain root,
-// so every asset/link must be prefixed with /podshot or they'll 404 there.
-// Set GH_PAGES=1 only for the Pages build; local dev/build stays at the root as before.
-const forPages = process.env.GH_PAGES === '1';
+// Subfolder deployments (GitHub Pages /podshot or test cPanel folder like /podshot-creative-agency)
+// need basePath/assetPrefix set at build time so CSS, JS chunks, images and links resolve under that path.
+// Default `npm run build` leaves basePath empty for root domain hosting.
+const rawBase = process.env.SITE_BASE_PATH || (process.env.GH_PAGES === '1' ? '/podshot' : '');
+const basePath = rawBase ? `/${rawBase.replace(/^\/+|\/+$/g, '')}` : '';
 
 const nextConfig = {
   output: 'export',
+  trailingSlash: true,
   images: { unoptimized: true },
-  ...(forPages
+  ...(basePath
     ? {
-        basePath: '/podshot',
-        assetPrefix: '/podshot',
-        env: { NEXT_PUBLIC_BASE_PATH: '/podshot' },
+        basePath,
+        assetPrefix: basePath,
+        env: { NEXT_PUBLIC_BASE_PATH: basePath },
       }
     : {}),
 };

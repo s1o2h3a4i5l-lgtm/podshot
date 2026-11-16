@@ -1,8 +1,8 @@
-import { Hero, Showreel, About, Features, Process, ProjectShowcase, ServicesList, TeamCards, ClientStrip, BlogTeaser } from '@/components/sections/home/HomeSections';
+import { Hero, Showreel, About, Features, Process, ProjectShowcase, ServicesList, ClientStrip, BlogTeaser } from '@/components/sections/home/HomeSections';
 import TestimonialSlider from '@/components/sections/home/TestimonialSlider';
 import Cta from '@/components/sections/Cta';
 import { projects } from '@/data/projects';
-import { testimonials, team } from '@/data/people';
+import { testimonials /* , team */ } from '@/data/people';
 import { posts } from '@/data/blog';
 import { site } from '@/data/site';
 
@@ -40,17 +40,17 @@ export default function HomePage() {
         subtitle="How we work"
         title="Our simple process."
         steps={[
-          { title: 'Audit and plan', text: 'We look at where your customers come from today, what your competitors do and where the quick wins are. Then we agree on clear goals.', tags: ['Free audit', 'Goals', 'Monthly plan'] },
-          { title: 'Create the content', text: 'Our team writes, shoots and edits everything: reels, product photos, ads and website pages, all in your brand style.', tags: ['Scripts', 'Shoots', 'Edits'] },
-          { title: 'Run, measure, improve', text: 'We publish, run the ads and track every lead. Each month you get a simple report and a plan for what to do next.', tags: ['Ads', 'Reports', 'Growth'] },
+          { title: 'Audit and plan', text: 'We look at where your customers come from today, what your competitors do and where the quick wins are. Then we agree on clear goals.', tags: ['Channel audit', 'Competitor check', '90-day roadmap'] },
+          { title: 'Create the content', text: 'Our team writes, shoots and edits everything: reels, product photos, ads and website pages, all in your brand style.', tags: ['Reels & shoots', 'Ad creatives', 'Web & landing pages'] },
+          { title: 'Run, measure, improve', text: 'We publish, run the ads and track every lead. Each month you get a simple report and a plan for what to do next.', tags: ['Campaign setup', 'Lead tracking', 'Monthly review'] },
         ]}
       />
       <ProjectShowcase
-        subtitle="Our work in action"
-        titleLead="Real"
-        title="campaigns, shoots and results"
+        subtitle="Software & Systems"
+        title="Smart tools to run & scale your business"
+        text="Pre-built software systems to run your daily operations so you can focus on customers. Pick the one your business needs."
+        button={{ label: 'Explore all programs', href: '/programs' }}
         projects={projects.slice(0, 4)}
-        button={{ label: 'See all our work', href: '/work' }}
       />
       <ServicesList
         subtitle="What we do"
@@ -58,13 +58,13 @@ export default function HomePage() {
         text="SEO, social media, ads and websites that bring you customers, plus the content that makes them worth watching. Pick one service or let us handle all of it."
         button={{ label: 'View all services', href: '/digital-marketing' }}
       />
-      <TeamCards
+      {/* <TeamCard
         text="A small team of marketers, editors, shooters and designers who work on your brand every week."
         subtitle="Meet the team"
         title="The people behind your growth"
         button={{ label: 'More about us', href: '/about' }}
         members={team}
-      />
+      /> */}
       <TestimonialSlider subtitle="What our clients say" items={testimonials} />
       <ClientStrip subtitle="Brands we work with" />
       <BlogTeaser

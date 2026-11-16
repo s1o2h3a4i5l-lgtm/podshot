@@ -9,15 +9,15 @@ import { groups, services, serviceHref } from '@/data/services-meta';
 const company = [
   { label: 'Home', href: '/' },
   { label: 'About us', href: '/about' },
+  { label: 'Programs', href: '/programs' },
   { label: 'Our work', href: '/work' },
-  { label: 'Packages', href: '/packages' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 
 const featured = services.filter((s) => s.flagship);
 const serviceLinks = [
-  { label: groups.digital.name, href: groups.digital.href },
+  { label: 'All digital marketing', href: groups.digital.href },
   ...featured.map((s) => ({ label: s.short, href: serviceHref(s) })),
 ];
 
@@ -74,7 +74,7 @@ export default function Footer() {
                 <hr className="tj-fade" data-delay=".5" />
                 <FooterLinks title="Company" links={company} delay=".6" />
                 <hr className="tj-fade" data-delay=".6" />
-                <FooterLinks title="Services" links={serviceLinks} delay=".7" />
+                <FooterLinks title="Digital Marketing" links={serviceLinks} delay=".7" />
                 <hr className="tj-fade" data-delay=".7" />
                 <div className="tj_footer_widget footer_contact tj-fade" data-delay=".8">
                   <div className="tj_footer_contact">

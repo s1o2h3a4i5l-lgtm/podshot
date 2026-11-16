@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation';
 import { ServiceBanner } from '@/components/sections/service/ServiceSections';
-import { RelatedSlider } from '@/components/sections/service/ServiceClient';
 import Sections from '@/components/sections/service/Sections';
 import Faq from '@/components/sections/Faq';
 import Cta from '@/components/sections/Cta';
 import { services, groups } from '@/data/services-meta';
-import { digital, related } from '@/data/services/digital';
+import { digital } from '@/data/services/digital';
 
 const content = { ...digital };
 
@@ -26,14 +25,12 @@ export default async function ServicePage({ params }) {
   const meta = services.find((s) => s.slug === slug);
   const c = content[slug];
   if (!meta || !c) notFound();
-  const group = groups[meta.group];
-  const work = related(['Campaigns', 'Websites', 'Local SEO', 'Social media']);
+  const group = groups[meta.group] || groups.digital;
   return (
     <>
       <div className="inner_top_gap" />
       <ServiceBanner back={{ label: `All ${group.name.toLowerCase()}`, href: group.href }} {...c.banner} />
       <Sections sections={c.sections} />
-      <RelatedSlider subtitle="Related work" title="Recent projects" items={work} />
       <Faq title={`Questions about ${meta.name.toLowerCase()}`} items={c.faqs} border />
       <Cta message={`Hi PodShot, I am interested in ${meta.name}.`} />
     </>

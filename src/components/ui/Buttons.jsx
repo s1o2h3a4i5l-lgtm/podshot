@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import FlipText from './FlipText';
-import { BASE_PATH } from '@/lib/basePath';
 
 const isExternal = (href) => /^(https?:|mailto:|tel:)/.test(href);
 
@@ -40,10 +39,9 @@ export function SolidButton({ href, children, className = '' }) {
   );
 }
 
-export function UserButton({ href, children, avatar = `${BASE_PATH}/images/users/h1-hero-user-img.png` }) {
+export function UserButton({ href, children }) {
   return (
     <Anchor className="tj_user_profile flip-text-wrap" href={href}>
-      <div className="avatar"><img alt="" loading="lazy" width="96" height="96" src={avatar} /></div>
       <div className="name flip-text"><FlipText>{children}</FlipText></div>
     </Anchor>
   );

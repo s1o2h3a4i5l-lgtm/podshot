@@ -7,7 +7,7 @@ import { BASE_PATH } from '@/lib/basePath';
 
 const Sub = ({ children, direction = 'right' }) => <span className="sec_subtitle tj-fade" data-direction={direction}>[ <span>{children}</span> ]</span>;
 
-export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/service/service-details.webp`, listTitle = 'What you get', list, back = { label: 'All services', href: '/digital-marketing' }, primary = { label: 'Get a free quote', href: '/contact' }, secondary = { label: 'See our work', href: '/work' } }) {
+export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/service/service-details.webp`, listTitle = 'What you get', list, back = { label: 'All services', href: '/digital-marketing' }, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary = { label: 'See our work', href: '/work' } }) {
   return (
     <section className="service-details-banner fix">
       <div className="container-space">
@@ -117,7 +117,7 @@ export function Stats({ subtitle, title, text, button = { label: 'Book a free ca
   );
 }
 
-export function ProcessCards({ subtitle, title, steps, button = { label: 'Start your project', href: '/contact' } }) {
+export function ProcessCards({ subtitle, title, steps, button = { label: 'Start your project', href: '/contact#contact-form' } }) {
   return (
     <section className="working-process-section container-space tj-theme-dark">
       <div className="container-fluid">
@@ -390,12 +390,20 @@ export function GalleryShowcase({ titles, word = 'PodShot' }) {
   );
 }
 
-const PERSPECTIVE = [`${BASE_PATH}/images/projects/h1-project-img-1.webp`, `${BASE_PATH}/images/projects/h1-project-img-2.webp`, `${BASE_PATH}/images/projects/h1-project-img-3.webp`, `${BASE_PATH}/images/projects/h1-project-img-4.webp`, `${BASE_PATH}/images/projects/h1-project-img-5.webp`, `${BASE_PATH}/images/projects/skew-project-5.png`, `${BASE_PATH}/images/projects/skew-project-6.png`, `${BASE_PATH}/images/projects/skew-project-8.png`];
+const PERSPECTIVE = [`${BASE_PATH}/images/projects/project-3.webp`, `${BASE_PATH}/images/projects/project-2.png`, `${BASE_PATH}/images/projects/h1-project-img-3.webp`, `${BASE_PATH}/images/projects/h1-project-img-4.webp`, `${BASE_PATH}/images/projects/project.png`, `${BASE_PATH}/images/projects/skew-project-5.png`, `${BASE_PATH}/images/projects/skew-project-6.png`, `${BASE_PATH}/images/projects/skew-project-8.png`];
+
+function ItemLink({ href, children }) {
+  if (!href) return children;
+  if (/^https?:\/\//i.test(href)) {
+    return <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+  }
+  return <Link href={href}>{children}</Link>;
+}
 
 export function PerspectiveShowcase({ items }) {
   const list = items.map((it, i) => ({ ...it, image: it.image || PERSPECTIVE[i % PERSPECTIVE.length] }));
   const Sec = ({ children }) => <span className="sec_subtitle">[ <span>{children}</span> ]</span>;
-  const Title = ({ it }) => (it.href ? <Link href={it.href}>{it.title}</Link> : <span>{it.title}</span>);
+  const Title = ({ it }) => (it.href ? <ItemLink href={it.href}>{it.title}</ItemLink> : <span>{it.title}</span>);
   return (
     <section className="perspective-showcase-section container-space">
       <h2 className="visually-hidden">Selected projects</h2>
@@ -415,7 +423,7 @@ export function PerspectiveShowcase({ items }) {
                   {list.map((it, i) => (
                     <div key={i} className="perspective-showcase-item works-item">
                       <div className="perspective-showcase-img">
-                        {it.href ? <Link href={it.href}><img alt={it.title} loading="lazy" width="1326" height="900" src={it.image} /></Link> : <img alt={it.title} loading="lazy" width="1326" height="900" src={it.image} />}
+                        <ItemLink href={it.href}><img alt={it.title} loading="lazy" width="1326" height="900" src={it.image} /></ItemLink>
                       </div>
                       <div className="perspective-showcase-content d-xl-none">
                         <div className="d-flex justify-content-between">

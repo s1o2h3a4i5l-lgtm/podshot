@@ -28,11 +28,25 @@
   max-width: none;
   object-fit: contain;
 }
-.offcanvas_logo .podshot-logo img { height: 64px; }
-.footer_logo .podshot-logo img { height: 110px; }
-#loading-icon img { width: 120px; height: 120px; object-fit: contain; }
+
+.offcanvas_logo .podshot-logo img {
+  height: 64px;
+}
+
+.footer_logo .podshot-logo img {
+  height: 110px;
+}
+
+#loading-icon img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
 @media (max-width: 991px) {
-  .podshot-logo img { height: 56px; }
+  .podshot-logo img {
+    height: 56px;
+  }
 }
 
 .footer-studio-link {
@@ -42,300 +56,819 @@
   align-items: center;
   color: var(--tj-color-light-2);
 }
-.footer-studio-link:hover { color: var(--tj-color-theme-primary); }
+
+.footer-studio-link:hover {
+  color: var(--tj-color-theme-primary);
+}
 
 /* Homepage services list: two labelled groups inside Agina's dark list. */
-.ps-service-group + .ps-service-group { margin-top: 70px; }
-.ps-service-group-head { margin-bottom: 24px; }
-.ps-service-group-head .sec_subtitle { color: var(--tj-color-light-2); }
-.ps-service-group-head .sec_subtitle:hover { color: var(--tj-color-theme-primary); }
+.ps-service-group+.ps-service-group {
+  margin-top: 70px;
+}
+
+.ps-service-group-head {
+  margin-bottom: 24px;
+}
+
+.ps-service-group-head .sec_subtitle {
+  color: var(--tj-color-light-2);
+}
+
+.ps-service-group-head .sec_subtitle:hover {
+  color: var(--tj-color-theme-primary);
+}
 
 /* Video lightbox (Agina's popup library is not used). */
 .ps-video-modal {
-  position: fixed; inset: 0; z-index: 99999; display: flex; align-items: center; justify-content: center;
-  background: rgba(10, 10, 10, 0.92); padding: 40px 20px;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.92);
+  padding: 40px 20px;
 }
-.ps-video-modal video { width: 100%; max-width: 1200px; max-height: 85vh; background: #000; }
+
+.ps-video-modal video {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 85vh;
+  background: #000;
+}
+
 .ps-video-close {
-  position: absolute; top: 20px; right: 20px; width: 48px; height: 48px; border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3); background: transparent; color: #fff; font-size: 18px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
 }
-.ps-video-close:hover { background: var(--tj-color-theme-primary); border-color: var(--tj-color-theme-primary); }
+
+.ps-video-close:hover {
+  background: var(--tj-color-theme-primary);
+  border-color: var(--tj-color-theme-primary);
+}
 
 /* Service process with more than 3 steps: three per row, no vertical dividers. */
-.tj-process-items-wrapper.ps-process-many { row-gap: 60px; }
-.tj-process-items-wrapper.ps-process-many hr { display: none; }
-.tj-process-items-wrapper.ps-process-many .tj-process-item-3 { flex: 0 0 calc(33.333% - 10px); max-width: none; padding: 0 40px 0 90px; border: 0; }
-@media (max-width: 991px) {
-  .tj-process-items-wrapper.ps-process-many .tj-process-item-3 { flex-basis: 100%; }
+.tj-process-items-wrapper.ps-process-many {
+  row-gap: 60px;
 }
 
-/* Packages page plan switch. */
-.ps-package-switch { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 30px; margin: 10px 0 40px; }
-.ps-package-switch .pricing_switcher { display: inline-flex; position: relative; }
-.ps-package-switch .desc { margin: 0; color: var(--tj-color-text-body); }
-.h2_pricing_wrap.ps-two-plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (max-width: 767px) { .h2_pricing_wrap.ps-two-plans { grid-template-columns: 1fr; } }
+.tj-process-items-wrapper.ps-process-many hr {
+  display: none;
+}
+
+.tj-process-items-wrapper.ps-process-many .tj-process-item-3 {
+  flex: 0 0 calc(33.333% - 10px);
+  max-width: none;
+  padding: 0 40px 0 90px;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .tj-process-items-wrapper.ps-process-many .tj-process-item-3 {
+    flex-basis: 100%;
+  }
+}
 
 /* Contact map: OpenStreetMap tiles turned dark to match Agina's map. */
-.ps-dark-tiles { filter: invert(1) hue-rotate(180deg) grayscale(1) brightness(0.75) contrast(1.1); }
+.ps-dark-tiles {
+  filter: invert(1) hue-rotate(180deg) grayscale(1) brightness(0.75) contrast(1.1);
+}
+
+.ps-map-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ps-map-link {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--tj-color-theme-bg);
+  color: var(--tj-color-heading-primary);
+  font-family: var(--tj-ff-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1px solid var(--tj-color-border-1);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.ps-map-link:hover,
+.ps-map-link:focus-visible {
+  background-color: var(--tj-color-theme-primary);
+  color: var(--tj-color-light-1);
+}
 
 /* Digital marketing service cards: a longer title or description wraps to a second line and
    makes that card taller than its neighbours. Reserve room for two lines of each so every
    card matches. */
-.h2-service-content .service-title { min-height: 2.5em; }
-.h2-service-content .service-desc { min-height: 3em; }
-.h2-service-item { display: flex; flex-direction: column; height: 100%; }
-.h2-service-item .btn-area { margin-top: auto; }
+.h2-service-content .service-title {
+  min-height: 2.5em;
+}
+
+.h2-service-content .service-desc {
+  min-height: 3em;
+}
+
+.h2-service-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.h2-service-item .btn-area {
+  margin-top: auto;
+}
 
 /* Service card stack (replaces Agina's .tj-scroll-slider horizontal slide): cards are pinned
    and each new one slides in from the right to cover the last, fanning the covered ones out
    a little behind it. Runs at every width; phones and tablets get a tighter fan (ServiceStack.jsx). */
 .ps-stack {
-  overflow: hidden; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: clamp(14px, 3vh, 32px); padding-top: clamp(40px, 6vh, 80px);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3vh, 32px);
+  padding-top: clamp(40px, 6vh, 80px);
 }
+
 /* The track is nudged right by half the fanned pile so pile + card stay centred. */
-.ps-stack-track, .ps-stack-meta {
-  width: min(820px, 56vw); transform: translateX(calc(var(--ps-fan, 0px) / 2));
+.ps-stack-track,
+.ps-stack-meta {
+  width: min(820px, 56vw);
+  transform: translateX(calc(var(--ps-fan, 0px) / 2));
 }
-.ps-stack-track { position: relative; height: clamp(420px, 64vh, 600px); }
+
+.ps-stack-track {
+  position: relative;
+  height: clamp(420px, 64vh, 600px);
+}
+
 .ps-stack-item {
-  position: absolute; inset: 0; will-change: transform;
+  position: absolute;
+  inset: 0;
+  will-change: transform;
   box-shadow: -24px 0 48px rgba(12, 12, 12, 0.18);
 }
+
 /* Agina's fade-in can leave a card half see-through on top of the pile; the slide-in replaces it. */
-.ps-stack-item .h2-service-item { height: 100%; opacity: 1 !important; transform: none !important; }
-.ps-stack-item .h2-service-content { padding: clamp(20px, 6vh, 80px) 0 clamp(12px, 2vh, 24px); }
+.ps-stack-item .h2-service-item {
+  height: 100%;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.ps-stack-item .h2-service-content {
+  padding: clamp(20px, 6vh, 80px) 0 clamp(12px, 2vh, 24px);
+}
+
 .ps-stack-meta {
-  display: flex; align-items: center; gap: 18px;
-  font-family: var(--tj-ff-heading); font-weight: var(--tj-fw-sbold); font-size: 15px;
-  color: var(--tj-color-heading-primary); font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--tj-ff-heading);
+  font-weight: var(--tj-fw-sbold);
+  font-size: 15px;
+  color: var(--tj-color-heading-primary);
+  font-variant-numeric: tabular-nums;
 }
-.ps-stack-bar { position: relative; flex: 1; height: 2px; background: var(--tj-color-border-1); overflow: hidden; }
-.ps-stack-bar > span {
-  position: absolute; inset: 0; background: var(--tj-color-theme-primary);
-  transform-origin: 0 50%; transition: transform 0.4s ease;
+
+.ps-stack-bar {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  background: var(--tj-color-border-1);
+  overflow: hidden;
 }
+
+.ps-stack-bar>span {
+  position: absolute;
+  inset: 0;
+  background: var(--tj-color-theme-primary);
+  transform-origin: 0 50%;
+  transition: transform 0.4s ease;
+}
+
 /* Same alternating light/dark look Agina gave every other card, keyed to the new markup. */
-.ps-stack-item:nth-child(2n) .h2-service-item { background-color: var(--tj-color-theme-bg-dark); }
-.ps-stack-item:nth-child(2n) .h2-service-item .service-sl,
-.ps-stack-item:nth-child(2n) .h2-service-item .service-title { color: var(--tj-color-light-1); }
-.ps-stack-item:nth-child(2n) .h2-service-item .service-desc { color: var(--tj-color-light-2); }
-.ps-stack-item:nth-child(2n) .h2-service-item .category { color: var(--tj-color-light-2); border-color: var(--tj-color-border-3); }
-.ps-stack-item:nth-child(2n) .h2-service-item .category:hover { background-color: var(--tj-color-theme-bg-dark-2); }
-.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border { color: var(--tj-color-light-1); }
-.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border .icon_btn { background-color: var(--tj-color-light-1); color: var(--tj-color-heading-primary); }
-.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border:hover .icon_btn { color: var(--tj-color-light-1); }
-@media (max-width: 991px) {
-  .ps-stack { padding-top: 0; }
-  .ps-stack-track, .ps-stack-meta { width: min(600px, calc(100vw - 60px - var(--ps-fan, 0px))); }
-  .ps-stack-track { height: clamp(380px, 60vh, 520px); }
-  .ps-stack-item { box-shadow: -12px 0 28px rgba(12, 12, 12, 0.2); }
-  .ps-stack-item .h2-service-content { padding: clamp(16px, 4vh, 48px) 0 clamp(8px, 1.5vh, 16px); }
+.ps-stack-item:nth-child(2n) .h2-service-item {
+  background-color: var(--tj-color-theme-bg-dark);
 }
+
+.ps-stack-item:nth-child(2n) .h2-service-item .service-sl,
+.ps-stack-item:nth-child(2n) .h2-service-item .service-title {
+  color: var(--tj-color-light-1);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .service-desc {
+  color: var(--tj-color-light-2);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .category {
+  color: var(--tj-color-light-2);
+  border-color: var(--tj-color-border-3);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .category:hover {
+  background-color: var(--tj-color-theme-bg-dark-2);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border {
+  color: var(--tj-color-light-1);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border .icon_btn {
+  background-color: var(--tj-color-light-1);
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-stack-item:nth-child(2n) .h2-service-item .tj_icon_btn.no-border:hover .icon_btn {
+  color: var(--tj-color-light-1);
+}
+
+@media (max-width: 991px) {
+  .ps-stack {
+    padding-top: 0;
+  }
+
+  .ps-stack-track,
+  .ps-stack-meta {
+    width: min(600px, calc(100vw - 60px - var(--ps-fan, 0px)));
+  }
+
+  .ps-stack-track {
+    height: clamp(380px, 60vh, 520px);
+  }
+
+  .ps-stack-item {
+    box-shadow: -12px 0 28px rgba(12, 12, 12, 0.2);
+  }
+
+  .ps-stack-item .h2-service-content {
+    padding: clamp(16px, 4vh, 48px) 0 clamp(8px, 1.5vh, 16px);
+  }
+}
+
 @media (max-width: 575px) {
-  .ps-stack-track, .ps-stack-meta { width: calc(100vw - 30px - var(--ps-fan, 0px)); }
+
+  .ps-stack-track,
+  .ps-stack-meta {
+    width: calc(100vw - 30px - var(--ps-fan, 0px));
+  }
 }
 
 /* Home hero on phones and tablets: Agina keeps it a full screen tall and pushes the text to the
    bottom, leaving a gap under the ring; let it size to its content. */
 @media (max-width: 991px) {
-  .h1_hero_content_wrap { height: auto; justify-content: flex-start; gap: 36px; padding-bottom: 30px; }
+  .h1_hero_content_wrap {
+    height: auto;
+    justify-content: flex-start;
+    gap: 36px;
+    padding-bottom: 30px;
+  }
 }
 
 /* Home projects strip: Agina stacks it into a column below 992px; keep it a pinned horizontal
    row instead (one large card on phones, a card and a half on tablets) with its progress line. */
 @media (max-width: 991px) {
-  .h1_projects_wrap { min-height: 0; display: flex; flex-direction: column; padding: 0; }
-  .h1_projects_items { flex-flow: row nowrap; gap: 30px; }
-  .h1_projects_items .tj_project_item { flex: 0 0 64%; max-width: 64%; }
-  .h1_projects_wrap .projects-progress { display: block; margin-top: 30px; }
-  .h1_projects_wrap .projects_more_button { margin-top: 24px; }
+  .h1_projects_wrap {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .h1_projects_items {
+    flex-flow: row nowrap;
+    gap: 30px;
+  }
+
+  .h1_projects_items .tj_project_item {
+    flex: 0 0 64%;
+    max-width: 64%;
+  }
+
+  .h1_projects_wrap .projects-progress {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .h1_projects_wrap .projects_more_button {
+    margin-top: 24px;
+  }
 }
+
 @media (max-width: 575px) {
-  .h1_projects_items { gap: 24px; }
-  .h1_projects_items .tj_project_item { flex: 0 0 84%; max-width: 84%; }
+  .h1_projects_items {
+    gap: 24px;
+  }
+
+  .h1_projects_items .tj_project_item {
+    flex: 0 0 84%;
+    max-width: 84%;
+  }
 }
 
 /* "Reels we make" on phones and tablets: like desktop, the heading stays pinned mid-screen while
    the reel cards slide up over it. Cards are narrower and alternate sides so the heading shows
    between them. */
 @media (max-width: 991px) {
-  .h3_team_wrapper .team_pin_area { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; z-index: 0; }
-  .h3_team_wrapper .section_heading { margin-bottom: 0; }
-  .team_pin_area_container .team_items_wrapper { position: relative; z-index: 2; padding-bottom: 12vh; }
-  .team_items_wrapper .team_items .tj_team_member { width: 58%; }
-  .team_items_wrapper .team_items .tj_team_member:nth-child(even) { margin-left: auto; }
+  .h3_team_wrapper .team_pin_area {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+  }
+
+  .h3_team_wrapper .section_heading {
+    margin-bottom: 0;
+  }
+
+  .team_pin_area_container .team_items_wrapper {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 12vh;
+  }
+
+  .team_items_wrapper .team_items .tj_team_member {
+    width: 58%;
+  }
+
+  .team_items_wrapper .team_items .tj_team_member:nth-child(even) {
+    margin-left: auto;
+  }
 }
+
 @media (max-width: 575px) {
-  .team_items_wrapper .team_items .tj_team_member { width: 72%; }
+  .team_items_wrapper .team_items .tj_team_member {
+    width: 72%;
+  }
 }
 
 /* Contrast: the logo brown is 2:1 on dark sections, so subtitle brackets there use a lighter
    shade of the same brown (5.4:1). The FAQ helper label was 4.1:1 on its panel. */
-.tj-theme-dark .sec_subtitle, footer .sec_subtitle { color: #c8703f; }
-.tj-faq-section .tj-author-profile .author-info .designation { color: #5c5c5c; }
+.tj-theme-dark .sec_subtitle,
+footer .sec_subtitle {
+  color: #c8703f;
+}
+
+.tj-faq-section .tj-author-profile .author-info .designation {
+  color: #5c5c5c;
+}
 
 /* Cards in a grid row fill their column, so every card in a row is as tall as the tallest,
    and their bottom row lines up. */
-.row > [class*="col"] > .career-opening-item,
-.row > [class*="col"] > .tj-process-item-3 { height: 100%; }
-.career-opening-item { display: flex; flex-direction: column; }
-.career-opening-item .career-bottom { margin-top: auto; }
+.row>[class*="col"]>.career-opening-item,
+.row>[class*="col"]>.tj-process-item-3 {
+  height: 100%;
+}
+
+.career-opening-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-opening-item .career-bottom {
+  margin-top: auto;
+}
+
 /* "Why choose us" 2x2 boxes: Agina's flex-wrap sizes each row on its own; a grid with equal rows
    keeps all four the same (same 30px gap and two columns). */
-.career_features_box_wrapper { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; }
-.career_features_box_wrapper > .career_features_box { width: auto; }
-@media (max-width: 575px) { .career_features_box_wrapper { grid-template-columns: minmax(0, 1fr); } }
+.career_features_box_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.career_features_box_wrapper>.career_features_box {
+  width: auto;
+}
+
+@media (max-width: 575px) {
+  .career_features_box_wrapper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 /* "Why choose us" cards are a 2-column grid on tablets; keep every row the same height. */
 @media (min-width: 768px) and (max-width: 991px) {
-  .why-choose-item-wrap { grid-auto-rows: 1fr; row-gap: 30px; }
-  .why-choose-item-wrap > .why-choose-item { margin-bottom: 0; }
+  .why-choose-item-wrap {
+    grid-auto-rows: 1fr;
+    row-gap: 30px;
+  }
+
+  .why-choose-item-wrap>.why-choose-item {
+    margin-bottom: 0;
+  }
 }
 
 /* "How it works" step row reuses Agina's project-details section, which has top padding only. */
-.ps-step-row { padding-bottom: clamp(70px, 6.25vw, 120px); }
+.ps-step-row {
+  padding-bottom: clamp(70px, 6.25vw, 120px);
+}
 
 /* Pinned "Reels we make" heading: Agina pushes it down 35% of its own height while pinned.
    At 120px our titles wrap to four lines and the push carries the button out of the section.
    Keep Agina's narrow column (clear of the image column on the left, which ends at ~33vw)
    and size the title to fit it in two lines. */
 @media (min-width: 992px) {
-  .h3_team_wrapper .section_heading { max-width: min(635px, 30vw); }
-  .h3_team_wrapper .section_heading .sec_title { font-size: min(76px, 3.8vw, 9vh); }
+  .h3_team_wrapper .section_heading {
+    max-width: min(635px, 30vw);
+  }
+
+  .h3_team_wrapper .section_heading .sec_title {
+    font-size: min(76px, 3.8vw, 9vh);
+  }
 }
 
 /* Service guide: sticky title + contents on the left, numbered sections on the right.
    Agina's article layout has no vertical padding; match the 150 to 70px its sections use. */
-.ps-guide { padding-top: clamp(70px, 7.8vw, 150px); padding-bottom: clamp(60px, 6vw, 120px); }
-.ps-guide .sec_title { font-size: clamp(34px, 3.2vw, 56px); }
-.ps-guide-toc { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--tj-color-border-1); }
-.ps-guide-toc-label {
-  display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-  font-weight: var(--tj-fw-sbold); color: var(--tj-color-text-body-2);
+.ps-guide {
+  padding-top: clamp(70px, 7.8vw, 150px);
+  padding-bottom: clamp(60px, 6vw, 120px);
 }
-.ps-guide .ps-guide-toc ol { list-style: none; padding: 0; margin: 0; }
-.ps-guide .ps-guide-toc li { margin: 0; }
-.ps-guide-toc a {
-  display: flex; align-items: baseline; gap: 14px; padding: 9px 0 9px 16px;
-  border-left: 2px solid var(--tj-color-border-1); color: var(--tj-color-text-body-2);
-  font-family: var(--tj-ff-heading); font-size: 18px; line-height: 1.35; transition: color 0.2s, border-color 0.2s;
-}
-.ps-guide-toc a .n { font-size: 13px; font-variant-numeric: tabular-nums; }
-.ps-guide-toc a:hover, .ps-guide-toc li.is-active a { color: var(--tj-color-heading-primary); }
-.ps-guide-toc li.is-active a { border-left-color: var(--tj-color-theme-primary); }
-.ps-guide-toc li.is-active a .n { color: var(--tj-color-theme-primary); }
 
-.ps-guide .ps-guide-body { margin-inline-start: 0; }
+.ps-guide .sec_title {
+  font-size: clamp(34px, 3.2vw, 56px);
+}
+
+.ps-guide-toc {
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid var(--tj-color-border-1);
+}
+
+.ps-guide-toc-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-text-body-2);
+}
+
+.ps-guide .ps-guide-toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ps-guide .ps-guide-toc li {
+  margin: 0;
+}
+
+.ps-guide-toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 0 9px 16px;
+  border-left: 2px solid var(--tj-color-border-1);
+  color: var(--tj-color-text-body-2);
+  font-family: var(--tj-ff-heading);
+  font-size: 18px;
+  line-height: 1.35;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ps-guide-toc a .n {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.ps-guide-toc a:hover,
+.ps-guide-toc li.is-active a {
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-guide-toc li.is-active a {
+  border-left-color: var(--tj-color-theme-primary);
+}
+
+.ps-guide-toc li.is-active a .n {
+  color: var(--tj-color-theme-primary);
+}
+
+.ps-guide .ps-guide-body {
+  margin-inline-start: 0;
+}
+
 .ps-guide-lead {
-  max-width: 30em; font-family: var(--tj-ff-heading); font-size: clamp(22px, 1.8vw, 30px); line-height: 1.4;
-  color: var(--tj-color-heading-primary); margin-bottom: 48px;
+  max-width: 30em;
+  font-family: var(--tj-ff-heading);
+  font-size: clamp(22px, 1.8vw, 30px);
+  line-height: 1.4;
+  color: var(--tj-color-heading-primary);
+  margin-bottom: 48px;
 }
-.ps-guide-intro { margin-bottom: 20px; }
+
+.ps-guide-intro {
+  margin-bottom: 20px;
+}
+
 .ps-guide-section {
-  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px;
-  padding: 44px 0; border-top: 1px solid var(--tj-color-border-1);
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 20px;
+  padding: 44px 0;
+  border-top: 1px solid var(--tj-color-border-1);
 }
+
 .ps-guide-num {
-  font-family: var(--tj-ff-heading); font-size: 15px; font-weight: var(--tj-fw-sbold);
-  color: var(--tj-color-theme-primary); padding-top: 10px; font-variant-numeric: tabular-nums;
+  font-family: var(--tj-ff-heading);
+  font-size: 15px;
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-theme-primary);
+  padding-top: 10px;
+  font-variant-numeric: tabular-nums;
 }
-.ps-guide .ps-guide-h { font-size: clamp(26px, 2vw, 34px); line-height: 1.2; margin-bottom: 26px; }
+
+.ps-guide .ps-guide-h {
+  font-size: clamp(26px, 2vw, 34px);
+  line-height: 1.2;
+  margin-bottom: 26px;
+}
 
 .ps-guide .ps-guide-list {
-  list-style: none; padding: 0; margin: 0;
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 32px;
 }
+
 /* Agina adds 10px under every list item but the last, which made grid cards uneven. */
-.ps-guide .ps-guide-list li:not(:last-child), .ps-guide .ps-guide-steps li:not(:last-child) { margin-bottom: 0; }
-.ps-guide .ps-guide-list li { position: relative; margin: 0; padding-left: 34px; font-size: 18px; line-height: 1.45; }
+.ps-guide .ps-guide-list li:not(:last-child),
+.ps-guide .ps-guide-steps li:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.ps-guide .ps-guide-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 34px;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
 .ps-guide .ps-guide-list li::before {
-  content: ''; position: absolute; left: 0; top: 2px; width: 22px; height: 22px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
   background: var(--ps-color-accent-yellow);
 }
+
 .ps-guide .ps-guide-list li::after {
-  content: ''; position: absolute; left: 8px; top: 6px; width: 6px; height: 11px;
-  border: solid var(--tj-color-theme-primary); border-width: 0 2px 2px 0; transform: rotate(45deg);
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 6px;
+  height: 11px;
+  border: solid var(--tj-color-theme-primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .ps-guide .ps-guide-steps {
-  list-style: none; padding: 0; margin: 0;
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
-.ps-guide .ps-guide-steps li {
-  margin: 0; padding: 24px 26px 26px; background: var(--tj-color-theme-bg-2);
-  display: flex; flex-direction: column; gap: 6px;
-}
-.ps-guide-steps .step-n {
-  margin-bottom: 14px; font-family: var(--tj-ff-heading); font-size: 14px;
-  font-weight: var(--tj-fw-sbold); color: var(--tj-color-theme-primary);
-}
-.ps-guide-steps b { font-family: var(--tj-ff-heading); font-size: 22px; font-weight: var(--tj-fw-sbold); color: var(--tj-color-heading-primary); }
-.ps-guide-steps .step-t { font-size: 16px; line-height: 1.5; }
 
-.ps-guide-quote { padding-top: 8px; }
-.ps-guide-quote blockquote { margin: 0; }
+.ps-guide .ps-guide-steps li {
+  margin: 0;
+  padding: 24px 26px 26px;
+  background: var(--tj-color-theme-bg-2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ps-guide-steps .step-n {
+  margin-bottom: 14px;
+  font-family: var(--tj-ff-heading);
+  font-size: 14px;
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-theme-primary);
+}
+
+.ps-guide-steps b {
+  font-family: var(--tj-ff-heading);
+  font-size: 22px;
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-guide-steps .step-t {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ps-guide-quote {
+  padding-top: 8px;
+}
+
+.ps-guide-quote blockquote {
+  margin: 0;
+}
+
 .ps-guide-cta {
-  margin-top: 32px; padding: 34px 40px; background: var(--tj-color-theme-bg-dark);
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 40px;
+  margin-top: 32px;
+  padding: 34px 40px;
+  background: var(--tj-color-theme-bg-dark);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 40px;
 }
+
 .ps-guide-cta p {
-  margin: 0; max-width: 520px; font-family: var(--tj-ff-heading); font-size: clamp(20px, 1.6vw, 26px);
-  line-height: 1.35; color: var(--tj-color-light-1);
+  margin: 0;
+  max-width: 520px;
+  font-family: var(--tj-ff-heading);
+  font-size: clamp(20px, 1.6vw, 26px);
+  line-height: 1.35;
+  color: var(--tj-color-light-1);
 }
+
 @media (max-width: 767px) {
-  .ps-guide-section { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 32px 0; }
-  .ps-guide-num { padding-top: 0; }
-  .ps-guide .ps-guide-list, .ps-guide .ps-guide-steps { grid-template-columns: minmax(0, 1fr); }
-  .ps-guide-cta { padding: 26px 22px; }
+  .ps-guide-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    padding: 32px 0;
+  }
+
+  .ps-guide-num {
+    padding-top: 0;
+  }
+
+  .ps-guide .ps-guide-list,
+  .ps-guide .ps-guide-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ps-guide-cta {
+    padding: 26px 22px;
+  }
 }
+
 /* Phones and tablets: FAQ and "why choose us" titles pin as a slim bar while their list scrolls
    (mobileEffects.js). The bar shrinks the title and gives it the page background. */
 @media (max-width: 991px) {
-  .ps-sticky-title { transition: font-size 0.25s ease, padding 0.25s ease; }
+  .ps-sticky-title {
+    transition: font-size 0.25s ease, padding 0.25s ease;
+  }
+
   .ps-sticky-title.is-stuck {
     /* GSAP keeps the full-size height on the pinned element, so set the bar's height outright. */
-    height: 48px !important; max-height: 48px;
-    font-size: 20px !important; line-height: 1.2; padding: 12px 0;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    background: var(--tj-color-theme-bg); border-bottom: 1px solid var(--tj-color-border-1);
+    height: 48px !important;
+    max-height: 48px;
+    font-size: 20px !important;
+    line-height: 1.2;
+    padding: 12px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: var(--tj-color-theme-bg);
+    border-bottom: 1px solid var(--tj-color-border-1);
   }
+
   /* Agina's line reveal splits some titles into block lines; flatten them for the one-line bar. */
-  .ps-sticky-title.is-stuck * { display: inline !important; }
+  .ps-sticky-title.is-stuck * {
+    display: inline !important;
+  }
+
   /* GSAP wraps the pinned title in a spacer; lift that above the cards that scroll past. */
-  .pin-spacer:has(> .ps-sticky-title) { z-index: 20 !important; }
+  .pin-spacer:has(> .ps-sticky-title) {
+    z-index: 20 !important;
+  }
 }
 
 /* Phones and tablets: the contents list becomes a row of chips that sticks to the top of the
    screen while the guide is being read (pinned in mobileEffects.js). */
 @media (max-width: 991px) {
-  .ps-guide-toc { margin-top: 20px; padding: 10px 0; border-top: 0; background: var(--tj-color-theme-bg); position: relative; z-index: 5; }
-  .ps-guide-toc-label { display: none; }
-  .ps-guide .ps-guide-toc ol { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
-  .ps-guide .ps-guide-toc ol::-webkit-scrollbar { display: none; }
-  .ps-guide .ps-guide-toc li { flex: 1 1 0; min-width: 0; }
-  .ps-guide-toc a {
-    padding: 8px 14px; gap: 8px; border: 1px solid var(--tj-color-border-1); border-radius: 999px;
-    font-size: 14px; white-space: nowrap;
+  .ps-guide-toc {
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 0;
+    background: var(--tj-color-theme-bg);
+    position: relative;
+    z-index: 5;
   }
-  .ps-guide-toc a .t { overflow: hidden; text-overflow: ellipsis; }
-  .ps-guide-toc li.is-active a { background: var(--tj-color-theme-primary); border-color: var(--tj-color-theme-primary); color: var(--tj-color-light-1); }
-  .ps-guide-toc li.is-active a .n { color: var(--ps-color-accent-yellow); }
+
+  .ps-guide-toc-label {
+    display: none;
+  }
+
+  .ps-guide .ps-guide-toc ol {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .ps-guide .ps-guide-toc ol::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ps-guide .ps-guide-toc li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .ps-guide-toc a {
+    padding: 8px 14px;
+    gap: 8px;
+    border: 1px solid var(--tj-color-border-1);
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .ps-guide-toc a .t {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ps-guide-toc li.is-active a {
+    background: var(--tj-color-theme-primary);
+    border-color: var(--tj-color-theme-primary);
+    color: var(--tj-color-light-1);
+  }
+
+  .ps-guide-toc li.is-active a .n {
+    color: var(--ps-color-accent-yellow);
+  }
 }
 
 /* The custom cursor bubble is desktop-only chrome. Touch browsers sometimes fire a synthetic
    mousemove/mouseover after a tap (for legacy JS compatibility), which would otherwise show it. */
-@media (hover: none), (pointer: coarse) { .cb-cursor { display: none !important; } }
+@media (hover: none),
+(pointer: coarse) {
+  .cb-cursor {
+    display: none !important;
+  }
+}
 
 /* Scroll animations shift the hero's bottom row past the section edge; clip sideways only. */
-.h1-hero-section { overflow: visible; overflow-x: clip; }
+.h1-hero-section {
+  overflow: visible;
+  overflow-x: clip;
+}
+
+/* Action buttons and testimonials without person avatars. */
+.tj_user_profile {
+  padding: 20px 30px;
+}
+
+.h1_testimonial_slider .tj_testimonial_item {
+  padding-bottom: 60px;
+}
+
+.h1_testimonial_author_slider {
+  margin-top: 24px;
+  height: auto;
+}
+
+.about_testimonial_item .tj-author-profile .author-info .name {
+  margin-top: 0;
+}
 
 /* Home hero is locked to 100vh, but Agina sized the title for a full 1080px screen.
    Scale title and spacing with height so it fits in any window. */
 @media (min-width: 992px) {
-  .h1_hero_content_wrap { min-height: 0; padding-bottom: clamp(24px, 5vh, 60px); }
+  .h1_hero_content_wrap {
+    min-height: 0;
+    padding-bottom: clamp(24px, 5vh, 60px);
+  }
+
   /* The top row fills the space between the menu bar and the bottom row, with the ring
      and headline centred in it and on each other. */
   .h1_hero_content_wrap .hero_top_content {
@@ -345,68 +878,1061 @@
     padding-top: clamp(96px, 12vh, 130px);
     padding-bottom: clamp(16px, 4vh, 48px);
   }
-  .h1_hero_content_wrap .hero_top_content .hero_title { font-size: min(120px, 6.25vw, 10.5vh); margin: 0; }
-  .h1_hero_content_wrap .hero_top_content .h1_hero_shape_animation { margin: 0; }
+
+  .h1_hero_content_wrap .hero_top_content .hero_title {
+    font-size: min(120px, 6.25vw, 10.5vh);
+    margin: 0;
+  }
+
+  .h1_hero_content_wrap .hero_top_content .h1_hero_shape_animation {
+    margin: 0;
+  }
+
   /* Same bottom gap as the hero, so the video lines up with the buttons. */
-  .h1_hero_video_wrap { min-height: 0; padding-bottom: clamp(24px, 5vh, 60px); }
+  .h1_hero_video_wrap {
+    min-height: 0;
+    padding-bottom: clamp(24px, 5vh, 60px);
+  }
+
   /* The reel opens to a whole 16:9 frame (see aginaEffects), so never clip its height. */
-  .h1_hero_video { max-height: none; }
+  .h1_hero_video {
+    max-height: none;
+  }
+
   /* After it opens (one screen of scroll) the reel rests fully visible for another half screen
      before the next section slides up over it. */
-  .h1-video-section { margin-bottom: 50vh; }
+  .h1-video-section {
+    margin-bottom: 50vh;
+  }
+
   /* Scroll hint sits on the same baseline as the buttons. */
-  .h1_hero_content_wrap .hero_bottom_content .tj_scroll_down { align-self: end; }
+  .h1_hero_content_wrap .hero_bottom_content .tj_scroll_down {
+    align-self: end;
+  }
 }
 
 /* Home hero 3D image ring (replaces Agina's shape GIF, /gif/hero-shape.gif, kept as backup). */
 .ps-ring {
-  position: relative; width: 100%; aspect-ratio: 2.5;
-  cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.ps-ring.is-dragging { cursor: grabbing; }
+
+.ps-ring.is-dragging {
+  cursor: grabbing;
+}
+
 .ps-ring-stage {
-  position: absolute; left: 50%; top: 50%; width: 0; height: 0;
-  transform-style: preserve-3d; will-change: transform;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
+
 .ps-ring .ps-ring-card {
-  position: absolute; width: var(--ps-card-w, 120px); aspect-ratio: 280 / 320;
-  left: calc(var(--ps-card-w, 120px) / -2); top: calc(var(--ps-card-w, 120px) * -0.5714);
-  border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(112, 48, 16, 0.18);
+  position: absolute;
+  width: var(--ps-card-w, 120px);
+  aspect-ratio: 280 / 320;
+  left: calc(var(--ps-card-w, 120px) / -2);
+  top: calc(var(--ps-card-w, 120px) * -0.5714);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(112, 48, 16, 0.18);
 }
-.ps-ring .ps-ring-card img { mix-blend-mode: normal; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+
+.ps-ring .ps-ring-card img {
+  mix-blend-mode: normal;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
 /* Agina's negative margins were for the GIF's empty padding; the ring has none. */
 @media (max-width: 991px) {
-  .h1_hero_content_wrap .hero_top_content .h1_hero_shape_animation { margin: 28px auto 8px; }
+  .h1_hero_content_wrap .hero_top_content .h1_hero_shape_animation {
+    margin: 28px auto 8px;
+  }
 }
+
 @media (min-width: 992px) and (max-height: 650px) {
-  .h1_hero_content_wrap .hero_bottom_content .tj_scroll_down { display: none; }
+  .h1_hero_content_wrap .hero_bottom_content .tj_scroll_down {
+    display: none;
+  }
 }
 
 /* Home services list on phones and tablets: the numbered services become a picker-wheel dial
    (mobileEffects.js), like a phone's timer scroll wheel, instead of a long scrolling list.
    Condensed so the heading, paragraph and dial fit together on one screen while pinned. */
 @media (max-width: 991px) {
-  .h1-services-section { padding-top: clamp(32px, 6vh, 56px); padding-bottom: clamp(32px, 6vh, 56px); }
-  .h1_services_wrapper .section_heading { margin-bottom: 8px; }
-  .h1_services_wrapper .section_heading_bottom { margin-bottom: 16px; }
-  .h1_services_wrapper .section_heading_bottom .service_desc { max-width: 420px; }
-  .ps-service-group-head { margin-bottom: 10px; }
-  .h1_services_wrapper .text-center.mt-5 { margin-top: 20px !important; }
-
-  .ps-dial { position: relative; overflow: hidden; }
-  .ps-dial .ps-dial-item {
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-    text-align: center; border-bottom: 0; padding: 0; will-change: transform, opacity;
+  .h1-services-section {
+    padding-top: clamp(32px, 6vh, 56px);
+    padding-bottom: clamp(32px, 6vh, 56px);
   }
-  .ps-dial .ps-dial-item .service_content { display: contents; }
+
+  .h1_services_wrapper .section_heading {
+    margin-bottom: 8px;
+  }
+
+  .h1_services_wrapper .section_heading_bottom {
+    margin-bottom: 16px;
+  }
+
+  .h1_services_wrapper .section_heading_bottom .service_desc {
+    max-width: 420px;
+  }
+
+  .ps-service-group-head {
+    margin-bottom: 10px;
+  }
+
+  .h1_services_wrapper .text-center.mt-5 {
+    margin-top: 20px !important;
+  }
+
+  .ps-dial {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ps-dial .ps-dial-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+    border-bottom: 0;
+    padding: 0;
+    will-change: transform, opacity;
+  }
+
+  .ps-dial .ps-dial-item .service_content {
+    display: contents;
+  }
+
   /* Agina gives the number a 65px min-width and pins it to the left; centre it over the title. */
-  .ps-dial .ps-dial-item .service_count { font-size: 13px; min-width: 0; align-self: center; }
+  .ps-dial .ps-dial-item .service_count {
+    font-size: 13px;
+    min-width: 0;
+    align-self: center;
+  }
+
   /* No line-clamp here: the title's text sits inside Agina's hover-flip wrapper (a positioned
      span, not plain text), and -webkit-line-clamp hides that instead of truncating it. The box
      is already sized to the tallest title, so a natural 2-line wrap always fits. */
-  .ps-dial .ps-dial-item .service_title { font-size: clamp(26px, 8.5vw, 34px); line-height: 1.08; }
+  .ps-dial .ps-dial-item .service_title {
+    font-size: clamp(26px, 8.5vw, 34px);
+    line-height: 1.08;
+  }
+
   /* Agina's split-text lines carry an inline text-align:start. */
-  .ps-dial .ps-dial-item .service_title .reveal-line { text-align: center !important; }
+  .ps-dial .ps-dial-item .service_title .reveal-line {
+    text-align: center !important;
+  }
+
   /* Agina's margin-left:auto pushes a column flex child sideways instead of centering it. */
-  .ps-dial .ps-dial-item .service_categories { justify-content: center; align-self: center; margin-top: 2px; margin-left: 0; }
+  .ps-dial .ps-dial-item .service_categories {
+    justify-content: center;
+    align-self: center;
+    margin-top: 2px;
+    margin-left: 0;
+  }
+}
+
+/* Home software cards: clickable CTA label in place of the fixed-width year badge. */
+.h1_projects_items .tj_project_item .project_content {
+  align-items: center;
+  gap: 12px 16px;
+}
+
+.h1_projects_items .tj_project_item .project_content .project_title {
+  width: auto;
+  max-width: none;
+  flex: 1 1 240px;
+}
+
+.h1_projects_items .tj_project_item .project_cta {
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.h1_projects_items .tj_project_item .project_cta:hover,
+.h1_projects_items .tj_project_item .project_cta:focus-visible {
+  color: var(--tj-color-theme-primary);
+}
+
+.h1_projects_items .tj_project_item .project_cta:hover .flip-text .front,
+.h1_projects_items .tj_project_item .project_cta:focus-visible .flip-text .front {
+  transform: translateY(-150%);
+}
+
+.h1_projects_items .tj_project_item .project_cta:hover .flip-text .back,
+.h1_projects_items .tj_project_item .project_cta:focus-visible .flip-text .back {
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--tj-color-theme-primary);
+}
+
+.h1_projects_items .tj_project_item .project_cta i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.h1_projects_items .tj_project_item .project_cta:hover i {
+  transform: translate(2px, -2px);
+}
+
+/* Brands we work with: left-aligned continuous two-track marquee with uniform full-color logo tiles. */
+.h1_client_slider_wrap .scroll-slider {
+  justify-content: flex-start;
+}
+
+.h1_client_slider_wrap .scroll-slider:hover .scroll-wrapper {
+  animation-play-state: paused;
+}
+
+.h1_client_slider_wrap .tj_client_item {
+  flex: 0 0 auto;
+  width: 240px;
+  height: 100px;
+  padding: 18px 26px;
+  border: 1px solid var(--tj-color-border-2);
+  overflow: hidden;
+}
+
+.h1_client_slider_wrap .tj_client_item:before {
+  background-color: #ffffff;
+}
+
+.h1_client_slider_wrap .tj_client_item:hover:before,
+.h1_client_slider_wrap .tj_client_item:focus:before {
+  box-shadow: inset 0 -3px 0 var(--ps-color-accent-yellow);
+}
+
+.h1_client_slider_wrap .tj_client_item:hover,
+.h1_client_slider_wrap .tj_client_item:focus {
+  border-color: var(--tj-color-theme-primary);
+}
+
+.h1_client_slider_wrap .tj_client_item>span {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.h1_client_slider_wrap .tj_client_item>span img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.h1_client_slider_wrap .tj_client_item:hover>span img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 767px) {
+  .h1_client_slider_wrap .tj_client_item {
+    width: 196px;
+    height: 86px;
+    padding: 14px 20px;
+  }
+}
+
+/* "Reels we make" embedded Instagram reel cards on Social Media page. */
+.team_items_wrapper .tj_team_member.ps-reel-member .member_image {
+  aspect-ratio: 9 / 15.5;
+  background-color: #ffffff;
+  border: 1px solid var(--tj-color-border-2);
+}
+
+.team_items_wrapper .tj_team_member.ps-reel-member .member_image::after {
+  display: none;
+}
+
+.ps-reel-frame,
+.ps-reel-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+  pointer-events: auto;
+}
+
+.ps-reel-video {
+  object-fit: cover;
+  background: #0c0c0c;
+}
+
+.team_items_wrapper .tj_team_member.ps-reel-member .member_info {
+  position: static;
+  inset: auto;
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  overflow: visible;
+}
+
+.team_items_wrapper .tj_team_member.ps-reel-member .member_info .name,
+.team_items_wrapper .tj_team_member.ps-reel-member .member_info .designation {
+  opacity: 1;
+  transform: none;
+}
+
+.team_items_wrapper .tj_team_member.ps-reel-member .member_info .name {
+  color: var(--tj-color-heading-primary);
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.team_items_wrapper .tj_team_member.ps-reel-member .member_info .designation {
+  color: var(--tj-color-text-body);
+  font-size: 14px;
+}
+
+.ps-reel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tj-color-theme-primary);
+  white-space: nowrap;
+}
+
+.ps-reel-link:hover {
+  color: var(--tj-color-heading-primary);
+}
+
+@media (min-width: 992px) {
+  .team_items_wrapper .team_items {
+    max-width: 380px;
+    width: 100%;
+  }
+
+  .team_items_wrapper .team_items_right {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .team_items_wrapper .team_items {
+    max-width: 310px;
+  }
+}
+
+@media (max-width: 991px) {
+  .team_pin_area_container .team_items_wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .team_items_wrapper .team_items_right {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .team_items_wrapper .team_items .tj_team_member.ps-reel-member {
+    width: 100%;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Perspective showcase on Website Development: 3:2 sizing with zero side clipping, keeping GSAP scroll intact. */
+.perspective-showcase-images {
+  height: 454px;
+  flex-shrink: 0;
+}
+
+.perspective-showcase-item .perspective-showcase-img {
+  border: 1px solid var(--tj-color-border-2);
+  width: 680px;
+  height: 454px;
+}
+
+.perspective-showcase-item .perspective-showcase-img>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.perspective-showcase-item .perspective-showcase-img img {
+  object-fit: contain;
+  background-color: #faf5e6;
+}
+
+.perspective-showcase-subtitle::after,
+.perspective-showcase-year::after {
+  display: none;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .perspective-showcase-images {
+    height: 380px;
+  }
+
+  .perspective-showcase-item .perspective-showcase-img {
+    width: 570px;
+    height: 380px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .perspective-showcase-images {
+    height: 340px;
+  }
+
+  .perspective-showcase-item .perspective-showcase-img {
+    width: 510px;
+    height: 340px;
+  }
+
+  .perspective-showcase-subtitle {
+    width: 13%;
+  }
+
+  .perspective-showcase-year {
+    width: 9%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .perspective-showcase-images {
+    height: auto;
+  }
+
+  .perspective-showcase-item .perspective-showcase-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.tj_project_grid .tj_project_item .project_image > a,
+.tj_project_grid .tj_project_item .project_image > .project_frame {
+  width: 100%;
+  display: inline-flex;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background-color: #ffffff;
+  border: 1px solid rgba(19, 18, 17, 0.08);
+}
+
+.tj_project_grid .tj_project_item .project_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service_details_img {
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid rgba(19, 18, 17, 0.08);
+}
+
+.service_details_img img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain;
+}
+
+.h2_projects_item .project_image {
+  background-color: #ffffff;
+}
+
+.h2_projects_item .project_image img {
+  height: 100% !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Site-wide desktop & tablet heading height/scale normalization: keep bold editorial titles compact without altering animations. */
+@media (min-width: 768px) {
+  .section_heading .sec_title:where(:not(.fs-120):not(.fs-230)) {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .ps-guide .section_heading .sec_title {
+    font-size: clamp(34px, 3.2vw, 52px);
+  }
+
+  .service-banner .section_heading .sec_title,
+  .tj_blog_details_title,
+  .h1_projects_wrapper .section_heading .sec_title,
+  .tj_blog_featured .section_heading .sec_title {
+    font-size: 42px;
+    line-height: 1.08;
+  }
+
+  .fs-120,
+  .h1_cta_wrapper .cta_title.fs-120 {
+    font-size: 46px;
+    line-height: 1.05;
+  }
+
+  .fs-230,
+  .tj-about-section .sec_title.fs-230 {
+    font-size: 68px;
+    line-height: 0.9;
+  }
+
+  .tj-about-section .sec_title {
+    margin-bottom: 24px;
+  }
+
+  .about_text,
+  .timeline-content {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+@media (min-width: 992px) {
+  .section_heading .sec_title:where(:not(.fs-120):not(.fs-230)) {
+    font-size: 44px;
+  }
+
+  .service-banner .section_heading .sec_title {
+    font-size: 46px;
+  }
+
+  .tj_blog_details_title,
+  .h1_projects_wrapper .section_heading .sec_title,
+  .tj_blog_featured .section_heading .sec_title {
+    font-size: 48px;
+  }
+
+  .h1_projects_wrapper .section_heading .sec_title .space {
+    padding-left: 36px;
+  }
+
+  .fs-120,
+  .h1_cta_wrapper .cta_title.fs-120 {
+    font-size: 54px;
+  }
+
+  .fs-230,
+  .tj-about-section .sec_title.fs-230 {
+    font-size: 86px;
+  }
+
+  .about_text,
+  .timeline-content {
+    font-size: 36px;
+  }
+
+  .about_text .space {
+    padding-inline-start: 64px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section_heading .sec_title:where(:not(.fs-120):not(.fs-230)) {
+    font-size: 48px;
+  }
+
+  .service-banner .section_heading .sec_title {
+    font-size: 52px;
+    line-height: 1.06;
+  }
+
+  .tj_blog_details_title,
+  .h1_projects_wrapper .section_heading .sec_title,
+  .tj_blog_featured .section_heading .sec_title {
+    font-size: 54px;
+    line-height: 1.05;
+  }
+
+  .h1_projects_wrapper .section_heading .sec_title .space {
+    padding-left: 48px;
+  }
+
+  .fs-120,
+  .h1_cta_wrapper .cta_title.fs-120 {
+    font-size: 62px;
+  }
+
+  .fs-230,
+  .tj-about-section .sec_title.fs-230 {
+    font-size: 104px;
+  }
+
+  .about_text,
+  .timeline-content {
+    font-size: 40px;
+  }
+
+  .about_text .space {
+    padding-inline-start: 84px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section_heading .sec_title:where(:not(.fs-120):not(.fs-230)) {
+    font-size: 52px;
+  }
+
+  .service-banner .section_heading .sec_title {
+    font-size: 58px;
+  }
+
+  .tj_blog_details_title,
+  .h1_projects_wrapper .section_heading .sec_title,
+  .tj_blog_featured .section_heading .sec_title {
+    font-size: 60px;
+  }
+
+  .h1_projects_wrapper .section_heading .sec_title .space {
+    padding-left: 60px;
+  }
+
+  .fs-120,
+  .h1_cta_wrapper .cta_title.fs-120 {
+    font-size: 70px;
+  }
+
+  .fs-230,
+  .tj-about-section .sec_title.fs-230 {
+    font-size: 120px;
+  }
+
+  .about_text,
+  .timeline-content {
+    font-size: 44px;
+  }
+
+  .about_text .space {
+    padding-inline-start: 104px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .section_heading .sec_title:where(:not(.fs-120):not(.fs-230)) {
+    font-size: 58px;
+  }
+
+  .service-banner .section_heading .sec_title {
+    font-size: 64px;
+  }
+
+  .tj_blog_details_title,
+  .h1_projects_wrapper .section_heading .sec_title,
+  .tj_blog_featured .section_heading .sec_title {
+    font-size: 68px;
+  }
+
+  .h1_projects_wrapper .section_heading .sec_title .space {
+    padding-left: 72px;
+  }
+
+  .fs-120,
+  .h1_cta_wrapper .cta_title.fs-120 {
+    font-size: 80px;
+  }
+
+  .fs-230,
+  .tj-about-section .sec_title.fs-230 {
+    font-size: 136px;
+  }
+
+  .about_text,
+  .timeline-content {
+    font-size: 48px;
+  }
+}
+
+/* Home Blog section header: align full-width from the left edge like other sections instead of leaving a 25-33% blank left offset. */
+@media (min-width: 992px) {
+  .h1-blog-section {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+
+  .h1_blog_wrapper .blog_section_header {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 56px;
+    gap: 24px 32px;
+  }
+
+  .h1_blog_wrapper .blog_section_header .section_heading {
+    max-width: 680px;
+  }
+
+  .h1_blog_wrapper .blog_section_header .blog_desc {
+    max-width: 440px;
+  }
+}
+
+
+/* Programs page — editorial hero & turnkey systems card */
+.ps-programs-hero {
+  padding-top: 170px;
+  padding-bottom: 70px;
+}
+
+.ps-programs-hero-inner {
+  max-width: 600px;
+}
+
+.ps-programs-title {
+  font-family: var(--tj-ff-heading);
+  font-weight: var(--tj-fw-bold);
+  font-size: clamp(44px, 5.5vw, 84px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--tj-color-heading-primary);
+  margin-top: 12px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.ps-programs-desc {
+  color: var(--tj-color-text-body);
+  max-width: 520px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.ps-programs-hero-actions {
+  margin-top: 28px;
+}
+
+/* Right-side turnkey systems directory card */
+.ps-programs-card {
+  background-color: var(--tj-color-theme-bg-2);
+  border: 1px solid var(--tj-color-border-1);
+  padding: 28px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.ps-programs-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--tj-color-border-1);
+}
+
+.ps-programs-card-head .card-badge {
+  font-family: var(--tj-ff-heading);
+  font-size: 13px;
+  font-weight: var(--tj-fw-sbold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-programs-card-head .card-status {
+  font-size: 12px;
+  color: var(--tj-color-text-body-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: var(--tj-fw-medium);
+}
+
+.ps-programs-card-head .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.ps-programs-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ps-programs-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--tj-color-theme-bg);
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.ps-programs-card-row:hover {
+  border-color: var(--tj-color-heading-primary);
+  transform: translateX(4px);
+  color: inherit;
+}
+
+.ps-programs-card-row .row-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.ps-programs-card-row .row-num {
+  font-family: var(--tj-ff-heading);
+  font-weight: var(--tj-fw-bold);
+  font-size: 13px;
+  color: var(--tj-color-theme-primary);
+  flex-shrink: 0;
+}
+
+.ps-programs-card-row .row-info {
+  min-width: 0;
+}
+
+.ps-programs-card-row .row-title {
+  font-size: 15px;
+  font-weight: var(--tj-fw-sbold);
+  margin: 0;
+  color: var(--tj-color-heading-primary);
+  font-family: var(--tj-ff-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ps-programs-card-row .row-tags {
+  font-size: 11px;
+  color: var(--tj-color-text-body-2);
+  display: block;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ps-programs-card-row .row-action {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--tj-color-theme-bg-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tj-color-heading-primary);
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.ps-programs-card-row:hover .row-action {
+  background-color: var(--tj-color-heading-primary);
+  color: var(--tj-color-light-1);
+}
+
+.ps-programs-card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--tj-color-border-1);
+  font-size: 11px;
+  color: var(--tj-color-text-body-2);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 991px) {
+  .ps-programs-hero {
+    padding-top: 140px;
+    padding-bottom: 40px;
+  }
+
+  .ps-programs-card {
+    margin-top: 24px;
+    padding: 22px 20px;
+  }
+}
+
+
+/* Direct anchor scroll offset for contact form */
+#contact-form {
+  scroll-margin-top: 80px;
+}
+
+
+/* Homepage Software & Systems section header (Option 4) */
+.h1_projects_wrapper .section_heading {
+  display: block !important;
+  margin-bottom: 20px;
+}
+
+.h1_projects_wrapper .section_heading .sec_subtitle {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.h1_projects_wrapper .section_heading .sec_title {
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: clamp(30px, 3.8vw, 56px) !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 0;
+}
+
+.h1_projects_wrapper .section_heading .sec_title .space {
+  padding-left: 0 !important;
+  display: inline !important;
+}
+
+.h1_projects_header_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 45px;
+}
+
+.h1_projects_header_bottom .project_desc {
+  max-width: 540px;
+  color: var(--tj-color-text-body);
+  line-height: 1.6;
+}
+
+
+/* Blog page 3-column grid on desktop */
+@media (min-width: 992px) {
+  .tj_blog_grid .tj_blog_item_standard {
+    width: 33.3333% !important;
+  }
+}
+
+
+/* Centered Blog Hero Section */
+.ps-blog-hero {
+  padding-top: clamp(140px, 13vw, 175px);
+  padding-bottom: 24px;
+}
+
+.ps-blog-hero-centered {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ps-blog-single-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--tj-color-text-body);
+  margin-bottom: 20px;
+  padding: 6px 18px;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.ps-blog-single-line .ps-blog-badge {
+  font-family: var(--tj-ff-heading);
+  font-weight: 600;
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-blog-single-line .ps-blog-sep {
+  opacity: 0.45;
+}
+
+.ps-blog-hero-heading {
+  font-family: var(--tj-ff-heading);
+  font-weight: var(--tj-fw-bold);
+  font-size: clamp(34px, 4.4vw, 62px);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--tj-color-heading-primary);
+  margin: 0 auto 16px auto;
+}
+
+.ps-blog-hero-subline {
+  font-size: clamp(15px, 1.15vw, 18px);
+  color: var(--tj-color-text-body);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.ps-blog-hero + .tj_blog_grid_area {
+  padding-top: 20px !important;
+}
+
+.tj_filter_btn_group.category-wrap.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+/* Service Pages Hero Banner Typography (All Service Pages: Social Media to Websites) */
+.service-details-banner .service_details_header_left {
+  max-width: 100% !important;
+}
+
+.service-details-banner .tj_blog_details_title {
+  font-size: clamp(28px, 3vw, 42px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+  margin-bottom: 22px;
+}
+
+.service-details-banner .service_details_header_right .desc {
+  font-size: clamp(15px, 1.1vw, 17px);
+  line-height: 1.6;
+}
+/* About Page Hero Section Typography */
+.tj-about-section {
+  padding-bottom: 70px !important;
+}
+
+.tj-about-section .sec_title,
+.tj-about-section .sec_title.fs-230 {
+  font-size: clamp(28px, 3.2vw, 44px) !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase;
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+  letter-spacing: -0.02em;
+}
+
+.tj-about-section .about_text {
+  font-size: clamp(18px, 1.8vw, 26px) !important;
+  line-height: 1.45 !important;
+  font-weight: 500;
+  max-width: 960px;
+}
+
+.tj-about-section .about_text .space {
+  padding-inline-start: clamp(24px, 3vw, 48px) !important;
 }

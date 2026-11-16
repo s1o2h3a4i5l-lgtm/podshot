@@ -28,7 +28,7 @@ export default async function CaseStudyPage({ params }) {
       <div className="inner_top_gap" />
       <CaseBanner project={p} />
       <StepRow subtitle="What we did" title="Our approach." text={p.summary} steps={p.steps} />
-      <Stats subtitle="Results and impact" title="The numbers after the work." text="Every project is measured on what matters to the business, not on vanity numbers." button={{ label: 'Get results like these', href: '/contact' }} items={p.results} />
+      <Stats subtitle="Results and impact" title="The numbers after the work." text="Every project is measured on what matters to the business, not on vanity numbers." button={{ label: 'Get results like these', href: '/contact#contact-form' }} items={p.results} />
       <ClientStory quote={p.quote} />
       <Conclusion text={p.conclusion} prev={projectHref(prev)} next={projectHref(next)} />
       <Cta title="Want this for you?" message={`Hi PodShot, I read the "${p.title}" case study and would like similar results.`} />

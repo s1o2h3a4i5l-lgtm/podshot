@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import FlipText from '@/components/ui/FlipText';
 import { nav } from '@/data/services-meta';
 import { site } from '@/data/site';
@@ -153,7 +154,24 @@ export default function Header() {
                 <div className="site_logo"><Logo /></div>
                 <DesktopNav onDropdownToggle={setDropdown} />
                 <div className="tj-header_right">
-                  <Link href="/contact" className="tj_btn flip-text-wrap d-none d-md-inline-flex">
+                  <Link
+                    href="/contact#contact-form"
+                    className="tj_btn flip-text-wrap d-none d-md-inline-flex"
+                    onClick={(e) => {
+                      if (typeof window !== 'undefined' && window.location.pathname.replace(/\/$/, '') === '/contact') {
+                        const el = document.getElementById('contact-form');
+                        if (el) {
+                          e.preventDefault();
+                          const smoother = ScrollSmoother.get();
+                          if (smoother) smoother.scrollTo(el, true, 'top 80px');
+                          else {
+                            const top = el.getBoundingClientRect().top + window.scrollY - 80;
+                            window.scrollTo({ top, behavior: 'smooth' });
+                          }
+                        }
+                      }
+                    }}
+                  >
                     <span className="flip-text"><FlipText>Get a free audit</FlipText></span>
                   </Link>
                   <button className="tj_sidebar_toggle" aria-label="Open menu" onClick={() => setMenuOpen(true)}>

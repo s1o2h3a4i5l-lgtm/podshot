@@ -195,7 +195,7 @@
       </div>
       <div className="project_image">
         <a href="/project/brandmark">
-          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/h1-project-img-1.webp" />
+          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/project-3.webp" />
         </a>
       </div>
     </div>
@@ -358,7 +358,7 @@
       </div>
       <div className="project_image">
         <a href="/project/stationery">
-          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/h1-project-img-2.webp" />
+          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/project-2.png" />
         </a>
       </div>
     </div>
@@ -673,7 +673,7 @@
       </div>
       <div className="project_image">
         <a href="/project/interface">
-          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/h1-project-img-5.webp" />
+          <img alt="Project" loading="lazy" width="1326" height="900" style={{ color: 'transparent', height: 'auto' }} src="/images/projects/project.png" />
         </a>
       </div>
     </div>

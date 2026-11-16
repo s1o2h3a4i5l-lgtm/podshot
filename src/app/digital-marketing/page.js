@@ -1,10 +1,9 @@
-import { DigitalHero, AboutCounters, MarqueeBand, ServiceCards, ListRows, PortfolioList, PricingSection, BlogSticky } from '@/components/sections/digital/DigitalSections';
+import { DigitalHero, AboutCounters, MarqueeBand, ServiceCards, ListRows, PortfolioList, BlogSticky } from '@/components/sections/digital/DigitalSections';
 import CardsTestimonials from '@/components/sections/CardsTestimonials';
 import Cta from '@/components/sections/Cta';
 import { servicesIn } from '@/data/services-meta';
 import { projects } from '@/data/projects';
 import { testimonials } from '@/data/people';
-import { marketingPlans } from '@/data/packages';
 import { posts } from '@/data/blog';
 import { site } from '@/data/site';
 
@@ -39,7 +38,7 @@ export default function DigitalMarketingPage() {
         subtitle="Our marketing services"
         title="Seven ways we help you get found and chosen."
         text="Pick one service or combine them. Every plan starts with a free audit, so we only suggest what your business actually needs."
-        button={{ label: 'See packages', href: '/packages' }}
+        button={{ label: 'Get a free audit', href: '/contact#contact-form' }}
         items={servicesIn('digital')}
       />
       <ListRows
@@ -56,7 +55,6 @@ export default function DigitalMarketingPage() {
         ]}
       />
       <PortfolioList subtitle="Recent results" title="Our work" button={{ label: 'See all work', href: '/work' }} items={projects.filter((p) => ['Campaigns', 'Social media', 'Websites', 'Local SEO'].includes(p.category)).slice(0, 4)} />
-      <PricingSection subtitle="Simple packages" title="Plans for every stage of growth" button={{ label: 'All packages', href: '/packages' }} plans={marketingPlans.slice(0, 2)} />
       <CardsTestimonials subtitle="Client feedback" title="What business owners tell us" items={testimonials} />
       <BlogSticky subtitle="From the blog" title="Marketing tips you can use today" button={{ label: 'Read the blog', href: '/blog' }} posts={marketingPosts} />
       <Cta title="Let’s grow!" message="Hi PodShot, I would like a free marketing audit." />

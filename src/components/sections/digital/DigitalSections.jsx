@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import ImageTrail from '@/components/ui/ImageTrail';
 import VideoPopup from '@/components/ui/VideoPopup';
-import PricingCard from '@/components/ui/PricingCard';
 import FlipText from '@/components/ui/FlipText';
 import ServiceStack from '@/components/ui/ServiceStack';
 import { MarqueeButton, UnderlineButton, SplitFlip } from '@/components/ui/Marquee';
@@ -138,6 +137,8 @@ export function ServiceCards({ subtitle, title, text, button, items }) {
         <div className="ps-stack-track">
           {items.map((s, i) => {
             const href = s.href || (s.slug ? serviceHref(s) : null);
+            const isExternal = href && /^https?:\/\//.test(href);
+            const linkProps = isExternal ? { target: '_blank', rel: 'noreferrer' } : {};
             return (
               <div key={s.title || s.name} className="ps-stack-item">
                 <div className="h2-service-item tj-fade">
@@ -146,15 +147,15 @@ export function ServiceCards({ subtitle, title, text, button, items }) {
                     <div className="service-icon"><i className={s.icon || 'tji-service-1'} /></div>
                   </div>
                   <div className="h2-service-content">
-                    <h3 className="service-title tj-fz-h4">{href ? <Link href={href}>{s.title || s.name}</Link> : (s.title || s.name)}</h3>
+                    <h3 className="service-title tj-fz-h4">{href ? <Link href={href} {...linkProps}>{s.title || s.name}</Link> : (s.title || s.name)}</h3>
                     <p className="service-desc">{s.text || s.blurb}</p>
                     <div className="category-wrap">{(s.tags || []).map((t) => <span key={t} className="category">{t}</span>)}</div>
                   </div>
                   {href && (
                     <div className="btn-area d-flex justify-content-end">
-                      <Link className="tj_icon_btn flip-text-wrap no-border" href={href}>
+                      <Link className="tj_icon_btn flip-text-wrap no-border" href={href} {...linkProps}>
                         <div className="icon_btn hover-bg"><i className="tji-arrow-right" /></div>
-                        <span className="flip-text"><FlipText>Learn more</FlipText></span>
+                        <span className="flip-text"><FlipText>{isExternal ? 'View details' : 'Learn more'}</FlipText></span>
                       </Link>
                     </div>
                   )}
@@ -231,58 +232,37 @@ export function BlocksShape() {
   );
 }
 
-export function PortfolioList({ subtitle, title, button, items }) {
+export function PortfolioList({ subtitle, title, button, items = [] }) {
   return (
     <section className="h2-project-section tj-theme-dark fix">
       <BlocksShape />
-      <div className="h2_projects_header d-flex flex-wrap align-items-end justify-content-between gap-3">
+      <div className="h2_projects_header d-flex flex-wrap align-items-end justify-content-between gap-3" style={items.length ? undefined : { marginBottom: 0 }}>
         <div className="section_heading ">
           <span className="sec_subtitle tj-fade">[ <span>{subtitle}</span> ]</span>
           <h2 className="sec_title fs-230 tj-text-light-1 tj-chars-up">{title}</h2>
         </div>
         {button && <div className="tj-fade" data-direction="right" data-delay="0.2"><UnderlineButton href={button.href} light>{button.label}</UnderlineButton></div>}
       </div>
-      <div className="h2_projects_wrap">
-        {items.map((p, i) => (
-          <div key={p.slug} className="h2_projects_item active">
-            <div className="project_sl">\{String(i + 1).padStart(2, '0')}</div>
-            <div className="project_title_wrap">
-              <h3 className="project_title split-flip-text-wrap"><Link href={projectHref(p)}><SplitFlip text={p.title} /></Link></h3>
-              <div className="project_year">[ <span>{p.category} - {p.year}</span> ]</div>
-            </div>
-            <div className="project_content">
-              <p className="project_desc">{p.summary}</p>
-              <div className="project_btn_wrap"><MarqueeButton href={projectHref(p)} light>See the case study</MarqueeButton></div>
-            </div>
-            <div className="project_image">
-              <Link href={projectHref(p)}><img alt={p.title} loading="lazy" width="1326" height="900" style={{ height: 'auto' }} src={p.image} /></Link>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function PricingSection({ subtitle, title, button, plans }) {
-  return (
-    <section className="h2-pricing-section container-space fix">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col">
-            <div className="h2_pricing_header d-flex flex-wrap align-items-end justify-content-between gap-3">
-              <div className="section_heading">
-                <span className="sec_subtitle tj-fade">[ <span>{subtitle}</span> ]</span>
-                <h2 className="sec_title tj-chars-up">{title}</h2>
+      {items.length > 0 && (
+        <div className="h2_projects_wrap">
+          {items.map((p, i) => (
+            <div key={p.slug} className="h2_projects_item active">
+              <div className="project_sl">\{String(i + 1).padStart(2, '0')}</div>
+              <div className="project_title_wrap">
+                <h3 className="project_title split-flip-text-wrap"><Link href={projectHref(p)}><SplitFlip text={p.title} /></Link></h3>
+                <div className="project_year">[ <span>{p.category} - {p.year}</span> ]</div>
               </div>
-              {button && <div className="sec_heading_right tj-fade" data-direction="right"><MarqueeButton href={button.href}>{button.label}</MarqueeButton></div>}
+              <div className="project_content">
+                <p className="project_desc">{p.summary}</p>
+                <div className="project_btn_wrap"><MarqueeButton href={projectHref(p)} light>See the case study</MarqueeButton></div>
+              </div>
+              <div className="project_image">
+                <Link href={projectHref(p)}><img alt={p.title} loading="lazy" width="1326" height="900" style={{ height: 'auto' }} src={p.image} /></Link>
+              </div>
             </div>
-            <div className="h2_pricing_wrap">
-              {plans.map((p, i) => <PricingCard key={p.name} plan={{ direction: i ? 'right' : 'left', delay: 0.2 + i * 0.1, ...p }} blocksShape={i === plans.length - 1} />)}
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
+      )}
     </section>
   );
 }

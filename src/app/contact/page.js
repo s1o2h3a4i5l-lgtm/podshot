@@ -32,7 +32,7 @@ export default function ContactPage() {
       </section>
 
       <section className="contact-location-section fix">
-        <div className="map-area tj-fade"><OfficeMap lat={18.61065} lng={73.75700} /></div>
+        <div className="map-area tj-fade"><OfficeMap lat={18.610646} lng={73.7595701} href={site.mapUrl} /></div>
         <div className="container-space">
           <div className="container-fluid">
             <div className="row">
@@ -45,13 +45,16 @@ export default function ContactPage() {
                       <div className="contact_info">{site.hours}</div>
                       <a href={site.phoneHref} className="contact_info">{site.phone}</a>
                       <a href={`mailto:${site.email}`} className="contact_info">{site.email}</a>
+                      <a href={site.mapUrl} target="_blank" rel="noreferrer" className="contact_info">View on Google Maps</a>
                     </div>
                   </div>
                   <div className="contact-location-item tj-fade" data-delay="0.5">
                     <div className="country-flag"><img alt="" loading="lazy" width="90" height="90" style={{ height: 'auto' }} src={`${BASE_PATH}/brand/podshot-logo.png`} /></div>
                     <div className="tj_contact">
-                      <div className="contact_info">Need a podcast studio?<br />Visit our sister brand.</div>
+                      <div className="contact_info">Need a podcast studio?</div>
                       <div className="contact_info">PodShot Studio, Wakad and Hinjewadi</div>
+                      <a href={site.phoneHref} className="contact_info">{site.phone}</a>
+                      <a href={`mailto:${site.email}`} className="contact_info">{site.email}</a>
                       <a href={site.studioSite} target="_blank" rel="noreferrer" className="contact_info">Visit PodShot Studio</a>
                     </div>
                   </div>
@@ -62,7 +65,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="tj-contact-section-3 container-space fix">
+      <section id="contact-form" className="tj-contact-section-3 container-space fix">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-6">
@@ -81,7 +84,6 @@ export default function ContactPage() {
                     {site.socials.map((s) => <li key={s.label}><a href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}><i className={s.icon} /></a></li>)}
                   </ul>
                 </div>
-                <div className="purpose-video"><video autoPlay loop muted playsInline><source src={`${BASE_PATH}/videos/h1-hero-2.mp4`} type="video/mp4" /></video></div>
               </div>
             </div>
             <div className="col-lg-6">

@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import { gsap } from 'gsap';
+import { Anchor } from '@/components/ui/Buttons';
 import { BASE_PATH } from '@/lib/basePath';
 
 const vertex = `
@@ -91,8 +91,8 @@ export default function HoverImage({ src, href, alt = '', displacement = `${BASE
   }, [src, displacement, intensity, speedIn, speedOut]);
 
   return (
-    <Link ref={ref} className="tj--hover-img" href={href} data-displacement={displacement} data-intensity={intensity} data-speedin={speedIn} data-speedout={speedOut} style={{ position: 'relative' }}>
+    <Anchor ref={ref} className="tj--hover-img" href={href} data-displacement={displacement} data-intensity={intensity} data-speedin={speedIn} data-speedout={speedOut} style={{ position: 'relative' }}>
       <img src={src} alt={alt} width={width} height={height} loading="lazy" style={{ height: 'auto' }} />
-    </Link>
+    </Anchor>
   );
 }

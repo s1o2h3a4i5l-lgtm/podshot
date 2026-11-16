@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node tools/postbuild.js",
+    "build:test": "node tools/build-cpanel.js /podshot-creative-agency",
     "start": "next start",
     "lint": "eslint"
   },

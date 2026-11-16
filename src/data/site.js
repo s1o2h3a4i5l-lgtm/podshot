@@ -13,12 +13,12 @@ export const site = {
   whatsapp: 'https://wa.me/919371773521',
   email: 'info@podshot.in',
   studioSite: 'https://www.podshot.in',
-  mapUrl: 'https://maps.app.goo.gl/dbZfENSCZvMybVuJA',
+  mapUrl: 'https://maps.app.goo.gl/eVZqXh2uZtprtwav8',
   socials: [
-    { icon: 'tji-facebook', href: 'https://www.facebook.com/', label: 'Facebook' },
-    { icon: 'tji-instagram', href: 'https://www.instagram.com/', label: 'Instagram' },
-    { icon: 'tji-linkedin', href: 'https://www.linkedin.com/', label: 'LinkedIn' },
-    { icon: 'tji-youtube', href: 'https://www.youtube.com/', label: 'YouTube' },
+    { icon: 'tji-facebook', href: 'https://www.facebook.com/podshotbymitul', label: 'Facebook' },
+    { icon: 'tji-instagram', href: 'https://www.instagram.com/podshotcreativeagency?dlrf=OXVzZzA5cmpkY3p0', label: 'Instagram' },
+    { icon: 'tji-linkedin', href: 'https://www.linkedin.com/company/podshot/', label: 'LinkedIn' },
+    { icon: 'tji-youtube', href: 'https://www.youtube.com/@podshotchannel?themeRe', label: 'YouTube' },
   ],
 };
 

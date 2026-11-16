@@ -190,7 +190,49 @@ export function DarkCallout({ subtitle, title, text, button, video, trust, image
   );
 }
 
+function getInstagramEmbedUrl(url) {
+  if (!url) return null;
+  const match = url.match(/https?:\/\/(?:www\.)?instagram\.com\/(reel|reels|p|tv)\/([A-Za-z0-9_-]+)/i);
+  if (!match) return null;
+  const kind = match[1].toLowerCase() === 'reels' ? 'reel' : match[1].toLowerCase();
+  return `https://www.instagram.com/${kind}/${match[2]}/embed/`;
+}
+
 export function PinnedPortraits({ subtitle, title, button, items }) {
+  const leftItems = items.filter((_, i) => i % 2 === 0);
+  const rightItems = items.filter((_, i) => i % 2 !== 0);
+
+  const renderMember = (m, i) => {
+    const embedUrl = getInstagramEmbedUrl(m.instagram);
+    return (
+      <div key={m.instagram || m.title || i} className={`tj_team_member${embedUrl ? ' ps-reel-member' : ''}`}>
+        <div className="member_image">
+          {embedUrl ? (
+            <iframe
+              className="ps-reel-frame"
+              src={embedUrl}
+              title={m.title || `Instagram reel ${i + 1}`}
+              scrolling="no"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          ) : m.video ? (
+            <video className="ps-reel-video" autoPlay loop muted playsInline src={m.video} />
+          ) : (
+            <img alt={m.title} loading="eager" width="641" height="729" style={{ height: 'auto' }} src={m.image} />
+          )}
+        </div>
+        <div className="member_info">
+          {m.instagram && (
+            <a className="ps-reel-link" href={m.instagram} target="_blank" rel="noopener noreferrer">
+              Watch on Instagram <i className="tji-arrow-up-right" />
+            </a>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="h3-team-section team_pin_area_container container-space">
       <div className="container-fluid">
@@ -205,17 +247,14 @@ export function PinnedPortraits({ subtitle, title, button, items }) {
                 </div>
               </div>
               <div className="team_items_wrapper">
-                <div className="team_items">
-                  {items.map((m, i) => (
-                    <div key={i} className="tj_team_member">
-                      <div className="member_image"><img alt={m.title} loading="eager" width="641" height="729" style={{ height: 'auto' }} src={m.image} /></div>
-                      <div className="member_info">
-                        <h3 className="name tj-fz-h5">{m.href ? <Link href={m.href}>{m.title}</Link> : m.title}</h3>
-                        <span className="designation">{m.label}</span>
-                      </div>
-                    </div>
-                  ))}
+                <div className="team_items team_items_left">
+                  {leftItems.map((m, i) => renderMember(m, i * 2))}
                 </div>
+                {rightItems.length > 0 && (
+                  <div className="team_items team_items_right">
+                    {rightItems.map((m, i) => renderMember(m, i * 2 + 1))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

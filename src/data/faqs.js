@@ -18,15 +18,6 @@ export const faqGroups = {
       { q: 'Can you manage our social media fully?', a: 'Yes. We plan the content, shoot it, write captions, post, reply to comments and report every month.' },
     ],
   },
-  packages: {
-    title: 'Packages',
-    items: [
-      { q: 'Is there a minimum contract?', a: 'Monthly marketing plans start with three months, because good results need a little time. Shoots and one-off projects have no contract.' },
-      { q: 'Can I change my plan later?', a: 'Yes. You can move up or down a plan at the start of any month.' },
-      { q: 'How do payments work?', a: 'Monthly plans are paid at the start of each month. For shoots and projects we take 50% to book and the rest on delivery.' },
-      { q: 'Do you offer custom packages?', a: 'Yes. If none of the plans fit, tell us what you need and we will put together a custom quote.' },
-    ],
-  },
 };
 
 export const allFaqs = Object.values(faqGroups).flatMap((g) => g.items);
