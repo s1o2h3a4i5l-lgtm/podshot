@@ -52,6 +52,94 @@ export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/
   );
 }
 
+// Banner for text-led service pages: same header as ServiceBanner, but the photo row is replaced
+// by a large lead statement and a few short paragraphs next to the "what you get" list.
+export function ServiceIntro({ title, tags, text, leadLabel = 'In short', lead, paragraphs = [], listTitle = 'What you get', list, back = { label: 'All services', href: '/services' }, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary = { label: 'See our work', href: '/work' } }) {
+  return (
+    <section className="service-details-banner ps-intro fix">
+      <div className="container-space">
+        <div className="container-fluid">
+          <div className="service_details_header row">
+            <div className="col-lg-8">
+              <div className="service_details_header_left tj-fade">
+                <Link className="tj_icon_btn text-underline-btn back_btn flip-text-wrap" href={back.href}>
+                  <div className="icon_btn"><span><i className="tji-arrow-left" /><i className="tji-arrow-left" /></span></div>
+                  <span className="underline-text flip-text"><FlipText>{back.label}</FlipText></span>
+                </Link>
+                <h1 className="tj_blog_details_title title-anim">{title}</h1>
+                <div className="categories">{tags.map((t) => <span key={t} className="category">{t}</span>)}</div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="service_details_header_right tj-fade" data-delay="0.3">
+                <p className="desc fs-18">{text}</p>
+                <div className="btn-wrap">
+                  <IconButton href={primary.href}>{primary.label}</IconButton>
+                  <Link className="tj_text_btn" href={secondary.href}>{secondary.label}</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="service_details_intro ps-intro-body row row-gap-5">
+            <div className="col-lg-8">
+              <div className="ps-intro-lead tj-fade" data-delay="0.3">
+                <div className="sec_subtitle">[ <span>{leadLabel}</span> ]</div>
+                <p className="ps-intro-statement">{lead}</p>
+                {paragraphs.length > 0 && (
+                  <div className="ps-intro-paras">
+                    {paragraphs.map((p) => <p key={p} className="desc fs-18">{p}</p>)}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="service_details_intro_content tj-fade" data-delay="0.5">
+                <div className="sec_subtitle tj-fade" data-direction="right">[ <span>{listTitle}</span> ]</div>
+                <ul>{list.map((l) => <li key={l}>{l}</li>)}</ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Paragraph-friendly list: heading sticks on the left while numbered, titled paragraphs run down
+// the right. For content that needs a few sentences per point rather than a one-line bullet.
+export function ProseRows({ subtitle, title, text, items, dark = false }) {
+  return (
+    <section className={`ps-prose container-space sidebar-sticky-container${dark ? ' tj-theme-dark' : ''}`}>
+      <div className="container-fluid">
+        <div className="row row-gap-5">
+          <div className="col-lg-5">
+            <div className="sidebar-sticky">
+              <div className="section_heading">
+                <Sub>{subtitle}</Sub>
+                <h2 className={`sec_title tj-reveal-line${dark ? ' tj-text-light-1' : ''}`}>{title}</h2>
+              </div>
+              {text && <p className={`desc fs-18 ps-prose-text tj-fade${dark ? ' tj-text-light-2' : ''}`}>{text}</p>}
+            </div>
+          </div>
+          <div className="col-lg-7">
+            <div className="ps-prose-items">
+              {items.map((it, i) => (
+                <div key={it.title} className="ps-prose-item tj-fade">
+                  <div className="ps-prose-num">[ <span>{String(i + 1).padStart(2, '0')}</span> ]</div>
+                  <div>
+                    <h3 className={`ps-prose-title tj-fz-h4${dark ? ' tj-text-light-1' : ''}`}>{it.title}</h3>
+                    <p className={`ps-prose-desc fs-18${dark ? ' tj-text-light-2' : ''}`}>{it.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function WhyChoose({ subtitle, title, text, items, image = `${BASE_PATH}/images/service/choose-img.webp` }) {
   return (
     <section className="why-choose-section container-space sidebar-sticky-container">

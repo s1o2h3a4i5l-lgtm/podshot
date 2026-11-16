@@ -1,6 +1,6 @@
 // Maps a service page's middle sections (from its data file) to components.
 // Each entry is { type, ...props }. Add new section types here when needed.
-import { WhyChoose, Stats, ProcessCards, IconCards, CardGrid, StepRow, ResultsChecklist, ThreeBlocks, ServiceRows, ImageStrip, GalleryShowcase, PerspectiveShowcase, SkewShowcase } from './ServiceSections';
+import { ProseRows, WhyChoose, Stats, ProcessCards, IconCards, CardGrid, StepRow, ResultsChecklist, ThreeBlocks, ServiceRows, ImageStrip, GalleryShowcase, PerspectiveShowcase, SkewShowcase } from './ServiceSections';
 import { RelatedSlider, PercentCircles } from './ServiceClient';
 import { ServiceCards, ListRows, PortfolioList } from '@/components/sections/digital/DigitalSections';
 import { PinnedPortraits, DarkCallout, ProjectGallery } from '@/components/sections/production/ProductionSections';
@@ -32,6 +32,7 @@ const TYPES = {
   stickyProcess: Process,
   portraitCards: TeamCards,
   guide: Guide,
+  proseRows: ProseRows,
 };
 
 export default function Sections({ sections }) {

@@ -40,7 +40,8 @@ export function DigitalHero({ word, text, button, location }) {
               <div className="tj_gallery d-lg-none tj-fade" data-direction="bottom" data-delay=".9">
                 {[1, 2, 3, 4].map((n) => <img key={n} alt="" loading="lazy" width="219" height="251" className="gallery_img" style={{ height: 'auto' }} src={`${BASE_PATH}/images/gallery/offcanvas-gallery-img-${n}.png`} />)}
               </div>
-              <h1 className="hero_title tj-char-reveal-left fade-in">{word}</h1>
+              {/* Agina sizes this word (28vw) for seven letters, as in DIGITAL; scale longer words down to fit one line. */}
+              <h1 className="hero_title tj-char-reveal-left fade-in" style={word.length > 7 ? { fontSize: `calc(28vw * 6.2 / ${word.length})`, whiteSpace: 'nowrap' } : undefined}>{word}</h1>
             </div>
           </div>
         </div>

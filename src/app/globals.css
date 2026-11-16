@@ -1936,3 +1936,231 @@ footer .sec_subtitle {
 .tj-about-section .about_text .space {
   padding-inline-start: clamp(24px, 3vw, 48px) !important;
 }
+
+/* Text-led service pages (src/data/services/more.js).
+   ServiceIntro: the banner photo row is replaced by a lead statement panel. */
+.ps-intro .ps-intro-lead {
+  height: 100%;
+  padding: clamp(28px, 3.6vw, 64px);
+  background-color: var(--tj-color-theme-bg-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-intro .ps-intro-statement {
+  max-width: 22em;
+  margin: 26px 0 0;
+  font-family: var(--tj-ff-heading);
+  font-size: clamp(26px, 2.5vw, 44px);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  color: var(--tj-color-heading-primary);
+}
+
+.ps-intro .ps-intro-paras {
+  margin-top: auto;
+  padding-top: clamp(32px, 3.4vw, 56px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 40px;
+}
+
+.ps-intro .ps-intro-paras .desc {
+  margin: 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--tj-color-border-1);
+}
+
+@media (max-width: 767px) {
+  .ps-intro .ps-intro-paras { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .ps-intro .ps-intro-paras .desc { padding: 18px 0; }
+  .ps-intro .ps-intro-paras .desc:last-child { padding-bottom: 0; }
+}
+
+/* ProseRows: sticky heading on the left, numbered paragraphs on the right. */
+.ps-prose .sec_title {
+  font-size: clamp(34px, 3.2vw, 56px);
+}
+
+.ps-prose .ps-prose-text {
+  max-width: 26em;
+  margin: 26px 0 0;
+}
+
+.ps-prose-item {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 20px;
+  padding: clamp(28px, 2.6vw, 40px) 0;
+  border-top: 1px solid var(--tj-color-border-1);
+}
+
+.ps-prose-item:last-child {
+  border-bottom: 1px solid var(--tj-color-border-1);
+}
+
+.ps-prose-num {
+  padding-top: 6px;
+  font-family: var(--tj-ff-heading);
+  font-size: 15px;
+  font-weight: var(--tj-fw-sbold);
+  color: var(--tj-color-theme-primary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ps-prose .ps-prose-title {
+  margin-bottom: 12px;
+}
+
+.ps-prose .ps-prose-desc {
+  margin: 0;
+  max-width: 36em;
+}
+
+.ps-prose.tj-theme-dark .ps-prose-item {
+  border-color: var(--tj-color-border-3);
+}
+
+.ps-prose.tj-theme-dark .ps-prose-num {
+  color: var(--ps-color-accent-yellow, #f8c808);
+}
+
+@media (max-width: 575px) {
+  .ps-prose-item { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+
+/* ───────────── More yellow (logo #f8c808), applied with contrast rules ─────────────
+   60/30/10: cream stays the ground, brown and ink the structure, yellow the accent.
+   Yellow is only ever (a) a fill with ink or brown text on top (12:1 and 7:1), or (b) text/lines
+   on dark backgrounds (12:1). Never yellow text on cream (1.4:1) or cream text on yellow (1.3:1). */
+:root {
+  --ps-yellow: var(--ps-color-accent-yellow);
+  --ps-ink: var(--tj-color-heading-primary);
+}
+
+/* 1. Small accents on light sections */
+::selection { background: var(--ps-yellow); color: var(--ps-ink); }
+
+/* Tag chips: yellow fill on hover instead of brown. */
+.category:hover,
+.service_details_header .category:hover,
+.categories .category:hover {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
+
+/* Numbered step badges on light sections (StepRow etc.). */
+:not(.tj-theme-dark) > .container-fluid .tj-process-item-3 .process-no,
+.ps-step-row .tj-process-item-3 .process-no {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
+
+/* Checklist ticks: ink tick on a yellow square. */
+.result-impact-section .tj_icon_list .icon {
+  background-color: var(--ps-yellow);
+  color: var(--ps-ink);
+  border-color: var(--ps-yellow);
+}
+
+/* "What you get" list markers: small yellow squares instead of 4px dark dots. */
+.service_details_intro_content ul li:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  background-color: var(--ps-yellow);
+}
+
+/* Guide contents: yellow active bar on desktop, yellow active chip on mobile. */
+.ps-guide-toc li.is-active a { border-left-color: var(--ps-yellow); border-left-width: 3px; }
+@media (max-width: 991px) {
+  .ps-guide-toc li.is-active a {
+    background: var(--ps-yellow);
+    border-color: var(--ps-yellow);
+    color: var(--ps-ink);
+  }
+  .ps-guide-toc li.is-active a .n { color: var(--tj-color-theme-primary); }
+}
+
+/* Text links: a yellow marker underline under the label. */
+.tj_text_btn:before { background-color: var(--ps-yellow); height: 3px; }
+
+/* Service intro panel on the new text-led pages: yellow rule above the lead statement. */
+.ps-intro .ps-intro-lead { border-top: 4px solid var(--ps-yellow); }
+
+/* 2. Dark sections (process blocks, homepage services list, footer, guide CTA) */
+.tj-theme-dark .sec_subtitle,
+.tj-theme-dark .widget_title,
+.tj-theme-dark .service_count,
+.tj-theme-dark .ps-prose-num,
+.tj-theme-dark .timeline-year,
+.ps-guide-cta .sec_subtitle {
+  color: var(--ps-yellow);
+}
+
+.tj-theme-dark .tj-process-item-3 .process-no {
+  border-color: var(--ps-yellow);
+  color: var(--ps-yellow) !important;
+}
+
+.tj-theme-dark a:not(.tj_btn):not(.tj_icon_btn):not(.tj_bordered_btn):not(.service_link):hover {
+  color: var(--ps-yellow);
+}
+
+.tj-theme-dark .category:hover {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
+
+.tj-theme-dark .tj_socials a:hover,
+.tj-theme-dark .footer_socials a:hover {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
+
+/* Homepage services list group labels sat brown on near-black (about 1.9:1). */
+.ps-service-group-head .sec_subtitle:hover { color: var(--ps-yellow); }
+
+/* 3. Main buttons: yellow with ink text; hover keeps Agina's ink fill with cream text. */
+.tj_btn,
+.tj_btn:hover,
+.tj_btn:focus {
+  background-color: var(--ps-yellow);
+}
+
+.tj_btn { color: var(--ps-ink); }
+.tj_btn:hover,
+.tj_btn:focus { color: var(--tj-color-light-1); }
+
+/* Arrow-box buttons ("Get a free quote", "Start your project"): yellow box, ink arrow. */
+.tj_icon_btn .icon_btn {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
+
+/* "Let's talk" band (brown): the WhatsApp button becomes the yellow one. */
+.h1-cta-section .tj_user_profile { background-color: var(--ps-yellow); }
+.h1-cta-section .tj_user_profile .name { color: var(--ps-ink); }
+
+/* On dark sections, the solid yellow buttons hover to cream instead of ink so they stay visible. */
+.tj-theme-dark .tj_btn:before,
+.ps-guide-cta .tj_btn:before { background-color: var(--tj-color-light-1); }
+.tj-theme-dark .tj_btn:hover,
+.tj-theme-dark .tj_btn:focus,
+.ps-guide-cta .tj_btn:hover,
+.ps-guide-cta .tj_btn:focus { color: var(--ps-ink); }
+
+/* Dark-section leftovers that Agina paints brown (about 1.9:1 on near-black). */
+.h1_services_wrapper .view-more-btn .icon_btn,
+.tj-theme-dark .tj_icon_btn .icon_btn,
+.tj-theme-dark button.icon_btn {
+  background-color: var(--ps-yellow);
+  border-color: var(--ps-yellow);
+  color: var(--ps-ink);
+}
