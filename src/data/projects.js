@@ -11,7 +11,7 @@ export const projects = [
     year: '2026',
     cta: 'Get started',
     url: 'https://smarttutorials.co.in/booking',
-    image: `${BASE_PATH}/images/projects/booking-software.jpg`,
+    image: `${BASE_PATH}/images/projects/booking-software-techno.jpg`,
     summary: 'Reservations, time-slots, packages, WhatsApp reminders & payments in one system.',
     brief: 'Automated appointment scheduling, instant customer confirmations on WhatsApp, and payment gateway integration.',
     steps: [
@@ -37,7 +37,7 @@ export const projects = [
     year: '2026',
     cta: 'Get started',
     url: 'https://smarttutorials.co.in/clinic/',
-    image: `${BASE_PATH}/images/projects/clinic-software.png`,
+    image: `${BASE_PATH}/images/projects/clinic-software-techno.jpg`,
     summary: 'Digital EMR, smart prescriptions, patient history & clinic billing.',
     brief: 'Paperless clinic workflow with rapid digital prescription writing and patient history retrieval.',
     steps: [
@@ -63,7 +63,7 @@ export const projects = [
     year: '2026',
     cta: 'Get started',
     url: 'https://smarttutorials.co.in/lms/',
-    image: `${BASE_PATH}/images/projects/lead-software.jpg`,
+    image: `${BASE_PATH}/images/projects/lead-software-techno-v2.jpg`,
     summary: 'Capture, organize and convert leads, assign to your team, track follow-ups and close more deals.',
     brief: 'Centralized lead pipeline tracking leads from Google, Meta and website forms with instant notifications.',
     steps: [
@@ -89,7 +89,7 @@ export const projects = [
     year: '2026',
     cta: 'Get started',
     url: 'https://smarttutorials.co.in/salon/',
-    image: `${BASE_PATH}/images/projects/salon-software.png`,
+    image: `${BASE_PATH}/images/projects/salon-software-techno.jpg`,
     summary: 'Manage appointments, services, staff, payroll, attendance and salon operations in one place.',
     brief: 'Complete salon operating system handling multi-chair appointments, stylist commissions and POS.',
     steps: [
@@ -115,7 +115,7 @@ export const projects = [
     year: '2026',
     cta: 'Get started',
     url: 'https://smarttutorials.co.in/laundry/',
-    image: `${BASE_PATH}/images/projects/laundry-software-subtle.jpg`,
+    image: `${BASE_PATH}/images/projects/laundry-software-techno.jpg`,
     summary: 'Order tracking, garment tagging, pickup & delivery, and instant POS billing in one system.',
     brief: 'Complete laundry operating system handling counter intake, barcode garment tracking, driver routes and automated WhatsApp status alerts.',
     steps: [

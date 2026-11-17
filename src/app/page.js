@@ -50,7 +50,7 @@ export default function HomePage() {
         title="Smart tools to run & scale your business"
         text="Pre-built software systems to run your daily operations so you can focus on customers. Pick the one your business needs."
         button={{ label: 'Explore all programs', href: '/programs' }}
-        projects={projects.slice(0, 4)}
+        projects={projects.slice(0, 5)}
       />
       <ServicesList
         subtitle="What we do"

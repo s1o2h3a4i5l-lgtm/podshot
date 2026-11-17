@@ -36,6 +36,7 @@ export const services = [
   // ── Creative ──
   { slug: 'logo-and-branding-services-in-pune', name: 'Logo and Branding', short: 'Logo & Branding', group: 'creative', icon: 'tji-star', tags: ['Logo', 'Identity', 'Guidelines'], blurb: 'A logo and brand look that people remember, with the files to use it everywhere.' },
   { slug: 'graphic-design-services-in-pune', name: 'Graphic Design', short: 'Graphic Design', group: 'creative', icon: 'tji-creative', tags: ['Social', 'Print', 'Packaging'], blurb: 'Posts, flyers, brochures and packaging designed to match your brand.' },
+  { slug: 'stationery-design-services-in-pune', name: 'Stationery & Print Design', short: 'Stationery', group: 'creative', icon: 'tji-service-5', tags: ['Brochures', 'Business Cards', 'Hoardings & Flex'], blurb: 'Brochures, luxury business cards, outdoor hoardings, flex banners and corporate stationery tailored for high physical impact.' },
   { slug: 'video-production-services-in-pune', name: 'Video Production', short: 'Video Creation', group: 'creative', icon: 'tji-play', tags: ['Brand films', 'Product', 'Explainers'], blurb: 'Brand films, product videos and explainers, scripted, shot and edited by one team.' },
   { slug: 'content-writing-services-in-pune', name: 'Content Writing', short: 'Content Writing', group: 'creative', icon: 'tji-quote', tags: ['Website copy', 'Blogs', 'Scripts'], blurb: 'Website pages, blogs and scripts written in plain words that sell.' },
 
@@ -79,6 +80,7 @@ export const servicesMegaMenu = [
       { label: 'Logo & Branding', href: '/services/logo-and-branding-services-in-pune' },
       { label: 'Website Design', href: '/services/website-development-company-in-pune' },
       { label: 'Graphic Design', href: '/services/graphic-design-services-in-pune' },
+      { label: 'Stationery & Print', href: '/services/stationery-design-services-in-pune' },
       { label: 'Video Creation', href: '/services/video-production-services-in-pune' },
       { label: 'AI Content Creation', href: '/services/top-ai-agency-in-pune' },
     ],

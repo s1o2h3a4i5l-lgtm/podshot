@@ -1,3 +1,5 @@
+import { BASE_PATH } from '@/lib/basePath';
+
 // Page content for the text-led services (no banner photo). They use `intro` (ServiceIntro) instead
 // of `banner`, and mix three layouts so the pages do not all look the same:
 //   Process-led   (logo, graphic design, video): what we make, then how we make it.
@@ -323,6 +325,140 @@ export const more = {
       { q: 'How many changes are included?', a: 'We agree on a fair number of revision rounds before we start, so you know what to expect.' },
       { q: 'Do you handle printing?', a: 'We prepare print-ready files and can recommend printers in Pune. We do not print in-house.' },
       { q: 'We do not have a brand style yet. Is that a problem?', a: 'Not at all. We can set up a simple brand style first, or do a full logo and branding project if you need one.' },
+    ],
+  },
+
+    'stationery-design-services-in-pune': {
+    seoTitle: 'Stationery & Print Design Services in Pune | Business Cards, Brochures & Hoardings',
+    description: 'Corporate stationery and large-format print design in Pune. Custom brochures, luxury visiting cards, outdoor flex hoardings, letterheads, and brand collateral by PodShot.',
+    banner: {
+      title: 'Stationery & Print Design Services in Pune',
+      tags: ['Brochures', 'Business Cards', 'Hoardings & Flex'],
+      text: 'From tactile executive business cards and high-finish corporate brochures to massive highway hoardings and outdoor flex banners. We design tangible print collateral engineered to make your brand memorable in the real world.',
+      listTitle: 'What we deliver',
+      list: [
+        'Luxury business cards & executive visiting cards',
+        'Bi-fold, tri-fold & multi-page corporate brochures',
+        'Large-format outdoor hoardings & flex banners',
+        'Official letterheads, envelopes & corporate suites',
+        'Roll-up standees & event display canopies',
+        '100% press-ready CMYK + bleed vector files',
+      ],
+      image: `${BASE_PATH}/images/service/stationery-hoarding-billboard.webp`,
+    },
+    sections: [
+      {
+        type: 'whyChoose',
+        subtitle: 'Tactile Authority',
+        title: 'Print you can feel, see, and remember.',
+        text: 'In a screen-saturated world, physical touch creates credibility. When a client holds a premium 400 GSM soft-touch business card or passes a high-contrast highway hoarding, your business looks established, trustworthy, and authoritative.',
+        image: `${BASE_PATH}/images/service/stationery-business-cards.webp`,
+        items: [
+          { title: 'CMYK & Pre-Press Calibration', text: 'Every file is built with exact CMYK color profiles, 300+ DPI vector resolution, precise bleed margins, and crop marks so the final print matches the screen.' },
+          { title: 'Luxury Finishes & Paper Advice', text: 'We advise you on paper GSM weights, velvet soft-touch laminations, raised spot UV gloss, metallic gold/copper foil stamping, and textured stocks.' },
+          { title: 'Scale & Viewing Distance', text: 'Whether it is a 2-inch business card held in hand or a 40-foot outdoor hoarding seen at 80 km/h, typography and visual hierarchy are crafted for instant impact.' },
+          { title: 'Unified Brand Cohesion', text: 'Your business cards, brochures, envelopes, and outdoor flex banners match your website and digital identity down to the exact millimeter.' },
+        ],
+      },
+      {
+        type: 'serviceRows',
+        subtitle: 'What We Design',
+        title: 'Full-Spectrum Stationery, Print & Outdoor Signage',
+        items: [
+          {
+            title: 'Brochure Design',
+            tags: ['Bi-Fold', 'Tri-Fold', 'Catalogs'],
+            points: [
+              'Corporate company profiles and investor pitch booklets',
+              'Bi-fold and tri-fold promotional brochures with custom fold maps',
+              'Multi-page product catalogs and technical service datasheets',
+              'Structured editorial layouts, typography grids, and saddle-stitch or perfect binding specs',
+            ],
+          },
+          {
+            title: 'Business Cards & Visiting Cards',
+            tags: ['Executive', 'Foil Stamping', 'Spot UV'],
+            points: [
+              'Standard 85×55 mm, square, and custom die-cut dimensions',
+              'Velvet soft-touch matte, textured linen, cotton, and kraft stocks (350–600 GSM)',
+              'Raised spot UV gloss, blind debossing, and metallic gold/silver/copper foil accents',
+              'Smart dynamic QR codes linking to instant vCards, digital portfolios, or WhatsApp chats',
+            ],
+          },
+          {
+            title: 'Hoardings & Outdoor Flex',
+            tags: ['Billboards', 'Highways', 'Glow Signs'],
+            points: [
+              'Large-scale highway hoardings and high-visibility unipole billboard ads',
+              'Frontlit and backlit heavy-duty outdoor flex banners with reinforced eyelets',
+              'Retail shopfront glow signboards, 3D acrylic letters, and ACP fascia boards',
+              'Construction site barricade wraps and real estate project boundary graphics',
+            ],
+          },
+          {
+            title: 'Corporate Office Stationery',
+            tags: ['Letterheads', 'Envelopes', 'Invoices'],
+            points: [
+              'Official executive letterheads and continuation sheets (Print & Word/PDF formats)',
+              'Branded corporate envelopes (Window, DL, C4, and C5 sizes)',
+              'Invoice books, quotation sheets, delivery challans, and receipt vouchers',
+              'Custom rubber stamps, official seal vector graphics, and certificate holders',
+            ],
+          },
+          {
+            title: 'Marketing Collateral & Handouts',
+            tags: ['Flyers', 'Leaflets', 'Standees'],
+            points: [
+              'High-volume marketing flyers, leaflets, and door-to-door promotional pamphlets',
+              'Roll-up pull-up standees for office receptions, conferences, and event booths',
+              'Trade show exhibition backdrops, pop-up media walls, and promotional canopies',
+              'Branded pocket presentation folders with die-cut card slots for proposals',
+            ],
+          },
+          {
+            title: 'Packaging, Bags & Brand Merchandise',
+            tags: ['Paper Bags', 'ID Cards', 'Corporate Gifts'],
+            points: [
+              'Branded luxury kraft paper bags, matte laminated shopping bags, and cotton totes',
+              'Employee ID cards, visitor access cards, and woven branded lanyards',
+              'Corporate gift sets, customized executive diaries, metal pens, and desk calendars',
+              'Product packaging labels, barcode stickers, and shipping box branding',
+            ],
+          },
+        ],
+      },
+      
+
+      {
+        type: 'stepRow',
+        subtitle: 'Our Workflow',
+        title: 'From Brief to Press-Ready Production',
+        text: 'We bridge the gap between creative graphic design and commercial printing technicalities.',
+        steps: [
+          { title: '1. Specs & Dimensions', text: 'We establish exact measurements, paper GSM, fold types, and printing method (offset, digital, screen, or flex).' },
+          { title: '2. Concept & 3D Mockup', text: 'We design custom layouts and present them in photorealistic 3D mockups so you can see the real-world scale and finish.' },
+          { title: '3. Proofing & Revisions', text: 'We fine-tune typography, proofread text, verify safety margins, and incorporate your feedback.' },
+          { title: '4. Press-Ready Delivery', text: 'You receive vector press-ready PDFs with embedded fonts, 300+ DPI images, bleeds, trim marks, and color specifications.' },
+        ],
+      },
+      {
+        type: 'proseRows',
+        subtitle: 'Why It Matters',
+        title: 'The Technical Side of Commercial Print Design',
+        text: 'Great print design requires technical precision that screen-only designers often overlook.',
+        items: [
+          { title: 'Zero Color Surprises (CMYK vs RGB)', text: 'Colors designed in RGB look dull or muddy when printed in CMYK ink. We design directly in calibrated CMYK color spaces, specify Pantone spot colors where needed, and ensure ink densities stay within press limits.' },
+          { title: 'Bleed, Safe Zones & Crease Lines', text: 'Commercial cutting machines have slight shifts. Without proper 3mm bleed margins and safe zones, text gets sliced or white borders appear. Every file we deliver is mathematically guarded against cutting errors.' },
+          { title: 'Scale-Engineered Typography', text: 'A font that looks legible on your phone can become unreadable on a passing highway hoarding or too small on a tri-fold brochure. We engineer typography scales for the exact viewing distance of each medium.' },
+        ],
+      },
+    ],
+    faqs: [
+      { q: 'Do you handle the actual printing as well as the design?', a: 'We specialize in design and pre-press production. We deliver 100% press-ready files that any commercial printer or flex vendor can produce without questions. We also recommend trusted high-end offset and digital printers in Pune and can coordinate directly with your vendor.' },
+      { q: 'What files will I receive upon project completion?', a: 'You receive press-ready vector PDF files with embedded fonts, CMYK profiles, bleed marks, and trim lines, along with high-res PNG/JPEG previews and editable open source files upon request.' },
+      { q: 'Can you design a complete corporate stationery package for our new brand?', a: 'Yes. We offer complete corporate identity suites including business cards, letterheads, continuation sheets, envelopes, presentation folders, ID cards, and email signatures designed in one unified style.' },
+      { q: 'How do you design hoardings and flex banners to ensure they look sharp at 40 feet?', a: 'Large-format hoardings are engineered using vector graphics and high-resolution imagery scaled specifically to the viewing distance, with high-contrast text hierarchies readable in under 3 seconds from moving traffic.' },
+      { q: 'Can you work with our existing brand guidelines and logo?', a: 'Yes. If you have an established logo and brand manual, we adhere strictly to your color codes, typography standards, and spacing rules across all print and outdoor collateral.' },
     ],
   },
 
