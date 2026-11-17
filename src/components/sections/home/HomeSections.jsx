@@ -291,7 +291,7 @@ export function ServicesList({ subtitle, title, text, button }) {
               {Object.entries(groups).filter(([, g]) => g.home !== false).map(([key, g]) => (
                 <div key={key} className="ps-service-group">
                   <div className="ps-service-group-head tj-fade">
-                    <Link href={g.href} className="sec_subtitle">[ <span>{g.name}</span> ]</Link>
+                    <span className="sec_subtitle">[ <span>{g.name}</span> ]</span>
                   </div>
                   <div className="h1_services_items">
                     {servicesIn(key).map((s) => {

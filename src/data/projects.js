@@ -106,6 +106,32 @@ export const projects = [
     quote: { text: 'Managing appointments and stylist commissions is seamless now.', name: 'Salon Owner', role: 'Pune' },
     conclusion: 'A custom salon OS elevates client experience and staff productivity.',
   },
+  {
+    slug: 'laundry',
+    title: 'Laundry Management Software',
+    client: 'Laundromats & Dry Cleaners',
+    category: 'Software',
+    services: ['Order Tracking', 'Garment Tagging', 'Pickup & Delivery'],
+    year: '2026',
+    cta: 'Get started',
+    url: 'https://smarttutorials.co.in/laundry/',
+    image: `${BASE_PATH}/images/projects/laundry-software-subtle.jpg`,
+    summary: 'Order tracking, garment tagging, pickup & delivery, and instant POS billing in one system.',
+    brief: 'Complete laundry operating system handling counter intake, barcode garment tracking, driver routes and automated WhatsApp status alerts.',
+    steps: [
+      { title: 'Intake & Tagging', text: 'Fast itemized intake with digital garment tags.' },
+      { title: 'Status Tracking', text: 'Real-time order stages: Washing, Ironing, Ready.' },
+      { title: 'Pickup & Delivery', text: 'Driver dispatch and scheduled home pickups.' },
+      { title: 'Instant Invoicing', text: 'Quick billing, GST invoices and WhatsApp alerts.' },
+    ],
+    results: [
+      { value: 99, suffix: '%', label: 'Tagging accuracy', text: 'Zero lost or mixed garments.' },
+      { value: 3, suffix: 'x', label: 'Faster counter check-in', text: 'Instant digital invoice generation.' },
+      { value: 45, suffix: '%', label: 'Repeat orders', text: 'Automated WhatsApp readiness alerts.' },
+    ],
+    quote: { text: 'Garment tracking and pickup delivery runs without confusion now.', name: 'Dry Cleaners Owner', role: 'Pune' },
+    conclusion: 'A specialized laundry software eliminates misplaced orders and speeds up customer turnaround.',
+  },
 ];
 
 export const localSeoItems = [

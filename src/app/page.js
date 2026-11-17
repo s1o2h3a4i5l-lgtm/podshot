@@ -56,7 +56,7 @@ export default function HomePage() {
         subtitle="What we do"
         title="Everything your brand needs to grow"
         text="SEO, social media, ads and websites that bring you customers, plus the content that makes them worth watching. Pick one service or let us handle all of it."
-        button={{ label: 'View all services', href: '/digital-marketing' }}
+        button={{ label: 'Get in touch', href: '/contact#contact-form' }}
       />
       {/* <TeamCard
         text="A small team of marketers, editors, shooters and designers who work on your brand every week."

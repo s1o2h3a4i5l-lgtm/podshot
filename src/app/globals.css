@@ -2164,3 +2164,243 @@ footer .sec_subtitle {
   border-color: var(--ps-yellow);
   color: var(--ps-ink);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   Services Mega Menu (Midbrains-style 4-column dropdown)
+   ───────────────────────────────────────────────────────────── */
+
+/* Position relative on header wrap so mega menu centers relative to header container */
+.tj-header_wrap {
+  position: relative !important;
+}
+
+/* Allow mega menu li to take header wrap width instead of individual li width */
+.site_navigation nav ul:not(.sub-menu) > li.has-megamenu {
+  position: static !important;
+}
+
+/* Ensure non-megamenu dropdowns (e.g. Company) remain anchored to their li */
+.site_navigation nav ul:not(.sub-menu) > li:not(.has-megamenu) {
+  position: relative !important;
+}
+
+/* Mega dropdown container - compact height matching Midbrains */
+.ps-mega-dropdown {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 50% !important;
+  transform: translateX(-50%) translateY(2px);
+  width: 980px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 75px);
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: var(--tj-color-theme-bg, #fdf6e6);
+  border: 1px solid var(--tj-color-border-1, #e8ddc4);
+  border-radius: 12px;
+  padding: 16px 28px 16px;
+  box-shadow: 0 16px 36px rgba(28, 25, 23, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 999;
+}
+
+.ps-mega-dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+/* Invisible hover bridge spanning between navbar link and mega menu so it sticks */
+.ps-mega-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+.ps-mega-dropdown.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+/* 4-column grid matching Midbrains structure */
+.ps-mega-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  gap: 28px;
+  text-align: left;
+}
+
+.ps-mega-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ps-mega-col-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tj-color-theme-primary, #703010);
+  margin: 0 0 7px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--tj-color-border-1, #e8ddc4);
+  line-height: 1.2;
+}
+
+.ps-mega-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.ps-mega-list > li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.ps-mega-link {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tj-color-heading-primary, #1c1917) !important;
+  padding: 1.5px 0;
+  line-height: 1.22;
+  transition: color 0.15s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+
+.ps-mega-link:hover {
+  color: var(--tj-color-theme-primary, #703010) !important;
+  transform: translateX(3px);
+}
+
+/* Mobile Offcanvas Mega Menu Styling (Clean & Minimal) */
+.ps-mobile-mega-container {
+  padding: 4px 0 10px 14px !important;
+  margin: 4px 0 8px 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.ps-mobile-mega-group {
+  margin-bottom: 8px !important;
+}
+
+.ps-mobile-mega-group:last-child {
+  margin-bottom: 0 !important;
+}
+
+.ps-mobile-mega-cat-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 7px 0 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: var(--tj-color-theme-primary, #703010) !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.ps-mobile-mega-cat-header:hover {
+  opacity: 0.8 !important;
+}
+
+.ps-cat-sign {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: var(--tj-color-theme-primary, #703010) !important;
+  flex-shrink: 0 !important;
+  margin-left: 8px !important;
+  background: none !important;
+  border: none !important;
+}
+
+.ps-cat-sign svg {
+  display: block !important;
+}
+
+.ps-cat-sign .sign-vert {
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+  transform-origin: 6px 6px !important;
+}
+
+.ps-cat-sign.is-open .sign-vert {
+  opacity: 0 !important;
+  transform: rotate(90deg) !important;
+}
+
+/* Force reset on all mean-nav styles for mega items */
+.offcanvas_menu .mean-nav ul.ps-mobile-mega-items,
+.offcanvas_menu .mean-nav .ps-mobile-mega-container ul.ps-mobile-mega-items,
+ul.ps-mobile-mega-items {
+  list-style: none !important;
+  padding: 2px 0 6px 12px !important;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+}
+
+.offcanvas_menu .mean-nav ul.ps-mobile-mega-items li,
+.offcanvas_menu .mean-nav .ps-mobile-mega-container ul.ps-mobile-mega-items li,
+ul.ps-mobile-mega-items li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+}
+
+.offcanvas_menu .mean-nav ul.ps-mobile-mega-items li a,
+.offcanvas_menu .mean-nav .ps-mobile-mega-container ul.ps-mobile-mega-items li a,
+.offcanvas_menu .mean-nav ul:not(.sub-menu) > li ul.ps-mobile-mega-items > li > a,
+.offcanvas_menu .mean-nav ul:not(.sub-menu) > li > div.ps-mobile-mega-container a,
+.ps-mobile-mega-items li a {
+  display: block !important;
+  font-family: var(--font-body, system-ui, -apple-system, sans-serif) !important;
+  font-size: 14.5px !important;
+  font-weight: 450 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  line-height: 1.45 !important;
+  color: var(--tj-color-heading-primary, #1c1917) !important;
+  padding: 5px 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  transition: color 0.18s ease, transform 0.18s ease !important;
+  text-decoration: none !important;
+  width: 100% !important;
+}
+
+.offcanvas_menu .mean-nav ul.ps-mobile-mega-items li a:hover,
+.offcanvas_menu .mean-nav .ps-mobile-mega-container ul.ps-mobile-mega-items li a:hover,
+.ps-mobile-mega-items li a:hover {
+  background: none !important;
+  color: var(--tj-color-theme-primary, #703010) !important;
+  transform: translateX(4px) !important;
+  padding-left: 0 !important;
+}
+

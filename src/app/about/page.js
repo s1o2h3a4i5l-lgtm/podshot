@@ -21,8 +21,8 @@ export default function AboutPage() {
               <div className="section_heading d-flex flex-xl-nowrap flex-wrap justify-content-between container-space">
                 <span className="sec_subtitle tj-fade">[ <span>About PodShot</span> ]</span>
                 <div className="sec_right">
-                  <h1 className="sec_title tj-reveal-line tj-fade">PodShot Studio &amp; Creative Agency</h1>
-                  <h2 className="about_text uppercase tj-reveal-line tj-fade">
+                  <h1 className="sec_title tj-reveal-line">PodShot Studio &amp; Creative Agency</h1>
+                  <h2 className="about_text uppercase tj-fade">
                     <span className="space">A creative</span> and digital marketing agency in Pune, <span>making content</span> and running campaigns that help local brands <span>grow.</span>
                   </h2>
                 </div>

@@ -284,7 +284,22 @@ const L = Renderer, K = Vec2, J = Flowmap, Q = Triangle, G = Texture, A = Progra
                         stagger: 0,
                       }));
                 }),
-                () => r.forEach((t) => t.revert())),
+                () =>
+                  r.forEach((t) => {
+                    try {
+                      if (t.elements) {
+                        t.elements.forEach((el) => {
+                          el.querySelectorAll?.('.tj-reveal-line__wrap')?.forEach((wrap) => {
+                            while (wrap.firstChild) {
+                              wrap.parentNode?.insertBefore(wrap.firstChild, wrap);
+                            }
+                            wrap.remove();
+                          });
+                        });
+                      }
+                      t.revert();
+                    } catch (_) {}
+                  })),
               ),
               i.push(
                 ((l = []),

@@ -578,4 +578,684 @@ export const more = {
       { q: 'Will our business information stay private?', a: 'Yes. Anything you share with us is kept confidential.' },
     ],
   },
+
+  // ───────────────────────────── Development ─────────────────────────────
+
+  "mobile-app-development-company-pune": {
+  "seoTitle": "Mobile App Development Company in Pune | PodShot Studio & Creative Agency",
+  "description": "Custom Android and iOS mobile app development in Pune. Scalable, high-performance, and intuitive native and cross-platform apps by PodShot.",
+  "intro": {
+    "title": "Mobile App Development Company in Pune",
+    "tags": [
+      "Android",
+      "iOS",
+      "Cross-Platform"
+    ],
+    "text": "PodShot Studio & Creative Agency provides cutting-edge mobile app development services in Pune for iOS and Android. No matter how complex your vision, our engineers design and build robust, secure, and user-friendly mobile applications that power seamless digital experiences.",
+    "lead": "Over 80% of digital traffic happens on mobile devices. We build apps that load instantly, feel intuitive and keep your business one tap away from customers.",
+    "paragraphs": [
+      "Whether you need a native iOS app in Swift, an Android app in Kotlin, or a cross-platform solution in Flutter or React Native, our team handles the full lifecycle.",
+      "From wireframes and UI/UX prototypes to backend APIs, database architecture, and App Store and Play Store launch, we ensure a reliable, scalable product."
+    ],
+    "list": [
+      "Native iOS (Swift) & Android (Kotlin) apps",
+      "Cross-platform apps (Flutter & React Native)",
+      "UI/UX wireframing & interactive prototypes",
+      "Secure backend API & database architecture",
+      "App Store and Google Play publishing",
+      "Maintenance, monitoring, and regular updates"
+    ]
+  },
+  "sections": [
+    {
+      "type": "iconCards",
+      "subtitle": "Mobile Excellence",
+      "title": "Engineered for performance, built for scale",
+      "text": "Over 80% of digital traffic in India originates on mobile devices. A custom mobile app establishes an authoritative brand presence, streamlines operational workflows, and keeps your services one tap away from customers.",
+      "items": [
+        {
+          "icon": "tji-service-3",
+          "title": "Tailored Business Logic",
+          "text": "Custom applications built around your exact business model, operations, and customer workflows."
+        },
+        {
+          "icon": "tji-virtual-labs",
+          "title": "Modern Tech Stack",
+          "text": "High-performance engineering with Flutter, React Native, Swift, Kotlin, Node.js, and cloud backends."
+        },
+        {
+          "icon": "tji-creative",
+          "title": "Human-Centered UI/UX",
+          "text": "Intuitive screen designs and frictionless navigation that keep user retention and engagement high."
+        },
+        {
+          "icon": "tji-growth",
+          "title": "Security & Scalability",
+          "text": "Enterprise encryption, secure authentication, and cloud infrastructure ready to handle millions of requests."
+        }
+      ]
+    },
+    {
+      "type": "guide",
+      "subtitle": "App Architecture",
+      "title": "Strategic mobile engineering from concept to store launch",
+      "blocks": [
+        [
+          "p",
+          "Building a successful mobile application requires far more than clean code. It demands a thorough understanding of user psychology, mobile platform guidelines, robust API performance, and seamless offline-online synchronisation."
+        ],
+        [
+          "h3",
+          "Mobile app development specializations"
+        ],
+        [
+          "ul",
+          [
+            "Customer-Facing Apps: E-commerce stores, appointment booking, clinic patient apps, fitness portals, and community platforms.",
+            "Internal Business Tools: Field staff tracking, delivery management, warehouse inventory logging, and CRM mobile apps.",
+            "Cross-Platform Development: Single codebase solutions using Flutter or React Native that deliver identical native performance on both Android and iPhone at reduced cost.",
+            "Native Development: High-performance native iOS (Swift) and Android (Kotlin) development for compute-intensive or device-hardware heavy projects."
+          ]
+        ],
+        [
+          "h3",
+          "Full lifecycle app delivery"
+        ],
+        [
+          "p",
+          "From initial wireframes and UI design to backend cloud architecture, rigorous testing, and official store publication on Google Play and Apple App Store, PodShot manages the complete engineering lifecycle."
+        ]
+      ]
+    },
+    {
+      "type": "processCards",
+      "subtitle": "Development Process",
+      "title": "How we build world-class mobile apps",
+      "steps": [
+        {
+          "title": "Discovery & Wireframing",
+          "text": "We map out user personas, feature scopes, and design interactive Figma prototypes."
+        },
+        {
+          "title": "UI/UX Visual Design",
+          "text": "We craft beautiful, responsive screens with intuitive micro-interactions and smooth gestures."
+        },
+        {
+          "title": "Frontend & Backend Build",
+          "text": "Our engineers develop frontend views and integrate scalable REST or GraphQL APIs."
+        },
+        {
+          "title": "Rigorous QA & Device Testing",
+          "text": "We test across dozens of real Android and iOS devices for speed, responsiveness, and bugs."
+        },
+        {
+          "title": "Store Launch & Handover",
+          "text": "We handle store submissions, compliance checks, and provide documentation and maintenance."
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "subtitle": "Who It Is For",
+      "title": "Businesses we help grow",
+      "items": [
+        {
+          "title": "Startups & Growing Brands",
+          "tags": [
+            "Fast Launch"
+          ],
+          "label": "Scale efficiently from day one"
+        },
+        {
+          "title": "Local Businesses & Clinics",
+          "tags": [
+            "Local Market"
+          ],
+          "label": "More enquiries and local footfall"
+        },
+        {
+          "title": "E-commerce & Retail",
+          "tags": [
+            "Sales Growth"
+          ],
+          "label": "Higher conversions and customer retention"
+        },
+        {
+          "title": "Enterprises & B2B",
+          "tags": [
+            "Scale & Security"
+          ],
+          "label": "Robust systems and predictable ROI"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should we build a Native app or a Cross-Platform app?",
+      "a": "For most startups and business apps, cross-platform frameworks like Flutter or React Native offer the best balance of native performance, unified codebase, and faster time-to-market."
+    },
+    {
+      "q": "Do you help publish the app on Google Play and Apple App Store?",
+      "a": "Yes, we take care of the entire store deployment process including developer account setup, privacy policy compliance, screenshots, and review guidelines."
+    },
+    {
+      "q": "Will I own the complete source code and intellectual property?",
+      "a": "Yes. Upon project completion and final handover, 100% of the source code, repository access, and intellectual property belong exclusively to you."
+    },
+    {
+      "q": "Do you offer ongoing post-launch maintenance?",
+      "a": "Yes, we provide flexible monthly maintenance packages covering OS compatibility updates, performance monitoring, bug fixes, and feature additions."
+    }
+  ]
+},
+
+  "ecommerce-website-development-company-pune": {
+  "seoTitle": "E-Commerce Website Development Company in Pune | PodShot Studio & Creative Agency",
+  "description": "Scale your online sales with high-converting custom e-commerce stores in Pune. Shopify, WooCommerce, and custom web stores by PodShot.",
+  "intro": {
+    "title": "E-Commerce Website Development Company in Pune",
+    "tags": [
+      "Online Store",
+      "Payment Gateway",
+      "Catalog"
+    ],
+    "text": "PodShot Studio & Creative Agency transforms your online business with expert e-commerce website and app development in Pune. We build fast, secure, and visually stunning digital storefronts with frictionless checkout experiences that turn visitors into repeat buyers.",
+    "lead": "An online store is not just a digital catalog; it is your 24/7 revenue engine. We build e-commerce platforms engineered to convert visitors into paying customers.",
+    "paragraphs": [
+      "We work across Shopify, WooCommerce, and custom web applications to build fast, secure online stores with frictionless checkout and multi-gateway payment integration.",
+      "Every store is optimized for mobile shoppers, inventory management, automated shipping notifications, and high search engine visibility."
+    ],
+    "list": [
+      "Custom e-commerce store design",
+      "Shopify, WooCommerce & custom builds",
+      "Secure Indian & international payment gateways",
+      "Automated inventory & order tracking",
+      "Mobile-first responsive checkout flows",
+      "SEO-friendly product catalogs & filters"
+    ]
+  },
+  "sections": [
+    {
+      "type": "iconCards",
+      "subtitle": "E-Commerce Growth",
+      "title": "Digital stores engineered for conversions and sales",
+      "text": "Success in e-commerce requires more than just listing products online. You need lightning-fast load times, effortless navigation, trusted payment options, and frictionless checkout that minimizes cart abandonment.",
+      "items": [
+        {
+          "icon": "tji-collaboration",
+          "title": "Conversion-Focused UX",
+          "text": "Designed specifically to guide buyers from product discovery to purchase with minimal friction."
+        },
+        {
+          "icon": "tji-service-3",
+          "title": "Seamless Payments",
+          "text": "Integrated with Razorpay, Cashfree, Stripe, PayU, and UPI for instant, secure transactions."
+        },
+        {
+          "icon": "tji-growth",
+          "title": "Fast Mobile Performance",
+          "text": "Sub-second mobile loading speeds ensuring you never lose shoppers to laggy pages."
+        },
+        {
+          "icon": "tji-creative",
+          "title": "Automated Operations",
+          "text": "Real-time sync with shipping aggregators (Shiprocket), inventory systems, and WhatsApp alerts."
+        }
+      ]
+    },
+    {
+      "type": "guide",
+      "subtitle": "Store Architecture",
+      "title": "Comprehensive e-commerce solutions for brands",
+      "blocks": [
+        [
+          "p",
+          "“We can’t just open a website and expect people to flow in. To succeed, you have to create traffic and provide a buying experience so smooth that shoppers return again and again.”"
+        ],
+        [
+          "h3",
+          "Our e-commerce development capabilities"
+        ],
+        [
+          "ul",
+          [
+            "Shopify Development: Custom theme creation, app integrations, and optimized checkout experiences for modern direct-to-consumer (D2C) brands.",
+            "WooCommerce Solutions: Flexible, content-rich WordPress e-commerce setups with complete data ownership and endless customization options.",
+            "Custom Headless E-Commerce: High-scale Next.js and Node.js e-commerce architectures for enterprise brands requiring ultra-fast speeds and complex logic.",
+            "B2B Portals: Custom wholesale pricing, bulk order forms, tiered access levels, and quotation systems."
+          ]
+        ],
+        [
+          "h3",
+          "Integrated logistics and automated communication"
+        ],
+        [
+          "p",
+          "We connect your store with leading logistics partners, automated WhatsApp order confirmations, abandoned cart recovery emails, and real-time tracking dashboards."
+        ]
+      ]
+    },
+    {
+      "type": "processCards",
+      "subtitle": "Store Build Process",
+      "title": "How we build high-converting online stores",
+      "steps": [
+        {
+          "title": "Store Architecture",
+          "text": "We plan product categories, attribute filters, inventory structures, and user journeys."
+        },
+        {
+          "title": "Custom UI/UX Design",
+          "text": "We design high-impact homepage layouts, product detail pages, and frictionless checkout flows."
+        },
+        {
+          "title": "Development & Integration",
+          "text": "We configure payment gateways, shipping APIs, tax configurations, and coupon engines."
+        },
+        {
+          "title": "Testing & Security Audit",
+          "text": "We test end-to-end checkout, payment callbacks, SSL encryption, and mobile performance."
+        },
+        {
+          "title": "Launch & Growth Support",
+          "text": "We push the store live, set up conversion tracking pixels, and train your team on managing orders."
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "subtitle": "Who It Is For",
+      "title": "Businesses we help grow",
+      "items": [
+        {
+          "title": "Startups & Growing Brands",
+          "tags": [
+            "Fast Launch"
+          ],
+          "label": "Scale efficiently from day one"
+        },
+        {
+          "title": "Local Businesses & Clinics",
+          "tags": [
+            "Local Market"
+          ],
+          "label": "More enquiries and local footfall"
+        },
+        {
+          "title": "E-commerce & Retail",
+          "tags": [
+            "Sales Growth"
+          ],
+          "label": "Higher conversions and customer retention"
+        },
+        {
+          "title": "Enterprises & B2B",
+          "tags": [
+            "Scale & Security"
+          ],
+          "label": "Robust systems and predictable ROI"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which e-commerce platform should I choose: Shopify or WooCommerce?",
+      "a": "Shopify is ideal for brands wanting an all-in-one, low-maintenance hosted solution. WooCommerce offers complete control, no platform transaction fees, and deep customizability on your own server."
+    },
+    {
+      "q": "Which payment gateways can be integrated?",
+      "a": "We integrate all major Indian and global gateways including Razorpay, Cashfree, PayU, Stripe, PayPal, and Cash on Delivery (COD) verification."
+    },
+    {
+      "q": "Will the e-commerce store be optimized for mobile phones?",
+      "a": "Yes. 100% of our e-commerce designs are mobile-first, recognizing that over 80% of online shopping happens on smartphones."
+    },
+    {
+      "q": "Do you help set up shipping and courier integrations?",
+      "a": "Yes, we integrate courier aggregators like Shiprocket, Delhivery, and Blue Dart for automated airway bill (AWB) generation and tracking."
+    }
+  ]
+},
+
+  "software-development-services-pune": {
+  "seoTitle": "Software Development Company in Pune | PodShot Studio & Creative Agency",
+  "description": "Custom software development services in Pune. Tailored web applications, enterprise software, and scalable digital systems by PodShot.",
+  "intro": {
+    "title": "Software Development Services in Pune",
+    "tags": [
+      "Custom Systems",
+      "Web Apps",
+      "Enterprise"
+    ],
+    "text": "PodShot Studio & Creative Agency is a top-rated custom software development company in Pune. We build secure, scalable, and intuitive software solutions and web applications tailored to solve unique operational bottlenecks and accelerate business efficiency.",
+    "lead": "Off-the-shelf software rarely fits a growing business perfectly. We build bespoke web applications and SaaS platforms tailored to your exact workflows.",
+    "paragraphs": [
+      "Our software engineers use modern frameworks including React, Node.js, Next.js, and cloud backends to deliver fast, secure and reliable business software.",
+      "We focus on clean code, automated testing, bank-grade encryption, and future-proof architectures that grow with your company."
+    ],
+    "list": [
+      "Custom web application development",
+      "Enterprise software & management tools",
+      "SaaS platform architecture & development",
+      "Database design & cloud API integrations",
+      "Legacy software modernization & migration",
+      "Ongoing code maintenance & DevOps support"
+    ]
+  },
+  "sections": [
+    {
+      "type": "iconCards",
+      "subtitle": "Custom Engineering",
+      "title": "Software built around your business, not vice versa",
+      "text": "Off-the-shelf software rarely fits your exact operational needs and often charges hefty recurring licensing fees. Custom software gives you complete ownership, automated workflows, and an unbeatable competitive edge.",
+      "items": [
+        {
+          "icon": "tji-virtual-labs",
+          "title": "Custom Business Logic",
+          "text": "Engineered specifically around your exact processes, eliminating manual paperwork and spreadsheets."
+        },
+        {
+          "icon": "tji-service-4",
+          "title": "Full Code Ownership",
+          "text": "Zero recurring per-user licensing fees. You own 100% of the software and intellectual property."
+        },
+        {
+          "icon": "tji-growth",
+          "title": "Scalable Architecture",
+          "text": "Built on modern cloud architectures ready to support thousands of concurrent users and operations."
+        },
+        {
+          "icon": "tji-chat",
+          "title": "Enterprise Security",
+          "text": "Role-based access controls, data encryption, regular backups, and complete audit logging."
+        }
+      ]
+    },
+    {
+      "type": "guide",
+      "subtitle": "Enterprise Software",
+      "title": "Reliable, secure software systems built in Pune",
+      "blocks": [
+        [
+          "p",
+          "Modern businesses run on custom software. Whether you need an internal operations portal, a client collaboration system, a bespoke billing platform, or a software-as-a-service (SaaS) product, PodShot delivers robust, clean, and maintainable software."
+        ],
+        [
+          "h3",
+          "Our core software development specializations"
+        ],
+        [
+          "ul",
+          [
+            "Enterprise Resource Planning (ERP): Centralizing operations, stock management, procurement, billing, and staff workflows.",
+            "Customer Relationship Management (CRM): Custom lead pipelines, automated task assignments, call logs, and client history tracking.",
+            "Web Portals & Dashboards: Real-time analytics, user management, secure file sharing, and self-service portals.",
+            "API & Third-Party Integrations: Connecting disparate software systems, accounting packages (Tally/Zoho), and payment systems."
+          ]
+        ],
+        [
+          "h3",
+          "Agile development with clean code standards"
+        ],
+        [
+          "p",
+          "We develop using modular, documented code following industry best practices. With comprehensive testing and continuous deployment pipelines, our software is stable, fast, and easy to maintain long-term."
+        ]
+      ]
+    },
+    {
+      "type": "processCards",
+      "subtitle": "Engineering Lifecycle",
+      "title": "From requirements blueprint to production release",
+      "steps": [
+        {
+          "title": "Business Discovery",
+          "text": "We interview stakeholders, map existing bottlenecks, and create a comprehensive technical specification."
+        },
+        {
+          "title": "Architecture & UX Design",
+          "text": "We design database schemas, API structures, and interactive wireframes for every user role."
+        },
+        {
+          "title": "Sprint-Based Development",
+          "text": "We develop in focused 2-week agile sprints, providing regular demo releases for feedback."
+        },
+        {
+          "title": "Quality Assurance & Security",
+          "text": "We conduct rigorous stress testing, vulnerability scanning, and cross-browser quality checks."
+        },
+        {
+          "title": "Deployment & Training",
+          "text": "We deploy to cloud infrastructure (AWS/DigitalOcean), conduct staff training, and provide support."
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "subtitle": "Who It Is For",
+      "title": "Businesses we help grow",
+      "items": [
+        {
+          "title": "Startups & Growing Brands",
+          "tags": [
+            "Fast Launch"
+          ],
+          "label": "Scale efficiently from day one"
+        },
+        {
+          "title": "Local Businesses & Clinics",
+          "tags": [
+            "Local Market"
+          ],
+          "label": "More enquiries and local footfall"
+        },
+        {
+          "title": "E-commerce & Retail",
+          "tags": [
+            "Sales Growth"
+          ],
+          "label": "Higher conversions and customer retention"
+        },
+        {
+          "title": "Enterprises & B2B",
+          "tags": [
+            "Scale & Security"
+          ],
+          "label": "Robust systems and predictable ROI"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What technologies do you use for custom software development?",
+      "a": "We primarily build with modern, battle-tested technologies including React, Next.js, Node.js, Python, PostgreSQL, MySQL, and Docker on cloud infrastructure like AWS and DigitalOcean."
+    },
+    {
+      "q": "How long does a custom software development project take?",
+      "a": "Typical business software applications take between 6 to 16 weeks depending on feature complexity, user roles, and third-party integrations."
+    },
+    {
+      "q": "Can the software integrate with our existing accounting or billing software?",
+      "a": "Yes. We frequently integrate custom systems with platforms like Tally, Zoho, payment gateways, WhatsApp API, and biometric attendance devices."
+    },
+    {
+      "q": "Do you provide maintenance and updates after launch?",
+      "a": "Yes, we provide ongoing service level agreements (SLAs) covering server monitoring, security patches, regular database backups, and new feature additions."
+    }
+  ]
+},
+
+  "crm-erp-development-pune": {
+  "seoTitle": "CRM & ERP Development Company in Pune | PodShot Studio & Creative Agency",
+  "description": "Custom CRM and ERP software development in Pune. Streamline business operations, lead management, inventory, and billing with PodShot.",
+  "intro": {
+    "title": "CRM/ERP Development in Pune",
+    "tags": [
+      "CRM Solutions",
+      "ERP Systems",
+      "Workflow"
+    ],
+    "text": "Improve your business efficiency, staff productivity, and customer retention with custom CRM and ERP development services from PodShot Studio & Creative Agency in Pune. We build unified enterprise platforms that connect sales, inventory, accounting, and operations in one central hub.",
+    "lead": "Running disconnected spreadsheets slows your team down. Custom CRM and ERP software centralizes your leads, sales, inventory and finance in one dashboard.",
+    "paragraphs": [
+      "We design custom CRM and ERP systems that automate repetitive tasks, track customer histories, generate invoices, and give management real-time visibility.",
+      "Built specifically around your team’s daily routines so adoption is quick and painless without unnecessary complexity."
+    ],
+    "list": [
+      "Custom CRM lead & deal pipelines",
+      "Enterprise ERP operations & inventory",
+      "Role-based permissions & security",
+      "Automated invoicing & quotation tools",
+      "Interactive reporting & KPI dashboards",
+      "Mobile responsive staff portals"
+    ]
+  },
+  "sections": [
+    {
+      "type": "iconCards",
+      "subtitle": "Operational Clarity",
+      "title": "One unified system for your entire business",
+      "text": "Scattered spreadsheets, disconnected tools, and manual data entry slow your team down. A centralized custom CRM/ERP eliminates data silos and empowers managers with real-time operational visibility.",
+      "items": [
+        {
+          "icon": "tji-creative",
+          "title": "Zero Per-User Monthly Fees",
+          "text": "Avoid expensive per-seat subscriptions like Salesforce. Own your system and add unlimited users freely."
+        },
+        {
+          "icon": "tji-growth",
+          "title": "Automated Sales Pipeline",
+          "text": "Capture leads from website, ads, and WhatsApp automatically, assign them to sales staff, and track deals."
+        },
+        {
+          "icon": "tji-service-4",
+          "title": "Inventory & Billing Sync",
+          "text": "Keep warehouse inventory, customer invoices, delivery receipts, and payments synchronized."
+        },
+        {
+          "icon": "tji-chat",
+          "title": "Real-Time Executive Dashboards",
+          "text": "Actionable visibility into daily sales, staff productivity, pending tasks, and profit margins."
+        }
+      ]
+    },
+    {
+      "type": "guide",
+      "subtitle": "Enterprise Automation",
+      "title": "Custom CRM & ERP software built for Pune businesses",
+      "blocks": [
+        [
+          "p",
+          "By implementing custom CRM/ERP software, companies can seamlessly record customer interactions, analyze transactional data, streamline resource planning, and drive higher profitability. We tailor every module to your unique operational workflow."
+        ],
+        [
+          "h3",
+          "Core modules we engineer in our CRM/ERP systems"
+        ],
+        [
+          "ul",
+          [
+            "Lead & Inquiry Management: Automatic lead capture from Google Ads, Meta Ads, website forms, and WhatsApp directly into an intuitive Kanban board.",
+            "Sales & Quotation Engine: One-click professional PDF quotation and invoice generation with automated WhatsApp and email delivery.",
+            "Inventory & Order Processing: Real-time stock alerts, vendor purchase orders, warehouse management, and delivery tracking.",
+            "Task & Staff Accountability: Role-based task assignments, deadline alerts, employee performance tracking, and attendance logs.",
+            "Customer Support Ticketing: Dedicated client portal for tracking complaints, service requests, and maintenance contracts."
+          ]
+        ],
+        [
+          "h3",
+          "Tailored for Indian business workflows"
+        ],
+        [
+          "p",
+          "Our CRM and ERP solutions are designed with GST-compliant invoicing, multi-branch support, Indian payment gateway integrations, and WhatsApp automated notifications built right in."
+        ]
+      ]
+    },
+    {
+      "type": "processCards",
+      "subtitle": "Implementation Roadmap",
+      "title": "From workflow mapping to company-wide adoption",
+      "steps": [
+        {
+          "title": "Workflow & Gap Analysis",
+          "text": "We map out your current team processes, pain points, spreadsheets, and reporting needs."
+        },
+        {
+          "title": "Modular Architecture Design",
+          "text": "We design custom modules and database structures tailored to your departments."
+        },
+        {
+          "title": "Development & Data Migration",
+          "text": "We build the platform and securely import your historical customer and product data."
+        },
+        {
+          "title": "User Acceptance Testing (UAT)",
+          "text": "Your team tests the platform in a staging sandbox while we fine-tune permissions."
+        },
+        {
+          "title": "Deployment & Hands-on Training",
+          "text": "We conduct team training workshops, launch the system, and provide dedicated support."
+        }
+      ]
+    },
+    {
+      "type": "cardGrid",
+      "subtitle": "Who It Is For",
+      "title": "Businesses we help grow",
+      "items": [
+        {
+          "title": "Startups & Growing Brands",
+          "tags": [
+            "Fast Launch"
+          ],
+          "label": "Scale efficiently from day one"
+        },
+        {
+          "title": "Local Businesses & Clinics",
+          "tags": [
+            "Local Market"
+          ],
+          "label": "More enquiries and local footfall"
+        },
+        {
+          "title": "E-commerce & Retail",
+          "tags": [
+            "Sales Growth"
+          ],
+          "label": "Higher conversions and customer retention"
+        },
+        {
+          "title": "Enterprises & B2B",
+          "tags": [
+            "Scale & Security"
+          ],
+          "label": "Robust systems and predictable ROI"
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Why choose custom CRM/ERP over ready-made software like Zoho or Salesforce?",
+      "a": "Ready-made tools require recurring monthly fees per employee that escalate as you grow, and often force you to adapt your processes to their rigid limitations. Custom CRM/ERP belongs 100% to you with no per-user fees."
+    },
+    {
+      "q": "Can you migrate our existing customer data from Excel sheets?",
+      "a": "Yes. We sanitize, structure, and import all your historical Excel/CSV data into the new system without data loss."
+    },
+    {
+      "q": "Is the system accessible on mobile phones?",
+      "a": "Yes. Our systems are fully mobile-responsive and can also be packaged as dedicated PWA or mobile apps for on-the-field staff."
+    },
+    {
+      "q": "Can different employees have different access levels?",
+      "a": "Yes. We build granular role-based access control (RBAC), ensuring sales reps only see their own leads, while managers and accountants see respective department data."
+    }
+  ]
+},
+
 };

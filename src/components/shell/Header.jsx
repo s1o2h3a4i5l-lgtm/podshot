@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import FlipText from '@/components/ui/FlipText';
@@ -19,33 +19,125 @@ function Logo() {
 function DesktopNav({ onDropdownToggle }) {
   const [open, setOpen] = useState(null);
   const [height, setHeight] = useState(0);
+  const closeTimer = useRef(null);
+
+  const clearTimer = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+
+  const handleOpen = (i) => {
+    clearTimer();
+    setOpen(i);
+    onDropdownToggle(true);
+  };
+
+  const handleClose = (force = false) => {
+    clearTimer();
+    if (force) {
+      setOpen(null);
+      onDropdownToggle(false);
+      return;
+    }
+    // 350ms grace period so moving cursor to Digital Marketing sticks and never closes unintentionally
+    closeTimer.current = setTimeout(() => {
+      setOpen(null);
+      onDropdownToggle(false);
+    }, 350);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.has-dropdown') && !e.target.closest('.ps-mega-dropdown')) {
+        handleClose(true);
+      }
+    };
+    window.addEventListener('click', handleOutsideClick);
+    return () => {
+      window.removeEventListener('click', handleOutsideClick);
+      clearTimer();
+    };
+  }, []);
+
   return (
     <div className="site_navigation d-none d-lg-inline-flex">
       <nav id="mobile-menu">
         <ul>
           {nav.map((item, i) =>
-            item.submenu ? (
+            item.megaMenu ? (
+              <li
+                key={item.label}
+                className={`has-dropdown has-megamenu${open === i ? ' is-active' : ''}`}
+                onMouseEnter={() => handleOpen(i)}
+                onMouseLeave={() => handleClose(false)}
+              >
+                <Link
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (open === i) {
+                      handleClose(true);
+                    } else {
+                      handleOpen(i);
+                    }
+                  }}
+                >
+                  {item.label}
+                </Link>
+                <div
+                  className={`ps-mega-dropdown${open === i ? ' is-open' : ''}`}
+                  onMouseEnter={clearTimer}
+                  onMouseLeave={() => handleClose(false)}
+                >
+                  <div className="ps-mega-grid">
+                    {item.megaMenu.map((col) => (
+                      <div key={col.category} className="ps-mega-col">
+                        <h4 className="ps-mega-col-title">{col.category}</h4>
+                        <ul className="ps-mega-list">
+                          {col.items.map((sub) => (
+                            <li key={sub.href}>
+                              <Link
+                                href={sub.href}
+                                className="ps-mega-link"
+                                onClick={() => handleClose(true)}
+                              >
+                                {sub.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            ) : item.submenu ? (
               <li
                 key={item.label}
                 className="has-dropdown"
                 onMouseEnter={(e) => {
+                  clearTimer();
                   const sub = e.currentTarget.querySelector('.sub-menu');
                   setHeight(sub ? sub.scrollHeight : 0);
                   setOpen(i);
                   onDropdownToggle(true);
                 }}
-                onMouseLeave={() => { setOpen(null); onDropdownToggle(false); }}
+                onMouseLeave={() => handleClose(false)}
               >
                 <Link href={item.href}>{item.label}</Link>
                 <ul
                   className="sub-menu"
+                  onMouseEnter={clearTimer}
+                  onMouseLeave={() => handleClose(false)}
                   style={{
                     display: 'flex', overflow: 'hidden', transition: 'height 0.3s ease, opacity 0.25s ease',
                     height: open === i ? `${height}px` : 0, opacity: open === i ? 1 : 0, pointerEvents: open === i ? 'auto' : 'none',
                   }}
                 >
                   {item.submenu.map((s) => (
-                    <li key={s.href}><Link href={s.href}>{s.label}</Link></li>
+                    <li key={s.href}><Link href={s.href} onClick={() => handleClose(true)}>{s.label}</Link></li>
                   ))}
                 </ul>
               </li>
@@ -61,9 +153,74 @@ function DesktopNav({ onDropdownToggle }) {
 
 function MobileItem({ item, isLast, onNavigate }) {
   const [open, setOpen] = useState(false);
-  if (!item.submenu) {
+  const [openCat, setOpenCat] = useState(0);
+
+  if (!item.submenu && !item.megaMenu) {
     return <li className={isLast ? 'mean-last' : undefined}><Link href={item.href} onClick={onNavigate}>{item.label}</Link></li>;
   }
+
+  if (item.megaMenu) {
+    return (
+      <li className={`has-dropdown ps-mobile-mega${open ? ' dropdown-opened' : ''}`}>
+        <a
+          href="#services"
+          role="button"
+          onClick={(e) => {
+            e.preventDefault();
+            setOpen((v) => !v);
+            if (!open) setOpenCat(0);
+          }}
+        >
+          {item.label}
+        </a>
+        <div className="ps-mobile-mega-container" style={{ display: open ? 'block' : 'none' }}>
+          {item.megaMenu.map((col, idx) => (
+            <div key={col.category} className="ps-mobile-mega-group">
+              <button
+                type="button"
+                className={`ps-mobile-mega-cat-header${openCat === idx ? ' is-open' : ''}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setOpenCat(openCat === idx ? null : idx);
+                }}
+              >
+                <span>{col.category}</span>
+                <span className={`ps-cat-sign${openCat === idx ? ' is-open' : ''}`}>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                    <path d="M6 1.5V10.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" className="sign-vert" />
+                    <path d="M1.5 6H10.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+                  </svg>
+                </span>
+              </button>
+              <ul className="sub-menu ps-mobile-mega-items" style={{ display: openCat === idx ? 'block' : 'none' }}>
+                {col.items.map((s) => (
+                  <li key={s.href}>
+                    <Link href={s.href} onClick={onNavigate}>
+                      {s.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <button
+          type="button"
+          className={`mean-expand${open ? ' mean-clicked' : ''}`}
+          style={{ fontSize: '18px' }}
+          aria-label={`Toggle ${item.label} submenu`}
+          aria-expanded={open}
+          onClick={() => {
+            setOpen((v) => !v);
+            if (!open) setOpenCat(0);
+          }}
+        >
+          <i className="tji-dropdown" />
+        </button>
+      </li>
+    );
+  }
+
   return (
     <li className={`has-dropdown${open ? ' dropdown-opened' : ''}`}>
       <Link href={item.href} onClick={onNavigate}>{item.label}</Link>

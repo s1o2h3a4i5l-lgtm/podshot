@@ -6,7 +6,7 @@ import { programs } from '@/data/programs';
 
 export const metadata = {
   title: 'Programs — Business Software by PodShot',
-  description: 'Ready-to-use software for bookings, clinics, salons and lead management. Built for Indian businesses, backed by PodShot.',
+  description: 'Ready-to-use software for bookings, clinics, salons, lead management and laundry businesses. Built for Indian businesses, backed by PodShot.',
 };
 
 function ProgramsHero() {
@@ -17,7 +17,7 @@ function ProgramsHero() {
           <div className="col-12 col-lg-6">
             <div className="ps-programs-hero-inner">
               <span className="sec_subtitle tj-fade">[ <span>Software & Systems</span> ]</span>
-              <h1 className="ps-programs-title tj-reveal-line">Programs</h1>
+              <h1 className="ps-programs-title title-anim">Programs</h1>
               <p className="ps-programs-desc fs-18 tj-fade" data-delay="0.2">
                 Ready-to-use software engines that automate your daily operations so you can focus on servicing your clients.
               </p>
@@ -29,7 +29,7 @@ function ProgramsHero() {
           <div className="col-12 col-lg-6 col-xl-5">
             <div className="ps-programs-card tj-fade" data-direction="left" data-delay="0.25">
               <div className="ps-programs-card-head">
-                <span className="card-badge">[ <span>04 Turnkey Systems</span> ]</span>
+                <span className="card-badge">[ <span>0{programs.length} Turnkey Systems</span> ]</span>
                 <span className="card-status"><span className="pulse-dot" /> Live &amp; Ready</span>
               </div>
               <div className="ps-programs-card-list">

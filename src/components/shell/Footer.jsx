@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import FlipText from '@/components/ui/FlipText';
 import { site } from '@/data/site';
-import { groups, services, serviceHref } from '@/data/services-meta';
 
 const company = [
   { label: 'Home', href: '/' },
@@ -15,10 +14,14 @@ const company = [
   { label: 'Contact', href: '/contact' },
 ];
 
-const featured = services.filter((s) => s.flagship);
-const serviceLinks = [
-  { label: 'All digital marketing', href: groups.digital.href },
-  ...featured.map((s) => ({ label: s.short, href: serviceHref(s) })),
+const quickLinks = [
+  { label: 'Social Media', href: '/services/social-media-marketing-agency-in-pune' },
+  { label: 'SEO', href: '/services/seo-company-in-pune' },
+  { label: 'Google Ads', href: '/services/google-ads-agency-in-pune' },
+  { label: 'Websites', href: '/services/website-development-company-in-pune' },
+  { label: 'Graphic Design', href: '/services/graphic-design-services-in-pune/' },
+  { label: 'Youtube Marketing', href: '/services/best-youtube-advertising-agency-in-pune/' },
+  { label: 'AI Creation', href: '/services/top-ai-agency-in-pune/' },
 ];
 
 function FooterLinks({ title, links, delay }) {
@@ -74,7 +77,7 @@ export default function Footer() {
                 <hr className="tj-fade" data-delay=".5" />
                 <FooterLinks title="Company" links={company} delay=".6" />
                 <hr className="tj-fade" data-delay=".6" />
-                <FooterLinks title="Digital Marketing" links={serviceLinks} delay=".7" />
+                <FooterLinks title="Quick Links" links={quickLinks} delay=".7" />
                 <hr className="tj-fade" data-delay=".7" />
                 <div className="tj_footer_widget footer_contact tj-fade" data-delay=".8">
                   <div className="tj_footer_contact">

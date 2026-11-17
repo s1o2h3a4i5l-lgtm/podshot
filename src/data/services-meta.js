@@ -3,13 +3,15 @@
 // `home: false` keeps a group off the homepage services list (it still shows in the menu, the
 // /services hub and the contact form).
 export const groups = {
-  digital: { name: 'Digital Marketing', short: 'Digital Marketing', href: '/digital-marketing' },
-  direct: { name: 'Direct Marketing', short: 'Direct', href: '/services', home: false },
-  creative: { name: 'Design and Content', short: 'Design', href: '/services', home: false },
-  business: { name: 'Strategy and Data', short: 'Strategy', href: '/services', home: false },
+  digital: { name: 'Digital Marketing', short: 'Digital Marketing', href: '#' },
+  development: { name: 'Development', short: 'Development', href: '#', home: false },
+  direct: { name: 'Direct Marketing', short: 'Direct', href: '#', home: false },
+  creative: { name: 'Design and Content', short: 'Design', href: '#', home: false },
+  business: { name: 'Strategy and Data', short: 'Strategy', href: '#', home: false },
 };
 
 export const services = [
+  // ── Core Services ──
   { slug: 'social-media-marketing-agency-in-pune', name: 'Social Media Marketing', short: 'Social Media', group: 'digital', flagship: true, icon: 'tji-service-1', tags: ['Strategy', 'Reels', 'Growth'], blurb: 'Posts and reels people stop for, plus the planning that keeps your pages growing.' },
   { slug: 'seo-company-in-pune', name: 'SEO', short: 'SEO', group: 'digital', flagship: true, icon: 'tji-service-2', tags: ['Rankings', 'Content', 'Technical'], blurb: 'Show up on Google when people in Pune search for what you sell.' },
   { slug: 'local-seo-services-in-pune-gmb', name: 'Local SEO', short: 'Local SEO', group: 'digital', icon: 'tji-location', tags: ['Maps', 'Reviews', 'Calls'], blurb: 'Rank in the Google Maps top 3 and get more calls, visits and directions.' },
@@ -18,17 +20,26 @@ export const services = [
   { slug: 'top-ai-agency-in-pune', name: 'AI Content Creation', short: 'AI Content', group: 'digital', icon: 'tji-virtual-labs', tags: ['AI images', 'AI video', 'Editing'], blurb: 'AI images and videos, finished by human editors so they look real and on brand.' },
   { slug: 'website-development-company-in-pune', name: 'Website Development', short: 'Websites', group: 'digital', flagship: true, icon: 'tji-service-3', tags: ['Design', 'Build', 'SEO ready'], blurb: 'Fast, mobile-first websites that turn visitors into enquiries.' },
 
+  // ── Development ──
+  { slug: 'mobile-app-development-company-pune', name: 'Mobile App Development', short: 'Mobile App', group: 'development', icon: 'tji-mobile', tags: ['iOS', 'Android', 'Cross-Platform'], blurb: 'Native and cross-platform mobile apps for iOS and Android, built to scale.' },
+  { slug: 'ecommerce-website-development-company-pune', name: 'E-Commerce Development', short: 'E-Commerce', group: 'development', icon: 'tji-cart', tags: ['Shopify', 'WooCommerce', 'Custom'], blurb: 'Fast, secure online stores engineered for high sales conversions and repeat customers.' },
+  { slug: 'software-development-services-pune', name: 'Software Development', short: 'Software Dev', group: 'development', icon: 'tji-code', tags: ['Web Apps', 'SaaS', 'Cloud'], blurb: 'Custom web applications, client portals and software built around your exact workflows.' },
+  { slug: 'crm-erp-development-pune', name: 'CRM/ERP Development', short: 'CRM / ERP', group: 'development', icon: 'tji-database', tags: ['Custom ERP', 'Sales CRM', 'Automation'], blurb: 'Tailored CRM and ERP systems that automate your sales pipeline and track business operations.' },
+
+  // ── Direct marketing ──
   { slug: 'email-marketing-services-in-pune', name: 'Email Marketing', short: 'Email Marketing', group: 'direct', icon: 'tji-chat', tags: ['Newsletters', 'Automation', 'Lists'], blurb: 'Emails your customers actually open, plus automated follow-ups that bring them back.' },
   { slug: 'whatsapp-marketing-services-in-pune', name: 'WhatsApp Marketing', short: 'WhatsApp', group: 'direct', icon: 'tji-whatsapp', tags: ['Broadcasts', 'Offers', 'Replies'], blurb: 'Offers, updates and reminders sent straight to the app your customers check most.' },
   { slug: 'bulk-sms-services-in-pune', name: 'Bulk SMS', short: 'Bulk SMS', group: 'direct', icon: 'tji-signal', tags: ['Promotions', 'Alerts', 'Reminders'], blurb: 'Short text messages that reach every phone, for offers, reminders and alerts.' },
   { slug: 'display-advertising-services-in-pune', name: 'Display Advertising', short: 'Display Ads', group: 'direct', icon: 'tji-globe', tags: ['Banners', 'Retargeting', 'Reach'], blurb: 'Banner and video ads across websites, apps and YouTube, aimed at the right people.' },
   { slug: 'app-store-optimization-services-in-pune', name: 'App Store Optimization', short: 'App Store (ASO)', group: 'direct', icon: 'tji-apple', tags: ['Play Store', 'App Store', 'Downloads'], blurb: 'Help people find your app in the Play Store and App Store, and choose to install it.' },
 
-  { slug: 'logo-and-branding-services-in-pune', name: 'Logo and Branding', short: 'Logo and Branding', group: 'creative', icon: 'tji-star', tags: ['Logo', 'Identity', 'Guidelines'], blurb: 'A logo and brand look that people remember, with the files to use it everywhere.' },
+  // ── Creative ──
+  { slug: 'logo-and-branding-services-in-pune', name: 'Logo and Branding', short: 'Logo & Branding', group: 'creative', icon: 'tji-star', tags: ['Logo', 'Identity', 'Guidelines'], blurb: 'A logo and brand look that people remember, with the files to use it everywhere.' },
   { slug: 'graphic-design-services-in-pune', name: 'Graphic Design', short: 'Graphic Design', group: 'creative', icon: 'tji-creative', tags: ['Social', 'Print', 'Packaging'], blurb: 'Posts, flyers, brochures and packaging designed to match your brand.' },
-  { slug: 'video-production-services-in-pune', name: 'Video Production', short: 'Video Production', group: 'creative', icon: 'tji-play', tags: ['Brand films', 'Product', 'Explainers'], blurb: 'Brand films, product videos and explainers, scripted, shot and edited by one team.' },
+  { slug: 'video-production-services-in-pune', name: 'Video Production', short: 'Video Creation', group: 'creative', icon: 'tji-play', tags: ['Brand films', 'Product', 'Explainers'], blurb: 'Brand films, product videos and explainers, scripted, shot and edited by one team.' },
   { slug: 'content-writing-services-in-pune', name: 'Content Writing', short: 'Content Writing', group: 'creative', icon: 'tji-quote', tags: ['Website copy', 'Blogs', 'Scripts'], blurb: 'Website pages, blogs and scripts written in plain words that sell.' },
 
+  // ── Strategy & Business ──
   { slug: 'digital-strategy-services-in-pune', name: 'Digital Strategy', short: 'Digital Strategy', group: 'business', icon: 'tji-growth', tags: ['Goals', 'Channels', 'Roadmap'], blurb: 'A clear plan for where to spend your marketing time and money, and why.' },
   { slug: 'data-analytics-services-in-pune', name: 'Data Analytics', short: 'Data Analytics', group: 'business', icon: 'tji-service-4', tags: ['Tracking', 'Dashboards', 'Insights'], blurb: 'Tracking and dashboards that show what is working, in numbers you can act on.' },
   { slug: 'business-consulting-services-in-pune', name: 'Business Consulting', short: 'Business Consulting', group: 'business', icon: 'tji-collaboration', tags: ['Growth', 'Offers', 'Process'], blurb: 'An outside view on your offers, pricing and processes, with practical next steps.' },
@@ -37,12 +48,60 @@ export const services = [
 export const servicesIn = (group) => services.filter((s) => s.group === group);
 export const serviceHref = (s) => `/services/${s.slug}`;
 
-const MORE = ['direct', 'creative', 'business'];
+export const servicesMegaMenu = [
+  {
+    category: 'DIGITAL MARKETING',
+    items: [
+      { label: 'Search Engine Optimization', href: '/services/seo-company-in-pune' },
+      { label: 'Local SEO', href: '/services/local-seo-services-in-pune-gmb' },
+      { label: 'Pay-Per-Click', href: '/services/google-ads-agency-in-pune' },
+      { label: 'Email Marketing', href: '/services/email-marketing-services-in-pune' },
+      { label: 'Social Media Marketing', href: '/services/social-media-marketing-agency-in-pune' },
+      { label: 'Display Marketing', href: '/services/display-advertising-services-in-pune' },
+      { label: 'Youtube Marketing', href: '/services/best-youtube-advertising-agency-in-pune' },
+      { label: 'App Store Optimization', href: '/services/app-store-optimization-services-in-pune' },
+      { label: 'WhatsApp Marketing', href: '/services/whatsapp-marketing-services-in-pune' },
+      { label: 'Bulk SMS', href: '/services/bulk-sms-services-in-pune' },
+    ],
+  },
+  {
+    category: 'DEVELOPMENT',
+    items: [
+      { label: 'Mobile App development', href: '/services/mobile-app-development-company-pune' },
+      { label: 'E-Commerce development', href: '/services/ecommerce-website-development-company-pune' },
+      { label: 'Software development', href: '/services/software-development-services-pune' },
+      { label: 'CRM/ERP development', href: '/services/crm-erp-development-pune' },
+    ],
+  },
+  {
+    category: 'DESIGN',
+    items: [
+      { label: 'Logo & Branding', href: '/services/logo-and-branding-services-in-pune' },
+      { label: 'Website Design', href: '/services/website-development-company-in-pune' },
+      { label: 'Graphic Design', href: '/services/graphic-design-services-in-pune' },
+      { label: 'Video Creation', href: '/services/video-production-services-in-pune' },
+      { label: 'AI Content Creation', href: '/services/top-ai-agency-in-pune' },
+    ],
+  },
+  {
+    category: 'BUSINESS',
+    items: [
+      { label: 'Digital Strategy', href: '/services/digital-strategy-services-in-pune' },
+      { label: 'Business Consulting', href: '/services/business-consulting-services-in-pune' },
+      { label: 'Content Writing', href: '/services/content-writing-services-in-pune' },
+      { label: 'Data Analytics', href: '/services/data-analytics-services-in-pune' },
+    ],
+  },
+];
 
 export const nav = [
   { label: 'Home', href: '/' },
-  { label: 'Digital Marketing', href: groups.digital.href, submenu: [...servicesIn('digital').map((s) => ({ label: s.short, href: serviceHref(s) })), { label: 'All digital marketing', href: groups.digital.href }] },
-  { label: 'More Services', href: '/services', submenu: [...MORE.flatMap((g) => servicesIn(g)).map((s) => ({ label: s.short, href: serviceHref(s) })), { label: 'All services', href: '/services' }] },
+  {
+    label: 'Services',
+    href: '#',
+    isMega: true,
+    megaMenu: servicesMegaMenu,
+  },
   { label: 'Programs', href: '/programs' },
   { label: 'Work', href: '/work' },
   { label: 'Company', href: '/about', submenu: [{ label: 'About us', href: '/about' }, { label: 'Blog', href: '/blog' }, { label: 'FAQ', href: '/faq' }] },

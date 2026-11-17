@@ -32,4 +32,12 @@ export const programs = [
     url: 'https://smarttutorials.co.in/salon/',
     blurb: 'Multi-chair scheduling, stylist commissions, instant billing and loyalty rewards in one system.',
   },
+  {
+    slug: 'laundry',
+    title: 'Laundry Management',
+    tags: ['Garment Tracking', 'Pickup & Delivery', 'POS'],
+    icon: 'tji-service-4',
+    url: 'https://smarttutorials.co.in/laundry/',
+    blurb: 'Itemized garment tagging, order tracking, pickup & delivery dispatch, and instant billing for dry cleaners.',
+  },
 ];

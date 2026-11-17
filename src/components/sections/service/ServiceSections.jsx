@@ -7,7 +7,7 @@ import { BASE_PATH } from '@/lib/basePath';
 
 const Sub = ({ children, direction = 'right' }) => <span className="sec_subtitle tj-fade" data-direction={direction}>[ <span>{children}</span> ]</span>;
 
-export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/service/service-details.webp`, listTitle = 'What you get', list, back = { label: 'All services', href: '/digital-marketing' }, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary = { label: 'See our work', href: '/work' } }) {
+export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/service/service-details.webp`, listTitle = 'What you get', list, back = null, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary }) {
   return (
     <section className="service-details-banner fix">
       <div className="container-space">
@@ -15,10 +15,12 @@ export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/
           <div className="service_details_header row">
             <div className="col-lg-8">
               <div className="service_details_header_left tj-fade">
-                <Link className="tj_icon_btn text-underline-btn back_btn flip-text-wrap" href={back.href}>
-                  <div className="icon_btn"><span><i className="tji-arrow-left" /><i className="tji-arrow-left" /></span></div>
-                  <span className="underline-text flip-text"><FlipText>{back.label}</FlipText></span>
-                </Link>
+                {back && back.href && back.href !== '#' && (
+                  <Link className="tj_icon_btn text-underline-btn back_btn flip-text-wrap" href={back.href}>
+                    <div className="icon_btn"><span><i className="tji-arrow-left" /><i className="tji-arrow-left" /></span></div>
+                    <span className="underline-text flip-text"><FlipText>{back.label}</FlipText></span>
+                  </Link>
+                )}
                 <h1 className="tj_blog_details_title title-anim">{title}</h1>
                 <div className="categories">{tags.map((t) => <span key={t} className="category">{t}</span>)}</div>
               </div>
@@ -28,7 +30,7 @@ export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/
                 <p className="desc fs-18">{text}</p>
                 <div className="btn-wrap">
                   <IconButton href={primary.href}>{primary.label}</IconButton>
-                  <Link className="tj_text_btn" href={secondary.href}>{secondary.label}</Link>
+                  {secondary && <Link className="tj_text_btn" href={secondary.href}>{secondary.label}</Link>}
                 </div>
               </div>
             </div>
@@ -54,7 +56,7 @@ export function ServiceBanner({ title, tags, text, image = `${BASE_PATH}/images/
 
 // Banner for text-led service pages: same header as ServiceBanner, but the photo row is replaced
 // by a large lead statement and a few short paragraphs next to the "what you get" list.
-export function ServiceIntro({ title, tags, text, leadLabel = 'In short', lead, paragraphs = [], listTitle = 'What you get', list, back = { label: 'All services', href: '/services' }, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary = { label: 'See our work', href: '/work' } }) {
+export function ServiceIntro({ title, tags, text, leadLabel = 'In short', lead, paragraphs = [], listTitle = 'What you get', list, back = null, primary = { label: 'Get a free quote', href: '/contact#contact-form' }, secondary }) {
   return (
     <section className="service-details-banner ps-intro fix">
       <div className="container-space">
@@ -62,10 +64,12 @@ export function ServiceIntro({ title, tags, text, leadLabel = 'In short', lead, 
           <div className="service_details_header row">
             <div className="col-lg-8">
               <div className="service_details_header_left tj-fade">
-                <Link className="tj_icon_btn text-underline-btn back_btn flip-text-wrap" href={back.href}>
-                  <div className="icon_btn"><span><i className="tji-arrow-left" /><i className="tji-arrow-left" /></span></div>
-                  <span className="underline-text flip-text"><FlipText>{back.label}</FlipText></span>
-                </Link>
+                {back && back.href && back.href !== '#' && (
+                  <Link className="tj_icon_btn text-underline-btn back_btn flip-text-wrap" href={back.href}>
+                    <div className="icon_btn"><span><i className="tji-arrow-left" /><i className="tji-arrow-left" /></span></div>
+                    <span className="underline-text flip-text"><FlipText>{back.label}</FlipText></span>
+                  </Link>
+                )}
                 <h1 className="tj_blog_details_title title-anim">{title}</h1>
                 <div className="categories">{tags.map((t) => <span key={t} className="category">{t}</span>)}</div>
               </div>
@@ -75,7 +79,7 @@ export function ServiceIntro({ title, tags, text, leadLabel = 'In short', lead, 
                 <p className="desc fs-18">{text}</p>
                 <div className="btn-wrap">
                   <IconButton href={primary.href}>{primary.label}</IconButton>
-                  <Link className="tj_text_btn" href={secondary.href}>{secondary.label}</Link>
+                  {secondary && <Link className="tj_text_btn" href={secondary.href}>{secondary.label}</Link>}
                 </div>
               </div>
             </div>
